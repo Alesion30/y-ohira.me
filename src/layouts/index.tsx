@@ -6,7 +6,7 @@ import theme from '~/layouts/theme';
 import Header from '~/layouts/components/Header';
 import Footer from '~/layouts/components/Footer';
 import ScrollTopButton from '~/layouts/components/ScrollTopButton';
-import LayoutStyle from '~/styles/Layout.module.scss';
+import Container from '@material-ui/core/Container';
 
 interface Props {
   title?: string;
@@ -19,12 +19,12 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
       <Head>
         <title>{title ?? 'ポートフォリオ'}</title>
       </Head>
-      <div className={LayoutStyle.container}>
+      <Container maxWidth="md">
         <Header />
         <div style={{ minHeight: '100vh', paddingTop: marginTop ?? 100 }}>{children}</div>
         <ScrollTopButton />
         <Footer />
-      </div>
+      </Container>
     </ThemeProvider>
   );
 };

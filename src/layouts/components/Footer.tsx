@@ -1,11 +1,14 @@
 import React, { FC } from 'react';
 import FooterStyle from '~/styles/components/Footer.module.scss';
+import Grid from '@material-ui/core/Grid';
 
 const Footer: FC = () => {
   return (
-    <footer className={FooterStyle.footer}>
-      <p>&#64;2021 Ohira's Portfolio</p>
-    </footer>
+    <Grid container direction="row" justify="center" alignItems="center">
+      <footer className={FooterStyle.footer}>
+        <p>&#64;2021 Ohira's Portfolio</p>
+      </footer>
+    </Grid>
   );
 };
 
