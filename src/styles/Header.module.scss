@@ -4,7 +4,6 @@ $primary-color: #2699fb;
   position: fixed;
   top: 10px;
   left: 30px;
-  width: 600px;
   height: 80px;
   padding: 0px 20px;
   background-color: #fff;
@@ -15,16 +14,28 @@ $primary-color: #2699fb;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.headerLogo {
+.logoWrapper {
+  margin: 0px 50px;
+}
+
+.logo {
   font-weight: bold;
   font-size: 24px;
   color: $primary-color;
   line-height: 10px;
   transform: scaleY(2);
+}
+
+.linkWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* Link スタイル */
