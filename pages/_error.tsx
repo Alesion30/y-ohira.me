@@ -2,21 +2,15 @@ import React from 'react';
 import { NextPage, NextPageContext } from 'next';
 
 interface ErrorProps {
-    statusCode: number;
+  statusCode: number;
 }
 const Error: NextPage<ErrorProps> = ({ statusCode }) => {
-    return (
-        <p>
-            {statusCode
-                ? `An error ${statusCode} occurred on server`
-                : 'An error occurred on client'}
-        </p>
-    );
+  return <p>{statusCode ? `An error ${statusCode} occurred on server` : 'An error occurred on client'}</p>;
 };
 
 Error.getInitialProps = async ({ res, err }: NextPageContext) => {
-    const statusCode = res ? res.statusCode : err ? err.statusCode ?? 500 : 404;
-    return { statusCode };
+  const statusCode = res ? res.statusCode : err ? err.statusCode ?? 500 : 404;
+  return { statusCode };
 };
 
 export default Error;
