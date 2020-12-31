@@ -1,3 +1,5 @@
+$main-color: #0070f3;
+
 .card {
   margin: 1rem;
   flex-basis: 45%;
@@ -13,8 +15,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: $main-color;
+  border-color: $main-color;
 }
 
 .card h3 {
