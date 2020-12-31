@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { WithRouterProps } from 'next/dist/client/with-router';
-import HeaderStyle from '~/styles/Header.module.scss';
+import HeaderStyle from '~/styles/components/Header.module.scss';
 
 interface Props {
   href: string;

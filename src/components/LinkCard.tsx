@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import LinkCardStyle from '~/styles/LinkCard.module.scss';
+import LinkCardStyle from '~/styles/components/LinkCard.module.scss';
 import Link from 'next/link';
 
 interface Props {

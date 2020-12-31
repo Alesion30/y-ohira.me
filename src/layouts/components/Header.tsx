@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Link from 'next/link';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import HeaderLink from '~/layouts/components/HeaderLink';
-import HeaderStyle from '~/styles/Header.module.scss';
+import HeaderStyle from '~/styles/components/Header.module.scss';
 import { Transition } from 'react-transition-group';
 
 const headerWidth = [280, 660];

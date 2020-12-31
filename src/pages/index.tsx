@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import HomeStyle from '~/styles/Home.module.scss';
+import HomeStyle from '~/styles/pages/Home.module.scss';
 import Layout from '~/layouts/index';
 import LinkCard from '~/components/LinkCard';
 
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={HomeStyle.description}>
-          Get started by editing <code className={HomeStyle.code}>pages/index.js</code>
+          Get started by editing
         </p>
 
         <div className={HomeStyle.grid}>
