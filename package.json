@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write **/*.{ts,tsx}"
+    "ssg": "next build && next export",
+    "ssg-start": "npx http-server ./out",
+    "format": "prettier --write ./src/**/*.{ts,tsx}"
   },
   "dependencies": {
     "next": "10.0.4",
