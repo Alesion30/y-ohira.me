@@ -12,12 +12,15 @@ interface Props {
 }
 
 const ScrollTopButton: FC<Props> = ({ bottom, right, threshold }) => {
-  const _threshold = threshold ?? 100;
-  const trigger = useScrollTrigger({
-    target: window,
-    disableHysteresis: true,
-    threshold: _threshold,
-  });
+  let trigger = false;
+  if (process.browser) {
+    const _threshold = threshold ?? 100;
+    trigger = useScrollTrigger({
+      target: window,
+      disableHysteresis: true,
+      threshold: _threshold,
+    });
+  }
   const scrollToTop = useCallback(() => animateScroll.scrollToTop(), []);
   const _bottom = bottom ?? 30;
   const _right = right ?? 30;

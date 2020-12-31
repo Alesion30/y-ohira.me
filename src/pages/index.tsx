@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import { NextPage } from 'next';
 import styles from '../styles/Home.module.css';
 import Layout from '~/layouts/index';
 
-const Home: FC = () => {
+const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Layout>
