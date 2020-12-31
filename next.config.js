@@ -1,6 +1,7 @@
 const path = require("path");
+const withSass = require('@zeit/next-sass')
 
-module.exports = {
+module.exports = withSass({
   distDir: 'build',
   webpack: (config) => {
     config.resolve.alias = {
@@ -11,5 +12,6 @@ module.exports = {
   },
   experimental: {
     optimizeFonts: true,
-  }
-};
+  },
+  cssModules: true
+});

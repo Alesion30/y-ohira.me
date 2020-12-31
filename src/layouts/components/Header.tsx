@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import HeaderLink from '~/layouts/components/HeaderLink';
-import HeaderStyle from '~/styles/Header.module.css';
+import HeaderStyle from '~/styles/Header.module.scss';
 
 const Header: FC = () => {
   let trigger = false;
