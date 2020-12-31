@@ -8,9 +8,11 @@
     "start": "next start",
     "ssg": "next build && next export",
     "ssg-start": "npx http-server ./out",
-    "format": "prettier --write ./src/**/*.{ts,tsx}"
+    "format": "prettier --write ./src/**/*.{ts,tsx}",
+    "lint": "eslint"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
     "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1"
@@ -35,7 +37,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
+      "yarn format",
       "git add"
     ]
   }
