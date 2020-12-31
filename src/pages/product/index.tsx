@@ -1,10 +1,14 @@
 import { NextPage } from 'next';
 import Layout from '~/layouts/index';
+import TopStyle from '~/styles/Top.module.scss';
 
 const Product: NextPage = () => {
   return (
     <Layout>
-      <h1>Product</h1>
+      <h1 className={TopStyle.title}>
+        My Name is <span className={TopStyle.highlight}>Yuta Ohira!</span>
+      </h1>
+      <p className={TopStyle.description}>Front-end Engineer & Backend Engineer</p>
     </Layout>
   );
 };

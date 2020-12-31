@@ -21,7 +21,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
       </Head>
       <Container maxWidth="md">
         <Header />
-        <div style={{ minHeight: '100vh', paddingTop: marginTop ?? 100 }}>{children}</div>
+        <div style={{ minHeight: '100vh', paddingTop: marginTop ?? 150 }}>{children}</div>
         <ScrollTopButton />
         <Footer />
       </Container>

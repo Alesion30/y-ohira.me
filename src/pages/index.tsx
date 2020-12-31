@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import HomeStyle from '~/styles/Home.module.scss';
+import TopStyle from '~/styles/Top.module.scss';
 import Layout from '~/layouts/index';
 import LinkCard from '~/components/LinkCard';
 import Image from 'next/image';
@@ -7,11 +7,11 @@ import Grid from '@material-ui/core/Grid';
 
 const Home: NextPage = () => {
   return (
-    <Layout marginTop={150}>
-      <h1 className={HomeStyle.title}>
-        My Name is <span className={HomeStyle.highlight}>Yuta Ohira!</span>
+    <Layout>
+      <h1 className={TopStyle.title}>
+        My Name is <span className={TopStyle.highlight}>Yuta Ohira!</span>
       </h1>
-      <p className={HomeStyle.description}>Front-end Engineer & Backend Engineer</p>
+      <p className={TopStyle.description}>Front-end Engineer & Backend Engineer</p>
       <Grid container direction="row" justify="center" alignItems="center">
         <LinkCard href="/about" title="Profile" description="経歴・スキルなど" />
         <LinkCard href="/product" title="Product" description="今までに作ってきたアプリ" />
