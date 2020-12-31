@@ -9,4 +9,7 @@ module.exports = {
     };
     return config;
   },
+  experimental: {
+    optimizeFonts: true,
+  }
 };
