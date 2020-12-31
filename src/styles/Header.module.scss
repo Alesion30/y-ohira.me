@@ -2,8 +2,8 @@ $primary-color: #2699fb;
 
 .appBar {
   position: fixed;
-  top: 10px;
-  left: 30px;
+  top: 30px;
+  left: 20px;
   height: 80px;
   padding: 0px 20px;
   background-color: #fff;
@@ -27,7 +27,7 @@ $primary-color: #2699fb;
   font-size: 24px;
   color: $primary-color;
   line-height: 10px;
-  transform: scaleY(2);
+  transform: scaleY(1.5);
 }
 
 .linkWrapper {

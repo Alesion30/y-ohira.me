@@ -4,23 +4,27 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from '~/layouts/theme';
 import Header from '~/layouts/components/Header';
+import Footer from '~/layouts/components/Footer';
 import ScrollTopButton from '~/layouts/components/ScrollTopButton';
+import LayoutStyle from '~/styles/Layout.module.scss';
 
 interface Props {
   title?: string;
+  marginTop?: number;
 }
 
-const DefaultLayout: NextPage<Props> = ({ children, title }) => {
+const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
         <title>{title ?? 'ポートフォリオ'}</title>
       </Head>
-      <Fragment>
+      <div className={LayoutStyle.container}>
         <Header />
-        <div style={{ height: '150vh', marginTop: 100 }}>{children}</div>
+        <div style={{ minHeight: '100vh', paddingTop: marginTop ?? 100 }}>{children}</div>
         <ScrollTopButton />
-      </Fragment>
+        <Footer />
+      </div>
     </ThemeProvider>
   );
 };

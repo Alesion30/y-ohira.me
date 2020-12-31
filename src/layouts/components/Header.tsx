@@ -1,26 +1,29 @@
 import React, { FC } from 'react';
+import Link from 'next/link';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import HeaderLink from '~/layouts/components/HeaderLink';
 import HeaderStyle from '~/styles/Header.module.scss';
 import { Transition } from 'react-transition-group';
 
+const headerWidth = [280, 660];
+
 const DEFAULT_APPBAR_STYLE = {
   transition: 'all 0.5s ease',
-  width: 280,
+  width: headerWidth[0],
 };
 
 const APPBAR_STYLE: { [key: string]: object } = {
   entering: {
-    width: 280,
+    width: headerWidth[0],
   },
   entered: {
-    width: 660,
+    width: headerWidth[1],
   },
   exiting: {
-    width: 660,
+    width: headerWidth[1],
   },
   exited: {
-    width: 280,
+    width: headerWidth[0],
   },
 };
 
@@ -47,7 +50,7 @@ const LINKGROUP_STYLE: { [key: string]: object } = {
 const Header: FC = () => {
   let trigger = true;
   if (process.browser) {
-    const threshold = 200;
+    const threshold = 100;
     trigger = useScrollTrigger({
       target: window,
       disableHysteresis: true,
@@ -59,7 +62,11 @@ const Header: FC = () => {
       {(state) => (
         <div className={HeaderStyle.appBar} style={{ ...DEFAULT_APPBAR_STYLE, ...APPBAR_STYLE[state] }}>
           <div className={HeaderStyle.logoWrapper}>
-            <p className={HeaderStyle.logo}>PORTFOLIO</p>
+            <p className={HeaderStyle.logo}>
+              <Link href="/">
+                <a>PORTFOLIO</a>
+              </Link>
+            </p>
           </div>
           <div className={HeaderStyle.linkWrapper} style={{ ...DEFAULT_LINKGROUP_STYLE, ...LINKGROUP_STYLE[state] }}>
             <HeaderLink href="/" title="HOME" />
