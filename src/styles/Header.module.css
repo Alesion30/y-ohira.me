@@ -1,0 +1,57 @@
+.appBar {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  width: 600px;
+  height: 80px;
+  padding: 0px 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  box-shadow: 2px 2px 4px #ddd;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headerLogo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #2699fb;
+  line-height: 10px;
+  transform: scaleY(2.0);
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+  padding: 2px 5px;
+  margin: 0px 7px;
+  display: inline-block;
+  transition: 0.3s;
+  color: gray;
+  font-weight: bold;
+}
+
+.link::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #2699fb;
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+
+.link:hover {
+  color: #2699fb;
+}
+
+.link:hover::after {
+  width: 100%;
+}
