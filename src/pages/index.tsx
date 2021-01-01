@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       </Grid>
       <div style={{ marginTop: 50, marginBottom: 100 }}>
         <Grid container direction="row" justify="center" alignItems="center">
-          <Image src="/images/challecara.png" title="Contemplative Reptile" width={700} height={400} />
+          <img src="/images/challecara.png" title="Contemplative Reptile" width={700} height={400} />
         </Grid>
       </div>
     </Layout>

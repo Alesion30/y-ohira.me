@@ -1,0 +1,18 @@
+{
+    "short_name": "PORTFOLIO",
+    "name": "PORTFOLIO",
+    "description": "Yuta Ohiraのポートフォリオ",
+    "theme_color": "#188320",
+    "background_color": "#ecf6ee",
+    "scope": "/",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        }
+    ],
+    "splash_pages": null
+}

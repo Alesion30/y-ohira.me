@@ -18,6 +18,9 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
     <ThemeProvider theme={theme}>
       <Head>
         <title>{title ?? 'ポートフォリオ'}</title>
+        <meta name="description" content="ohira yutaのポートフォリオ" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <Container maxWidth="md">
         <Header />

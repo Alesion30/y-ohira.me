@@ -1,7 +1,8 @@
-const path = require("path");
-const withSass = require('@zeit/next-sass')
+const path = require('path');
+const withSass = require('@zeit/next-sass');
+const withPWA = require('next-pwa')
 
-module.exports = withSass({
+const nextConfig = {
   distDir: 'build',
   webpack: (config) => {
     config.resolve.alias = {
@@ -10,8 +11,16 @@ module.exports = withSass({
     };
     return config;
   },
+  // Google Fonts
   experimental: {
     optimizeFonts: true,
   },
-  cssModules: true
-});
+  // SCSS
+  cssModules: true,
+  // PWA
+  pwa: {
+    dest: 'public'
+  }
+};
+
+module.exports = withPWA(withSass(nextConfig));
