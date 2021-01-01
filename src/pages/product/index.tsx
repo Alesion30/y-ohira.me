@@ -6,9 +6,9 @@ const Product: NextPage = () => {
   return (
     <Layout>
       <h1 className={TopStyle.title}>
-        My Name is <span className={TopStyle.highlight}>Yuta Ohira!</span>
+        <span className={TopStyle.highlight}>PRODUCT</span>
       </h1>
-      <p className={TopStyle.description}>Front-end Engineer & Backend Engineer</p>
+      <p className={TopStyle.description}>アプリ・仕事</p>
     </Layout>
   );
 };

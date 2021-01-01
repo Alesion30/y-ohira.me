@@ -6,10 +6,10 @@ const About: NextPage = () => {
   return (
     <Layout>
       <h1 className={TopStyle.title}>
-        My Name is <span className={TopStyle.highlight}>Yuta Ohira!</span>
+        <span className={TopStyle.highlight}>ABOUT</span>
       </h1>
-      <p className={TopStyle.description}>Front-end Engineer & Backend Engineer</p>
-      <div>
+      <p className={TopStyle.description}>経歴</p>
+      <div style={{ marginTop: 60 }}>
         <p>2018年4月 九州大学工学部電気情報工学科に入学。</p>
         <p>2018年12月 プログラミングの学習を始める。当時は、Unityを用いた3Dゲームの開発に熱中する。</p>
         <p>2019年5月 プログラミングサークル &quot;GLEAP&quot; に入部する。</p>

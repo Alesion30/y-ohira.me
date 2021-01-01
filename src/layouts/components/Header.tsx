@@ -58,7 +58,7 @@ const Header: FC = () => {
     });
   }
   return (
-    <Transition in={!trigger} timeout={5000}>
+    <Transition in={!trigger} timeout={10000}>
       {(state) => (
         <div className={HeaderStyle.appBar} style={{ ...DEFAULT_APPBAR_STYLE, ...APPBAR_STYLE[state] }}>
           <div className={HeaderStyle.logoWrapper}>

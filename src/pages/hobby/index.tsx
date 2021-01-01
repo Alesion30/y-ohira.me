@@ -6,9 +6,9 @@ const Hobby: NextPage = () => {
   return (
     <Layout>
       <h1 className={TopStyle.title}>
-        My Name is <span className={TopStyle.highlight}>Yuta Ohira!</span>
+        <span className={TopStyle.highlight}>HOBBY</span>
       </h1>
-      <p className={TopStyle.description}>Front-end Engineer & Backend Engineer</p>
+      <p className={TopStyle.description}>趣味</p>
     </Layout>
   );
 };
