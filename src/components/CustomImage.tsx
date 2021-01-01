@@ -1,19 +1,16 @@
-import { FC } from 'react';
+import { FC, CSSProperties } from 'react';
 
 interface Props {
   src: string;
   alt: string;
   width?: number;
-  marginTop?: number;
-  marginBottom?: number;
+  style?: CSSProperties;
 }
 
-const CustomImage: FC<Props> = ({ src, alt, width, marginTop, marginBottom }) => {
+const CustomImage: FC<Props> = ({ src, alt, width, style }) => {
   const _width = width ?? '100%';
-  const _marginTop = marginTop ?? 0;
-  const _marginBottom = marginBottom ?? 0;
   return (
-    <div style={{ width: _width, marginTop: _marginTop, marginBottom: _marginBottom }}>
+    <div style={{ width: _width, ...style }}>
       <img src={src} alt={alt} style={{ width: '100%', height: 'auto' }} />
     </div>
   );

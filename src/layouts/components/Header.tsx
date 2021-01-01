@@ -50,7 +50,7 @@ const LINKGROUP_STYLE: { [key: string]: object } = {
 const Header: FC = () => {
   let trigger = true;
   if (process.browser) {
-    const threshold = 100;
+    const threshold = 50;
     trigger = useScrollTrigger({
       target: window,
       disableHysteresis: true,

@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <h1 className={TopStyle.title}>
         My Name is <span className={TopStyle.highlight}>Yuta Ohira!</span>
       </h1>
-      <p className={TopStyle.description}>Front-end Engineer & Backend Engineer</p>
+      <p className={TopStyle.description}>Frontend Engineer & Backend Engineer</p>
       <Grid container direction="row" justify="center" alignItems="center">
         <LinkCard href="/about" title="Profile" description="経歴・スキルなど" />
         <LinkCard href="/product" title="Product" description="今までに作ってきたアプリ" />
@@ -20,15 +20,10 @@ const Home: NextPage = () => {
         <LinkCard href="https://github.com/Alesion30" title="GitHub Account" description="Githubのアカウントはこちら" />
       </Grid>
       <CustomSpacer height={50} />
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        alignItems="center"
-      >
+      <Grid container direction="column" justify="center" alignItems="center">
         <CustomImage src="/images/challecara.png" alt="チャレキャラ2019" />
       </Grid>
-      <CustomSpacer height={100} />
+      <CustomSpacer height={50} />
     </Layout>
   );
 };
