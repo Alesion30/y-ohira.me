@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { NextPage } from 'next';
 import Layout from '~/layouts/index';
-import TopStyle from '~/styles/Top.module.scss';
+import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import HoverImage from '~/components/HoverImage';
 import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
@@ -9,10 +9,10 @@ import Grid from '@material-ui/core/Grid';
 const Hobby: NextPage = () => {
   return (
     <Layout>
-      <h1 className={TopStyle.title}>
-        <span className={TopStyle.highlight}>HOBBY</span>
+      <h1 className={TopSectionStyle.title}>
+        <span className={TopSectionStyle.highlight}>HOBBY</span>
       </h1>
-      <p className={TopStyle.description}>趣味</p>
+      <p className={TopSectionStyle.description}>趣味</p>
       <CustomSpacer height={30} />
       <Grid container direction="row" justify="center" alignItems="center">
         <ProductImage

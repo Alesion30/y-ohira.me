@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { NextPage } from 'next';
 import Layout from '~/layouts/index';
-import TopStyle from '~/styles/Top.module.scss';
+import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import HoverImage from '~/components/HoverImage';
 import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
@@ -9,10 +9,10 @@ import Grid from '@material-ui/core/Grid';
 const Product: NextPage = () => {
   return (
     <Layout>
-      <h1 className={TopStyle.title}>
-        <span className={TopStyle.highlight}>PRODUCT</span>
+      <h1 className={TopSectionStyle.title}>
+        <span className={TopSectionStyle.highlight}>PRODUCT</span>
       </h1>
-      <p className={TopStyle.description}>アプリ・仕事</p>
+      <p className={TopSectionStyle.description}>アプリ・仕事</p>
       <CustomSpacer height={30} />
       <Grid container direction="row" justify="center" alignItems="center">
         <ProductImage title="ELEPOKE" description="ポケモン選出最適化アプリ" src="/images/product/elepoke.png" />
