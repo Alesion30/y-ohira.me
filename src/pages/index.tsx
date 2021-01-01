@@ -2,7 +2,8 @@ import { NextPage } from 'next';
 import TopStyle from '~/styles/Top.module.scss';
 import Layout from '~/layouts/index';
 import LinkCard from '~/components/LinkCard';
-import Image from 'next/image';
+import CustomImage from '~/components/CustomImage';
+import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 
 const Home: NextPage = () => {
@@ -18,11 +19,16 @@ const Home: NextPage = () => {
         <LinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
         <LinkCard href="https://github.com/Alesion30" title="GitHub Account" description="Githubのアカウントはこちら" />
       </Grid>
-      <div style={{ marginTop: 50, marginBottom: 100 }}>
-        <Grid container direction="row" justify="center" alignItems="center">
-          <img src="/images/challecara.png" title="Contemplative Reptile" width={700} height={400} />
-        </Grid>
-      </div>
+      <CustomSpacer height={50} />
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+      >
+        <CustomImage src="/images/challecara.png" alt="チャレキャラ2019" />
+      </Grid>
+      <CustomSpacer height={100} />
     </Layout>
   );
 };
