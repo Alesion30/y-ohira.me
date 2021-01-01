@@ -19,6 +19,7 @@ const nextConfig = {
   cssModules: true,
   // PWA
   pwa: {
+    disable: process.env.NODE_ENV === 'development',
     dest: 'public'
   }
 };
