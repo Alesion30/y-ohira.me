@@ -17,7 +17,11 @@ const Product: NextPage = () => {
       <Grid container direction="row" justify="center" alignItems="center">
         <ProductImage title="ELEPOKE" description="ポケモン選出最適化アプリ" src="/images/product/elepoke.png" />
         <ProductImage title="AWECON" description="エアコンのリモート制御アプリ" src="/images/product/awecon.png" />
-        <ProductImage title="授業マイスター" description="時間割を教えてくれるLineBot" src="/images/product/linebot.png" />
+        <ProductImage
+          title="授業マイスター"
+          description="時間割を教えてくれるLineBot"
+          src="/images/product/linebot.png"
+        />
         <ProductImage title="Passtick" description="複数人で共有できるメモアプリ" src="/images/product/passtick.png" />
         <ProductImage title="PenLab" description="学習時間記録ツール" src="/images/product/penlab.gif" />
         <ProductImage title="はもスケ" description="予定管理アプリ" src="/images/product/hamosuke.gif" />
@@ -38,7 +42,7 @@ const ProductImage: FC<ProductImageProps> = ({ src, title, description }) => {
       <h1 style={{ fontSize: 20 }}>{title}</h1>
       <p>{description}</p>
     </HoverImage>
-  )
-}
+  );
+};
 
 export default Product;
