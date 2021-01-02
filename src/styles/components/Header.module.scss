@@ -12,11 +12,34 @@ $primary-color: #008cd6;
   box-shadow: 2px 2px 4px #ddd;
   z-index: 1500;
 
+  // Flex
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+
+  // Animation
+  width: 280px;
+  transition: width 500ms 0ms ease;
+  &.active {
+    width: 660px;
+  }
+}
+
+.linkWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  // Animation
+  opacity: 0;
+  transition: opacity 200ms 0ms ease;
+  &.active {
+    opacity: 1;
+  }
 }
 
 .logoWrapper {
@@ -29,14 +52,6 @@ $primary-color: #008cd6;
   color: $primary-color;
   line-height: 10px;
   transform: scaleY(1.5);
-}
-
-.linkWrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
 }
 
 /* Link スタイル */
@@ -100,51 +115,66 @@ $primary-color: #008cd6;
   height: 80px;
   width: 80px;
   padding: 0px 20px;
-  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 100px;
   box-shadow: 2px 2px 4px #ddd;
   z-index: 1500;
+  cursor: pointer;
 
+  // Flex
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+
+  transition: background-color 500ms 0ms ease;
+  background-color: #fff;
+  &:hover {
+    background-color: #f1f6fb;
+    & .menuBtn i {
+      background-color: $primary-color;
+    }
+  }
 }
+
 .menuBtn {
   position: relative;
   width: 28px;
   height: 24px;
-}
-.menuBtn i {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: $primary-color;
-  font-weight: bold;
-  position: absolute;
-  transition: transform 0.5s, opacity 0.5s;
-}
-.menuBtn i:nth-child(1) {
-  top: 0;
-}
-.menuBtn i:nth-child(2) {
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-.menuBtn i:nth-child(3) {
-  bottom: 0;
+
+  & i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $primary-color;
+    font-weight: bold;
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
 }
 
-// メニュートグル クリック後
-.menuBtnShow i:nth-child(1) {
-  transform: translateY(10px) rotate(-45deg);
-}
-.menuBtnShow i:nth-child(2) {
-  opacity: 0;
-}
-.menuBtnShow i:nth-child(3) {
-  transform: translateY(-12px) rotate(45deg);
+.menuBtnShow {
+  & i {
+    &:nth-child(1) {
+      transform: translateY(10px) rotate(-45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: translateY(-12px) rotate(45deg);
+    }
+  }
 }
