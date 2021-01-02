@@ -15,49 +15,6 @@ interface Props {
 }
 
 const About: NextPage<Props> = ({ skills }) => {
-  const bp = breakpoint('sm');
-  let SkillSection: FC;
-  if (bp) {
-    const data: Skill[][] = [];
-    data[0] = skills.filter((_, i) => i % 2 === 0);
-    data[1] = skills.filter((_, i) => i % 2 === 1);
-    SkillSection = () => {
-      return (
-        <Grid container justify="center" alignItems="center" spacing={10}>
-          <Grid item>
-            {data[0].map((skill) => (
-              <p key={`skill_${skill.name}`}>
-                <span style={{ marginRight: 20 }}>{skill.name}</span>
-                <Stars star={skill.star} />
-              </p>
-            ))}
-          </Grid>
-          <Grid item>
-            {data[1].map((skill) => (
-              <p key={`skill_${skill.name}`}>
-                <span style={{ marginRight: 20 }}>{skill.name}</span>
-                <Stars star={skill.star} />
-              </p>
-            ))}
-          </Grid>
-        </Grid>
-      );
-    };
-  } else {
-    SkillSection = () => {
-      return (
-        <Grid container direction="column" justify="center" alignItems="center" spacing={5} style={{ marginTop: 20 }}>
-          {skills.map((skill) => (
-            <p key={`skill_${skill.name}`}>
-              <span style={{ marginRight: 20 }}>{skill.name}</span>
-              <Stars star={skill.star} />
-            </p>
-          ))}
-        </Grid>
-      );
-    };
-  }
-
   return (
     <Layout>
       <h1 className={TopSectionStyle.title}>
@@ -82,7 +39,7 @@ const About: NextPage<Props> = ({ skills }) => {
         <span className={TopSectionStyle.highlight}>Skills & Languages</span>
       </h1>
       <CustomSpacer height={30} />
-      <SkillSection />
+      <SkillSection skills={skills} />
       <CustomSpacer height={50} />
     </Layout>
   );
@@ -161,6 +118,46 @@ const AccountSection: FC = () => {
       </p>
     </div>
   );
+};
+
+const SkillSection: FC<{ skills: Skill[] }> = ({ skills }) => {
+  const bp = breakpoint('sm');
+  if (bp) {
+    const data: Skill[][] = [];
+    data[0] = skills.filter((_, i) => i % 2 === 0);
+    data[1] = skills.filter((_, i) => i % 2 === 1);
+    return (
+      <Grid container justify="center" alignItems="center" spacing={10}>
+        <Grid item>
+          {data[0].map((skill) => (
+            <p key={`skill_${skill.name}`}>
+              <span style={{ marginRight: 20 }}>{skill.name}</span>
+              <Stars star={skill.star} />
+            </p>
+          ))}
+        </Grid>
+        <Grid item>
+          {data[1].map((skill) => (
+            <p key={`skill_${skill.name}`}>
+              <span style={{ marginRight: 20 }}>{skill.name}</span>
+              <Stars star={skill.star} />
+            </p>
+          ))}
+        </Grid>
+      </Grid>
+    );
+  } else {
+    return (
+      <Grid container direction="column" justify="center" alignItems="center" spacing={5} style={{ marginTop: 20 }}>
+        {skills.map((skill) => (
+          <p key={`skill_${skill.name}`}>
+            <span style={{ marginRight: 20 }}>{skill.name}</span>
+            <Stars star={skill.star} />
+          </p>
+        ))}
+      </Grid>
+    );
+  }
 };
 
 export default About;
