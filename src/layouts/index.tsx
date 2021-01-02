@@ -12,6 +12,7 @@ import MenuStyle from '~/styles/components/Menu.module.scss';
 import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 import LinkCard from '~/components/LinkCard';
+import CustomLinkCard from '~/layouts/components/CustomLinkCard';
 
 interface Props {
   title?: string;
@@ -41,10 +42,14 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
           <CustomSpacer height={150} />
           <Container maxWidth="md">
             <Grid container direction="row" justify="center" alignItems="center">
-              <LinkCard href="/about" title="Profile" description="経歴・スキルなど" />
-              <LinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
-              <LinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
-              <LinkCard href="https://github.com/Alesion30" title="GitHub Account" description="Githubのアカウントはこちら" />
+              <CustomLinkCard href="/about" title="Profile" description="経歴・スキルなど" />
+              <CustomLinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
+              <CustomLinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
+              <LinkCard
+                href="https://github.com/Alesion30"
+                title="GitHub Account"
+                description="Githubのアカウントはこちら"
+              />
             </Grid>
           </Container>
           <CustomSpacer height={120} />
