@@ -52,9 +52,10 @@ const LINKGROUP_STYLE: { [key: string]: object } = {
 interface Props {
   active: boolean;
   onClick: () => void;
+  close: boolean;
 }
 
-const Header: FC<Props> = ({ active, onClick }) => {
+const Header: FC<Props> = ({ active, onClick, close }) => {
   // ヘッダーの開閉
   let open = false;
   if (process.browser) {
@@ -68,7 +69,7 @@ const Header: FC<Props> = ({ active, onClick }) => {
 
   const isWeb = breakpoint('md');
   const isMobile = !breakpoint(500);
-  if (isWeb) {
+  if (isWeb && !close) {
     return (
       <Transition in={open} timeout={10000}>
         {(state) => (
