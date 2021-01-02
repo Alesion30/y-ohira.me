@@ -3,7 +3,6 @@ const withSass = require('@zeit/next-sass');
 const withPWA = require('next-pwa')
 
 const nextConfig = {
-  distDir: 'build',
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
