@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <h1 className={TopSectionStyle.title}>
         My Name is <span className={TopSectionStyle.highlight}>Yuta Ohira!</span>
       </h1>
-      <p className={TopSectionStyle.description}>Frontend Engineer & Backend Engineer</p>
+      <p className={TopSectionStyle.description}>Web Engineer from Kyushu University</p>
       <Grid container direction="row" justify="center" alignItems="center">
         <LinkCard href="/about" title="Profile" description="経歴・スキルなど" />
         <LinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />

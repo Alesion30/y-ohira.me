@@ -4,6 +4,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import HeaderLink from '~/layouts/components/HeaderLink';
 import HeaderStyle from '~/styles/components/Header.module.scss';
 import { Transition } from 'react-transition-group';
+import breakpoint from '~/utils/breakpoint';
 
 const headerWidth = [280, 660];
 
@@ -48,36 +49,51 @@ const LINKGROUP_STYLE: { [key: string]: object } = {
 };
 
 const Header: FC = () => {
-  let trigger = true;
+  let open = false;
   if (process.browser) {
     const threshold = 50;
-    trigger = useScrollTrigger({
+    open = !useScrollTrigger({
       target: window,
       disableHysteresis: true,
       threshold: threshold,
     });
   }
-  return (
-    <Transition in={!trigger} timeout={10000}>
-      {(state) => (
-        <div className={HeaderStyle.appBar} style={{ ...DEFAULT_APPBAR_STYLE, ...APPBAR_STYLE[state] }}>
-          <div className={HeaderStyle.logoWrapper}>
-            <p className={HeaderStyle.logo}>
-              <Link href="/">
-                <a>PORTFOLIO</a>
-              </Link>
-            </p>
+  const isWeb = breakpoint('md');
+  if (isWeb) {
+    return (
+      <Transition in={open} timeout={10000}>
+        {(state) => (
+          <div className={HeaderStyle.appBar} style={{ ...DEFAULT_APPBAR_STYLE, ...APPBAR_STYLE[state] }}>
+            <div className={HeaderStyle.logoWrapper}>
+              <p className={HeaderStyle.logo}>
+                <Link href="/">
+                  <a>PORTFOLIO</a>
+                </Link>
+              </p>
+            </div>
+            <div className={HeaderStyle.linkWrapper} style={{ ...DEFAULT_LINKGROUP_STYLE, ...LINKGROUP_STYLE[state] }}>
+              <HeaderLink href="/" title="HOME" />
+              <HeaderLink href="/about" title="ABOUT" />
+              <HeaderLink href="/product" title="PRODUCT" />
+              <HeaderLink href="/hobby" title="HOBBY" />
+            </div>
           </div>
-          <div className={HeaderStyle.linkWrapper} style={{ ...DEFAULT_LINKGROUP_STYLE, ...LINKGROUP_STYLE[state] }}>
-            <HeaderLink href="/" title="HOME" />
-            <HeaderLink href="/about" title="ABOUT" />
-            <HeaderLink href="/product" title="PRODUCT" />
-            <HeaderLink href="/hobby" title="HOBBY" />
-          </div>
+        )}
+      </Transition>
+    );
+  } else {
+    return (
+      <div className={HeaderStyle.appBar} style={{ ...DEFAULT_APPBAR_STYLE }}>
+        <div className={HeaderStyle.logoWrapper}>
+          <p className={HeaderStyle.logo}>
+            <Link href="/">
+              <a>PORTFOLIO</a>
+            </Link>
+          </p>
         </div>
-      )}
-    </Transition>
-  );
+      </div>
+    );
+  }
 };
 
 export default Header;
