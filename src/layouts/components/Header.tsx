@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
+import classNames from 'classnames';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import HeaderLink from '~/layouts/components/HeaderLink';
 import HeaderStyle from '~/styles/components/Header.module.scss';
@@ -48,7 +49,13 @@ const LINKGROUP_STYLE: { [key: string]: object } = {
   },
 };
 
-const Header: FC = () => {
+interface Props {
+  active: boolean;
+  onClick: () => void;
+}
+
+const Header: FC<Props> = ({ active, onClick }) => {
+  // ヘッダーの開閉
   let open = false;
   if (process.browser) {
     const threshold = 50;
@@ -58,7 +65,9 @@ const Header: FC = () => {
       threshold: threshold,
     });
   }
+
   const isWeb = breakpoint('md');
+  const isMobile = !breakpoint(500);
   if (isWeb) {
     return (
       <Transition in={open} timeout={10000}>
@@ -77,11 +86,18 @@ const Header: FC = () => {
               <HeaderLink href="/product" title="PRODUCT" />
               <HeaderLink href="/hobby" title="HOBBY" />
             </div>
+            <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
+              <span className={classNames(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
+                <i></i>
+                <i></i>
+                <i></i>
+              </span>
+            </div>
           </div>
         )}
       </Transition>
     );
-  } else {
+  } else if (!isMobile) {
     return (
       <div className={HeaderStyle.appBar} style={{ ...DEFAULT_APPBAR_STYLE }}>
         <div className={HeaderStyle.logoWrapper}>
@@ -91,6 +107,23 @@ const Header: FC = () => {
             </Link>
           </p>
         </div>
+        <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
+          <span className={classNames(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
+        <span className={classNames(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
       </div>
     );
   }

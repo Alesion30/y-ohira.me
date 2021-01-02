@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
@@ -14,16 +14,16 @@ interface Props {
 }
 
 const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
+  // メニューの開閉
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   return (
     <ThemeProvider theme={theme}>
       <Head>
         <title>{title ?? 'ポートフォリオ'}</title>
         <meta name="description" content="ohira yutaのポートフォリオ" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="manifest" href="/manifest.json" />
       </Head>
       <Container maxWidth="md">
-        <Header />
+        <Header active={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
         <div style={{ minHeight: '100vh', paddingTop: marginTop ?? 150 }}>{children}</div>
         <ScrollTopButton />
         <Footer />
