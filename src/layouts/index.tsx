@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
@@ -10,6 +10,8 @@ import Container from '@material-ui/core/Container';
 import Drawer from '@material-ui/core/Drawer';
 import MenuStyle from '~/styles/components/Menu.module.scss';
 import CustomSpacer from '~/components/CustomSpacer';
+import Grid from '@material-ui/core/Grid';
+import LinkCard from '~/components/LinkCard';
 
 interface Props {
   title?: string;
@@ -38,8 +40,14 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
         <div className={MenuStyle.menu}>
           <CustomSpacer height={150} />
           <Container maxWidth="md">
-            <h1>menu</h1>
+            <Grid container direction="row" justify="center" alignItems="center">
+              <LinkCard href="/about" title="Profile" description="経歴・スキルなど" />
+              <LinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
+              <LinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
+              <LinkCard href="https://github.com/Alesion30" title="GitHub Account" description="Githubのアカウントはこちら" />
+            </Grid>
           </Container>
+          <CustomSpacer height={120} />
         </div>
       </Drawer>
     </ThemeProvider>
