@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { NextPage, GetStaticProps } from 'next';
-import Link from 'next/link';
+import Router from 'next/router';
 import Layout from '~/layouts/index';
 import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import HoverImage from '~/components/HoverImage';
@@ -54,14 +54,10 @@ interface ProductImageProps {
 }
 const ProductImage: FC<ProductImageProps> = ({ src, title, description, href }) => {
   return (
-    <Link href={href}>
-      <a>
-        <HoverImage src={src} alt={title} width={400} margin={10} bottom={10} left={20}>
-          <h1 style={{ fontSize: 20 }}>{title}</h1>
-          <p>{description}</p>
-        </HoverImage>
-      </a>
-    </Link>
+    <HoverImage onClick={() => Router.push(href)} src={src} alt={title} width={400} margin={10} bottom={10} left={20}>
+      <h1 style={{ fontSize: 20 }}>{title}</h1>
+      <p>{description}</p>
+    </HoverImage>
   );
 };
 
