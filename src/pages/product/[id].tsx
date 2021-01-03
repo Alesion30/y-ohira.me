@@ -12,7 +12,7 @@ const PostPage: NextPage<Props> = ({ postData }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds();
+  const paths = getAllPostIds('product');
   return {
     paths,
     fallback: false,
@@ -20,7 +20,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  let postData = params && typeof params.id == 'string' ? await getPostData(params.id) : null;
+  let postData = params && typeof params.id == 'string' ? await getPostData(params.id, 'product') : null;
   return {
     props: {
       postData,

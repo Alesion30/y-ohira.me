@@ -3,12 +3,44 @@ import path from 'path';
 import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
-import { Post } from '~/models';
+import { Post, PostList } from '~/models';
 
-const postsDirectory = path.join(process.cwd(), 'src/posts');
+const postsDirectory = (folder: string) => path.join(process.cwd(), `src/posts/${folder}`);
 
-export const getAllPostIds = () => {
-  const fileNames = fs.readdirSync(postsDirectory);
+export function getAllPostsData(folder: string): PostList[] {
+  // Get file names under /posts
+  const fileNames = fs.readdirSync(postsDirectory(folder));
+  const allPostsData: PostList[] = fileNames.map((fileName) => {
+    // Remove ".md" from file name to get id
+    const id = fileName.replace(/\.md$/, '');
+
+    // Read markdown file as string
+    const fullPath = path.join(postsDirectory(folder), fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+    // Use gray-matter to parse the post metadata section
+    const matterResult = matter(fileContents);
+
+    // Combine the data with the id
+    return {
+      id,
+      ...matterResult.data,
+    };
+  });
+  // Sort posts by date
+  return allPostsData.sort((a, b) => {
+    const _aSort = a.sort ?? 1000;
+    const _bSort = b.sort ?? 1000;
+    if (_aSort > _bSort) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+}
+
+export const getAllPostIds = (folder: string) => {
+  const fileNames = fs.readdirSync(postsDirectory(folder));
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -18,8 +50,8 @@ export const getAllPostIds = () => {
   });
 };
 
-export const getPostData = async (id: string): Promise<Post> => {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+export const getPostData = async (id: string, folder: string): Promise<Post> => {
+  const fullPath = path.join(postsDirectory(folder), `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section

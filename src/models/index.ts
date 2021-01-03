@@ -6,5 +6,16 @@ export interface Skill {
 export interface Post {
   id: string;
   title?: string;
+  description?: string;
+  image?: string;
+  sort?: number;
   contentHtml: string;
+}
+
+export interface PostList {
+  id: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  sort?: number;
 }
