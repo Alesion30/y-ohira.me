@@ -42,6 +42,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
           <CustomSpacer height={150} />
           <Container maxWidth="md">
             <Grid container direction="row" justify="center" alignItems="center">
+              <CustomLinkCard href="/" title="Home" description="トップページ" />
               <CustomLinkCard href="/about" title="Profile" description="経歴・スキルなど" />
               <CustomLinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
               <CustomLinkCard href="/hobby" title="Hobby" description="個人的な趣味" />

@@ -7,7 +7,7 @@ class Document extends NextDocument {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Ohira Yutaのポートフォリオ" />
-          <meta name="theme-color" content="#000000" />
+          <meta name="theme-color" content="#008CD6" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
