@@ -40,7 +40,7 @@ const Header: FC<Props> = ({ active, onClick, close }) => {
             <HeaderLink href="/" title="HOME" />
             <HeaderLink href="/about" title="ABOUT" />
             <HeaderLink href="/product" title="PRODUCT" />
-            <HeaderLink href="/hobby" title="HOBBY" />
+            <HeaderLink href="/blog" title="BLOG" />
           </div>
         </div>
         <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
