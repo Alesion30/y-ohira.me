@@ -43,13 +43,7 @@ const Header: FC<Props> = ({ active, onClick, close }) => {
             <HeaderLink href="/blog" title="BLOG" />
           </div>
         </div>
-        <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
-          <span className={classNames(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
-            <i></i>
-            <i></i>
-            <i></i>
-          </span>
-        </div>
+        <HamburgerButton onClick={onClick} active={active} />
       </Fragment>
     );
   } else if (!isMobile) {
@@ -64,28 +58,33 @@ const Header: FC<Props> = ({ active, onClick, close }) => {
             </p>
           </div>
         </div>
-        <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
-          <span className={classNames(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
-            <i></i>
-            <i></i>
-            <i></i>
-          </span>
-        </div>
+        <HamburgerButton onClick={onClick} active={active} />
       </Fragment>
     );
   } else {
     return (
       <Fragment>
-        <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
-          <span className={classNames(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
-            <i></i>
-            <i></i>
-            <i></i>
-          </span>
-        </div>
+        <HamburgerButton onClick={onClick} active={active} />
       </Fragment>
     );
   }
+};
+
+interface HamburgerButtonProps {
+  onClick: () => void;
+  active: boolean;
+}
+
+const HamburgerButton: FC<HamburgerButtonProps> = ({ onClick, active }) => {
+  return (
+    <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
+      <span className={classNames(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
+        <i></i>
+        <i></i>
+        <i></i>
+      </span>
+    </div>
+  );
 };
 
 export default Header;
