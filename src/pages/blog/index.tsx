@@ -36,7 +36,7 @@ const techBlog: NextPage<Props> = ({ allPostsData }) => {
           />
         ))}
       </Grid>
-      <CustomSpacer height={50} />
+      <CustomSpacer height={70} />
     </Layout>
   );
 };
