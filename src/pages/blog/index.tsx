@@ -26,7 +26,14 @@ const techBlog: NextPage<Props> = ({ allPostsData }) => {
       <CustomSpacer height={50} />
       <Grid container direction="row" justify="center" alignItems="center">
         {allPostsData.map((blog: BlogList) => (
-          <Blog key={blog.id} id={blog.id} title={blog.title ?? ''} date={blog.date ?? ''} image={blog.image ?? ''} tags={blog.tags ?? []} />
+          <Blog
+            key={blog.id}
+            id={blog.id}
+            title={blog.title ?? ''}
+            date={blog.date ?? ''}
+            image={blog.image ?? ''}
+            tags={blog.tags ?? []}
+          />
         ))}
       </Grid>
       <CustomSpacer height={50} />

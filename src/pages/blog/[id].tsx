@@ -12,7 +12,7 @@ const PostPage: NextPage<Props> = ({ postData }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const paths = getAllBlogIds();
+  const paths = getAllBlogIds();
   return {
     paths,
     fallback: false,
