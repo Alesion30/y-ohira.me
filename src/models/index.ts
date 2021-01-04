@@ -3,12 +3,7 @@ export interface Skill {
   star: 0 | 1 | 2 | 3 | 4 | 5;
 }
 
-export interface Post {
-  id: string;
-  title?: string;
-  description?: string;
-  image?: string;
-  sort?: number;
+export interface Post extends PostList {
   contentHtml: string;
 }
 
@@ -18,4 +13,16 @@ export interface PostList {
   description?: string;
   image?: string;
   sort?: number;
+}
+
+export interface Blog extends BlogList {
+  contentHtml: string;
+}
+
+export interface BlogList {
+  id: string;
+  title?: string;
+  image?: string;
+  date?: string;
+  tags?: string[];
 }
