@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </h1>
       <p className={TopSectionStyle.description}>Web Engineer from Kyushu University</p>
       <Grid container direction="row" justify="center" alignItems="center">
-        <LinkCard href="/about" title="Profile" description="経歴・スキルなど" />
+        <LinkCard href="/about" title="About" description="経歴・スキルなど" />
         <LinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
         <LinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
         <LinkCard href="https://github.com/Alesion30" title="GitHub Account" description="Githubのアカウントはこちら" />

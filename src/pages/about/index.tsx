@@ -18,7 +18,7 @@ const About: NextPage<Props> = ({ skills }) => {
   return (
     <Layout>
       <h1 className={TopSectionStyle.title}>
-        <span className={TopSectionStyle.highlight}>ABOUT</span>
+        <span className={TopSectionStyle.highlight}>PROFILE</span>
       </h1>
       <p className={TopSectionStyle.description}>経歴</p>
       <CustomSpacer height={20} />
