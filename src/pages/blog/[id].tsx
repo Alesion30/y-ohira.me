@@ -1,14 +1,43 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
+import { Fragment } from 'react';
+import Head from 'next/head';
 import { getAllBlogIds, getBlogData } from '~/libs/blogs';
-import { Post } from '~/models';
-import PostPageLayout from '~/layouts/PostPage';
+import Layout from '~/layouts/index';
+import { Blog } from '~/models';
+import CustomSpacer from '~/components/CustomSpacer';
+import Grid from '@material-ui/core/Grid';
+import Chip from '@material-ui/core/Chip';
+import moment from 'moment';
 
 interface Props {
-  postData: Post | null;
+  postData: Blog | null;
 }
 
-const PostPage: NextPage<Props> = ({ postData }) => {
-  return <PostPageLayout postData={postData} />;
+const BlogPage: NextPage<Props> = ({ postData }) => {
+  const _date = moment(postData?.date ?? '');
+  if (postData) {
+    return (
+      <Layout>
+        <Head>
+          <title>{postData.title ?? 'タイトル未設定'}</title>
+        </Head>
+        <article>
+          <p>{_date.format('YYYY-MM-DD')}</p>
+          <h1>{postData.title ?? ''}</h1>
+          <Grid container direction="row" justify="flex-start">
+            {(postData?.tags ?? []).map((tag, i) => (
+              <Chip key={`tag_${i}`} label={tag} color="primary" style={{ margin: 5 }} />
+            ))}
+          </Grid>
+          <CustomSpacer height={30} />
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
+        <CustomSpacer height={70} />
+      </Layout>
+    );
+  } else {
+    return <Fragment />;
+  }
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -28,4 +57,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default PostPage;
+export default BlogPage;
