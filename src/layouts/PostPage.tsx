@@ -1,10 +1,12 @@
 import { Fragment } from 'react';
 import { NextPage } from 'next';
+import Router from 'next/router';
 import Layout from '~/layouts/index';
 import Head from 'next/head';
 import { Post } from '~/models';
 import CustomSpacer from '~/components/CustomSpacer';
 import TopSectionStyle from '~/styles/components/TopSection.module.scss';
+import LinkButton from '~/components/LinkButton';
 
 interface Props {
   postData: Post | null;
@@ -18,6 +20,10 @@ const PostPageLayout: NextPage<Props> = ({ postData }) => {
           <title>{postData.title ?? 'タイトル未設定'}</title>
         </Head>
         <article>
+          <LinkButton onClick={() => Router.back()} style={{ width: 110 }}>
+            &larr; 戻る
+          </LinkButton>
+          <CustomSpacer height={30} />
           <h1 className={TopSectionStyle.title}>
             <span className={TopSectionStyle.highlight}>{postData.title ?? ''}</span>
           </h1>

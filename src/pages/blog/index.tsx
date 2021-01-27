@@ -23,7 +23,7 @@ const techBlog: NextPage<Props> = ({ allPostsData }) => {
         <span className={TopSectionStyle.highlight}>Technology Blog</span>
       </h1>
       <p className={TopSectionStyle.description}>技術ブログ</p>
-      <CustomSpacer height={50} />
+      <CustomSpacer height={20} />
       <Grid container direction="row" justify="center" alignItems="center">
         {allPostsData.map((blog: BlogList) => (
           <Blog
@@ -62,7 +62,7 @@ const Blog: FC<BlogProps> = ({ id, title, date, image, tags }) => {
   const _date = moment(date);
   return (
     <div className={BlogStyle.blog} onClick={() => Router.push(`/blog/${id}`)}>
-      <CustomImage src={image} alt={title} />
+      {image && <CustomImage src={image} alt="blog" />}
       <p>{_date.format('YYYY-MM-DD')}</p>
       <h3>{title}</h3>
       <Grid container direction="row" justify="flex-start">

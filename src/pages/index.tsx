@@ -3,7 +3,7 @@ import { FC } from 'react';
 import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import Layout from '~/layouts/index';
 import LinkCard from '~/components/LinkCard';
-import Link from '~/components/Link';
+import LinkButton from '~/components/LinkButton';
 import CustomImage from '~/components/CustomImage';
 import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
@@ -87,9 +87,9 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
             {link && (
-              <Link href={link.href} style={{ width: link.width, marginTop: 30 }}>
+              <LinkButton href={link.href} style={{ width: link.width, marginTop: 30 }}>
                 {link.text} &rarr;
-              </Link>
+              </LinkButton>
             )}
           </div>
         </div>
@@ -102,9 +102,9 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
             {link && (
-              <Link href={link.href} style={{ width: link.width, marginTop: 30 }}>
+              <LinkButton href={link.href} style={{ width: link.width, marginTop: 30 }}>
                 &larr; {link.text}
-              </Link>
+              </LinkButton>
             )}
           </div>
         </div>
@@ -118,9 +118,9 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
           <h1 style={{ color: '#008CD6' }}>{title}</h1>
           <p>{description}</p>
           {link && (
-            <Link href={link.href} style={{ width: link.width, marginTop: 30, marginLeft: 10 }}>
+            <LinkButton href={link.href} style={{ width: link.width, marginTop: 30, marginLeft: 10 }}>
               {link.text} &rarr;
-            </Link>
+            </LinkButton>
           )}
         </div>
       </div>
