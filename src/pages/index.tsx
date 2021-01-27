@@ -46,6 +46,17 @@ const Home: NextPage = () => {
             width: 220,
           }}
         />
+        <Block
+          title="GLEAP"
+          description="九大発 プログラミングサークル"
+          img="/images/gleap.png"
+          link={{
+            href: 'https://gleap.tech/',
+            text: 'HPはこちら',
+            width: 180,
+          }}
+          right
+        />
       </Grid>
       <CustomSpacer height={50} />
     </Layout>
@@ -72,7 +83,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
           <CustomImage width="70%" src={img} alt={title} style={{ float: 'right' }} />
-          <div style={{ position: 'absolute', top: 10, right: '62%' }}>
+          <div style={{ position: 'absolute', top: 10, left: 0, right: '62%' }}>
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
             {link && (
