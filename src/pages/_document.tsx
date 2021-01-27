@@ -9,15 +9,12 @@ class Document extends NextDocument {
           <meta name="description" content="Ohira Yutaのポートフォリオ" />
           <meta name="theme-color" content="#008CD6" />
           <link rel="manifest" href="/manifest.json" />
+
+          {/* Google Fonts */}
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300&display=swap"
-            rel="stylesheet"
-          />
+          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet" />
+
+          {/* Font Awesome */}
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
