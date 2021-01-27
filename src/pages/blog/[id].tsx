@@ -29,13 +29,13 @@ const BlogPage: NextPage<Props> = ({ postData }) => {
           </LinkButton>
           <CustomSpacer height={30} />
           <p>{_date.format('YYYY-MM-DD')}</p>
-          <h1>{postData.title ?? ''}</h1>
+          <h1 style={{ fontSize: 30 }}>{postData.title ?? ''}</h1>
           <Grid container direction="row" justify="flex-start">
             {(postData?.tags ?? []).map((tag, i) => (
               <Chip key={`tag_${i}`} label={tag} color="primary" style={{ margin: 5 }} />
             ))}
           </Grid>
-          <CustomSpacer height={30} />
+          <CustomSpacer height={40} />
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
         <CustomSpacer height={70} />
