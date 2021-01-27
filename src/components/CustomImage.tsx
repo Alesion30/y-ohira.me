@@ -3,7 +3,7 @@ import { FC, CSSProperties } from 'react';
 interface Props {
   src: string;
   alt: string;
-  width?: number;
+  width?: number | string;
   style?: CSSProperties;
 }
 
