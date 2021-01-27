@@ -3,6 +3,7 @@ import { FC } from 'react';
 import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import Layout from '~/layouts/index';
 import LinkCard from '~/components/LinkCard';
+import Link from '~/components/Link';
 import CustomImage from '~/components/CustomImage';
 import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
@@ -24,8 +25,27 @@ const Home: NextPage = () => {
       </Grid>
       <CustomSpacer height={70} />
       <Grid container direction="column" justify="center" alignItems="center">
-        <Block title="23株式会社" description="スタートアップから自治体まで、あらゆる挑戦に伴走する総合クリエイティブカンパニー" img='/images/23.png' right />
-        <Block title="チャレキャラ2019" description="共有メモアプリ「Passtick」を制作し、Excite賞を受賞" img='/images/challecara.png' />
+        <Block
+          title="23株式会社"
+          description="スタートアップから自治体まで、あらゆる挑戦に伴走する総合クリエイティブカンパニー"
+          img="/images/23.png"
+          link={{
+            href: 'https://23-creative.co.jp/',
+            text: 'HPはこちら',
+            width: 180,
+          }}
+          right
+        />
+        <Block
+          title="チャレキャラ2019"
+          description="共有メモアプリ「Passtick」を制作し、Excite賞を受賞"
+          img="/images/challecara.png"
+          link={{
+            href: '/product/passtick',
+            text: 'Passtickについて',
+            width: 220,
+          }}
+        />
       </Grid>
       <CustomSpacer height={50} />
     </Layout>
@@ -38,28 +58,43 @@ interface IBlockProps {
   title: string;
   description: string;
   img: string;
+  link?: {
+    href: string;
+    text: string;
+    width: number;
+  };
 }
 
-const _Block: FC<IBlockProps> = ({ width, right, title, description, img }) => {
+const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }) => {
   const bp = width === 'xl' || width === 'lg' || width === 'md';
   if (bp) {
     if (right === true) {
       return (
-        <div style={{ position: "relative", width: "100%", marginBottom: 80 }}>
-          <CustomImage width="70%" src={img} alt={title} style={{ float: "right" }} />
-          <div style={{ position: "absolute", top: 10, right: '62%' }}>
-            <h1 style={{ color: "#008CD6" }}>{title}</h1>
+        <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
+          <CustomImage width="70%" src={img} alt={title} style={{ float: 'right' }} />
+          <div style={{ position: 'absolute', top: 10, right: '62%' }}>
+            <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
+            {link && (
+              <Link href={link.href} style={{ width: link.width, marginTop: 30 }}>
+                {link.text} &rarr;
+              </Link>
+            )}
           </div>
         </div>
       );
     } else {
       return (
-        <div style={{ position: "relative", width: "100%", marginBottom: 80 }}>
+        <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
           <CustomImage width="70%" src={img} alt={title} />
-          <div style={{ position: "absolute", top: 10, left: '62%' }}>
-            <h1 style={{ color: "#008CD6" }}>{title}</h1>
+          <div style={{ position: 'absolute', top: 10, left: '62%' }}>
+            <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
+            {link && (
+              <Link href={link.href} style={{ width: link.width, marginTop: 30 }}>
+                &larr; {link.text}
+              </Link>
+            )}
           </div>
         </div>
       );
@@ -69,13 +104,18 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img }) => {
       <div style={{ marginBottom: 50 }}>
         <CustomImage src={img} alt={title} />
         <div style={{ marginTop: 20 }}>
-          <h1 style={{ color: "#008CD6" }}>{title}</h1>
+          <h1 style={{ color: '#008CD6' }}>{title}</h1>
           <p>{description}</p>
+          {link && (
+            <Link href={link.href} style={{ width: link.width, marginTop: 30, marginLeft: 10 }}>
+              {link.text} &rarr;
+            </Link>
+          )}
         </div>
       </div>
     );
   }
-}
+};
 const Block = withWidth()(_Block);
 
 export default Home;
