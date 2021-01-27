@@ -9,13 +9,13 @@ interface Props {
 
 const LinkCard: FC<Props> = ({ href, children, style }) => {
   return (
-    <Link href={href}>
-      <a>
-        <div className={LinkStyle.link} style={style}>
+    <div className={LinkStyle.link} style={style}>
+      <Link href={href}>
+        <a style={{ width: '100%' }}>
           <p>{children}</p>
-        </div>
-      </a>
-    </Link>
+        </a>
+      </Link>
+    </div>
   );
 };
 
