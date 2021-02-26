@@ -106,11 +106,11 @@ const AccountSection: FC = () => {
         <span style={{ marginRight: 10 }}>
           <i className="fab fa-github"></i>&nbsp;GitHub:
         </span>
-        <CustomLink title="https://github.com/Alesion30" href="https://github.com/Alesion30" />
+        <CustomLink title="https://github.com/Alesion30" target={true} href="https://github.com/Alesion30" />
       </p>
       <p>
         <span style={{ marginRight: 10 }}>Qiita:</span>
-        <CustomLink title="https://qiita.com/Alesion30" href="https://qiita.com/Alesion30" />
+        <CustomLink title="https://qiita.com/Alesion30" target={true} href="https://qiita.com/Alesion30" />
       </p>
       <p>
         <span style={{ marginRight: 10 }}>

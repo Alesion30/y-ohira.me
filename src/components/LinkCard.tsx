@@ -5,20 +5,32 @@ import classNames from 'classnames';
 
 interface Props {
   href: string;
+  target?: boolean;
   title: string;
   description: string;
   active?: boolean;
 }
 
-const LinkCard: FC<Props> = ({ href, title, description, active }) => {
-  return (
-    <Link href={href}>
-      <a className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}>
-        <h3>{title} &rarr;</h3>
-        <p>{description}</p>
-      </a>
-    </Link>
-  );
+const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
+  if (target) {
+    return (
+      <Link href={href}>
+        <a target="_blank" rel="noopener noreferrer" className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}>
+          <h3>{title} &rarr;</h3>
+          <p>{description}</p>
+        </a>
+      </Link>
+    );
+  } else {
+    return (
+      <Link href={href}>
+        <a className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}>
+          <h3>{title} &rarr;</h3>
+          <p>{description}</p>
+        </a>
+      </Link>
+    );
+  }
 };
 
 export default LinkCard;

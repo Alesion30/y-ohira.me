@@ -31,6 +31,7 @@ const Home: NextPage = () => {
           img="/images/23.png"
           link={{
             href: 'https://23-creative.co.jp/',
+            target: true,
             text: 'HPはこちら',
             width: 180,
           }}
@@ -52,6 +53,7 @@ const Home: NextPage = () => {
           img="/images/gleap.png"
           link={{
             href: 'https://gleap.tech/',
+            target: true,
             text: 'HPはこちら',
             width: 180,
           }}
@@ -71,6 +73,7 @@ interface IBlockProps {
   img: string;
   link?: {
     href: string;
+    target?: boolean;
     text: string;
     width: number;
   };
@@ -87,7 +90,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
             {link && (
-              <LinkButton href={link.href} style={{ width: link.width, marginTop: 30 }}>
+              <LinkButton href={link.href} target={link.target} style={{ width: link.width, marginTop: 30 }}>
                 {link.text} &rarr;
               </LinkButton>
             )}
@@ -102,7 +105,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
             {link && (
-              <LinkButton href={link.href} style={{ width: link.width, marginTop: 30 }}>
+              <LinkButton href={link.href} target={link.target} style={{ width: link.width, marginTop: 30 }}>
                 &larr; {link.text}
               </LinkButton>
             )}
@@ -118,7 +121,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
           <h1 style={{ color: '#008CD6' }}>{title}</h1>
           <p>{description}</p>
           {link && (
-            <LinkButton href={link.href} style={{ width: link.width, marginTop: 30, marginLeft: 10 }}>
+            <LinkButton href={link.href} target={link.target} style={{ width: link.width, marginTop: 30, marginLeft: 10 }}>
               {link.text} &rarr;
             </LinkButton>
           )}

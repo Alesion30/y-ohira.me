@@ -56,6 +56,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
                 <CustomLinkCard href="/blog" title="Tech Blog" description="技術ブログ" />
                 <LinkCard
                   href="https://github.com/Alesion30"
+                  target={true}
                   title="GitHub Account"
                   description="Githubのアカウントはこちら"
                 />
