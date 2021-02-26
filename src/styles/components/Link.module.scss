@@ -2,7 +2,6 @@ $main-color: #008CD6;
 
 .link {
   flex-basis: 45%;
-  padding: 10px 20px;
   text-align: left;
   color: inherit;
   background-color: #fff;
@@ -21,6 +20,7 @@ $main-color: #008CD6;
 
 .link p {
   margin: 0;
+  padding: 10px 20px;
   font-size: 1.25rem;
   line-height: 1.5;
 }
