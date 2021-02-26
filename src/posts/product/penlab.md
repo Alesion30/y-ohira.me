@@ -2,6 +2,7 @@
 title: "PenLab"
 description: "学習時間記録ツール"
 image: "/images/product/penlab.gif"
+type: 2
 sort: 5
 ---
 

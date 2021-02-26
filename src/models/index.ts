@@ -13,6 +13,7 @@ export interface PostList {
   description?: string;
   image?: string;
   sort?: number;
+  type?: number; // 1:仕事 2:個人
 }
 
 export interface Blog extends BlogList {

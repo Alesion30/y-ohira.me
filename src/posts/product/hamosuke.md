@@ -2,6 +2,7 @@
 title: "はもスケ"
 description: "予定管理アプリ"
 image: "/images/product/hamosuke.gif"
+type: 2
 sort: 6
 ---
 

@@ -19,20 +19,38 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
       <h1 className={TopSectionStyle.title}>
         <span className={TopSectionStyle.highlight}>PRODUCT</span>
       </h1>
-      <p className={TopSectionStyle.description}>アプリ・仕事</p>
+      <p className={TopSectionStyle.description}>今まで作ってきたアプリ</p>
       <CustomSpacer height={30} />
+      <p className={TopSectionStyle.description}>受注案件</p>
       <Grid container direction="row" justify="center" alignItems="center">
         {allPostsData.map((post) => (
-          <ProductImage
-            key={post.id}
-            href={`/product/${post.id}`}
-            title={post.title ?? ''}
-            description={post.description ?? ''}
-            src={post.image ?? ''}
-          />
+          post.type == 1 && (
+            <ProductImage
+              key={post.id}
+              href={`/product/${post.id}`}
+              title={post.title ?? ''}
+              description={post.description ?? ''}
+              src={post.image ?? ''}
+            />
+          )
         ))}
       </Grid>
       <CustomSpacer height={50} />
+      <p className={TopSectionStyle.description}>個人制作</p>
+      <Grid container direction="row" justify="center" alignItems="center">
+        {allPostsData.map((post) => (
+          post.type == 2 && (
+            <ProductImage
+              key={post.id}
+              href={`/product/${post.id}`}
+              title={post.title ?? ''}
+              description={post.description ?? ''}
+              src={post.image ?? ''}
+            />
+          )
+        ))}
+      </Grid>
+      <CustomSpacer height={80} />
     </Layout>
   );
 };
