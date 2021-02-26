@@ -38,6 +38,16 @@ const Home: NextPage = () => {
           right
         />
         <Block
+          title="受注案件・個人開発"
+          description="Laravel・Reactを用いたフルスタック開発をはじめ、Flutterを用いたアプリ開発やWordPressを用いたCMS運用を行なっております"
+          img="/images/work.png"
+          link={{
+            href: '/product',
+            text: 'PRODUCT一覧はこちら',
+            width: 300,
+          }}
+        />
+        <Block
           title="チャレキャラ2019"
           description="共有メモアプリ「Passtick」を制作し、Excite賞を受賞"
           img="/images/challecara.png"
@@ -46,6 +56,7 @@ const Home: NextPage = () => {
             text: 'Passtickについて',
             width: 220,
           }}
+          right
         />
         <Block
           title="GLEAP"
@@ -57,7 +68,6 @@ const Home: NextPage = () => {
             text: 'HPはこちら',
             width: 180,
           }}
-          right
         />
       </Grid>
       <CustomSpacer height={50} />
@@ -100,8 +110,8 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
     } else {
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
-          <CustomImage width="70%" src={img} alt={title} />
-          <div style={{ position: 'absolute', top: 10, left: '62%' }}>
+          <CustomImage width="60%" src={img} alt={title} />
+          <div style={{ position: 'absolute', top: 10, left: '64%' }}>
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
             {link && (

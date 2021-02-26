@@ -36,7 +36,7 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
         ))}
       </Grid>
       <CustomSpacer height={50} />
-      <p className={TopSectionStyle.description}>個人制作</p>
+      <p className={TopSectionStyle.description}>個人開発</p>
       <Grid container direction="row" justify="center" alignItems="center">
         {allPostsData.map((post) => (
           post.type == 2 && (
