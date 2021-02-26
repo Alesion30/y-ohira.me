@@ -34,11 +34,11 @@ const About: NextPage<Props> = ({ skills }) => {
           <AccountSection />
         </Grid>
       </Grid>
-      <CustomSpacer height={100} />
+      <CustomSpacer height={120} />
       <h1 className={TopSectionStyle.title}>
         <span className={TopSectionStyle.highlight}>Skills & Languages</span>
       </h1>
-      <CustomSpacer height={30} />
+      <CustomSpacer height={50} />
       <SkillSection skills={skills} />
       <CustomSpacer height={50} />
     </Layout>
@@ -51,9 +51,11 @@ export const getStaticProps: GetStaticProps = async () => {
     { name: 'TypeScript', star: 5 },
     { name: 'Laravel', star: 5 },
     { name: 'Docker', star: 4 },
+    { name: 'Flutter', star: 4 },
     { name: 'python', star: 3 },
     { name: 'ReactNative', star: 4 },
-    { name: 'jQuery', star: 4 },
+    { name: 'jQuery', star: 5 },
+    { name: 'WordPress', star: 4 },
     { name: 'Nuxt(Vue)', star: 3 },
     { name: 'AWS', star: 3 },
     { name: 'Firebase', star: 4 },
@@ -130,7 +132,7 @@ const SkillSection: FC<{ skills: Skill[] }> = ({ skills }) => {
       <Grid container justify="center" alignItems="center" spacing={10}>
         <Grid item>
           {data[0].map((skill) => (
-            <p key={`skill_${skill.name}`}>
+            <p style={{ marginBottom: 20 }} key={`skill_${skill.name}`}>
               <span style={{ marginRight: 20 }}>{skill.name}</span>
               <Stars star={skill.star} />
             </p>
@@ -138,7 +140,7 @@ const SkillSection: FC<{ skills: Skill[] }> = ({ skills }) => {
         </Grid>
         <Grid item>
           {data[1].map((skill) => (
-            <p key={`skill_${skill.name}`}>
+            <p style={{ marginBottom: 20 }} key={`skill_${skill.name}`}>
               <span style={{ marginRight: 20 }}>{skill.name}</span>
               <Stars star={skill.star} />
             </p>
@@ -150,7 +152,7 @@ const SkillSection: FC<{ skills: Skill[] }> = ({ skills }) => {
     return (
       <Grid container direction="column" justify="center" alignItems="center" spacing={5} style={{ marginTop: 20 }}>
         {skills.map((skill) => (
-          <p key={`skill_${skill.name}`}>
+          <p style={{ marginBottom: 10 }} key={`skill_${skill.name}`}>
             <span style={{ marginRight: 20 }}>{skill.name}</span>
             <Stars star={skill.star} />
           </p>
