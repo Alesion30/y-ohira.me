@@ -29,7 +29,9 @@ const PostPageLayout: NextPage<Props> = ({ postData }) => {
           </h1>
           <p className={TopSectionStyle.description}>{postData.description ?? ''}</p>
           <CustomSpacer height={30} />
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div style={{ fontSize: '1.2rem' }}>
+            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          </div>
         </article>
         <CustomSpacer height={70} />
       </Layout>

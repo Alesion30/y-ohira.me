@@ -1,7 +1,7 @@
 ---
-title: "自作PC"
-description: "RyzenのCPUを用いたゲーミングPCの組み立て"
-image: "/images/hobby/mypc.png"
+title: '自作PC'
+description: 'RyzenのCPUを用いたゲーミングPCの組み立て'
+image: '/images/hobby/mypc.png'
 sort: 1
 ---
 
