@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
+import { motion } from 'framer-motion';
 import theme from '~/layouts/theme';
 import Header from '~/layouts/components/Header';
 import Footer from '~/layouts/components/Footer';
@@ -26,37 +27,44 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
       <Head>
         <title>{title ?? 'ポートフォリオ'}</title>
       </Head>
-      <Container maxWidth="md">
-        <Header active={menuOpen} onClick={() => setMenuOpen(!menuOpen)} close={menuOpen} />
-        <div style={{ minHeight: '100vh', paddingTop: marginTop ?? 150 }}>{children}</div>
-        <ScrollTopButton />
-        <Footer />
-      </Container>
-      <Drawer
-        anchor="top"
-        open={menuOpen}
-        onClose={() => setMenuOpen(false)}
-        transitionDuration={{ enter: 800, exit: 200 }}
+      <motion.div
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4 }}
       >
-        <div className={MenuStyle.menu}>
-          <CustomSpacer height={150} />
-          <Container maxWidth="md">
-            <Grid container direction="row" justify="center" alignItems="center">
-              <CustomLinkCard href="/" title="Home" description="トップページ" />
-              <CustomLinkCard href="/about" title="About" description="経歴・スキルなど" />
-              <CustomLinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
-              <CustomLinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
-              <CustomLinkCard href="/blog" title="Tech Blog" description="技術ブログ" />
-              <LinkCard
-                href="https://github.com/Alesion30"
-                title="GitHub Account"
-                description="Githubのアカウントはこちら"
-              />
-            </Grid>
-          </Container>
-          <CustomSpacer height={120} />
-        </div>
-      </Drawer>
+        <Container maxWidth="md">
+          <Header active={menuOpen} onClick={() => setMenuOpen(!menuOpen)} close={menuOpen} />
+          <div style={{ minHeight: '100vh', paddingTop: marginTop ?? 150 }}>{children}</div>
+          <ScrollTopButton />
+          <Footer />
+        </Container>
+        <Drawer
+          anchor="top"
+          open={menuOpen}
+          onClose={() => setMenuOpen(false)}
+          transitionDuration={{ enter: 800, exit: 200 }}
+        >
+          <div className={MenuStyle.menu}>
+            <CustomSpacer height={150} />
+            <Container maxWidth="md">
+              <Grid container direction="row" justify="center" alignItems="center">
+                <CustomLinkCard href="/" title="Home" description="トップページ" />
+                <CustomLinkCard href="/about" title="About" description="経歴・スキルなど" />
+                <CustomLinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
+                <CustomLinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
+                <CustomLinkCard href="/blog" title="Tech Blog" description="技術ブログ" />
+                <LinkCard
+                  href="https://github.com/Alesion30"
+                  title="GitHub Account"
+                  description="Githubのアカウントはこちら"
+                />
+              </Grid>
+            </Container>
+            <CustomSpacer height={120} />
+          </div>
+        </Drawer>
+      </motion.div>
     </ThemeProvider>
   );
 };

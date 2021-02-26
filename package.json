@@ -17,6 +17,7 @@
     "@types/classnames": "^2.2.11",
     "@types/react-scroll": "^1.8.2",
     "classnames": "^2.2.6",
+    "framer-motion": "^3.7.0",
     "gray-matter": "^4.0.2",
     "moment": "^2.29.1",
     "next": "10.0.4",

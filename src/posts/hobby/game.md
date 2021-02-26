@@ -1,6 +1,6 @@
 ---
 title: "ゲーム"
-description: "ポケモンのプレイ時間は1000時間超"
+description: "ポケモンとモンハンが特に好きです"
 image: "/images/hobby/game.png"
 sort: 5
 ---
