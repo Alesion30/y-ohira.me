@@ -1,7 +1,7 @@
 ---
 title: 'ピアノ'
 description: 'ピアニスト（初心者）'
-image: 'https://firebasestorage.googleapis.com/v0/b/portfolio-41c9f.appspot.com/o/hobby%2Fpiano.gif?alt=media&token=fba0fa59-ce18-45d8-ad46-4153564ddeba'
+image: '/images/hobby/piano.gif'
 sort: 5
 ---
 
