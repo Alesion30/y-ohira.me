@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NextPage } from 'next';
-import appConfig from '~/config/app.ts';
+import appConfig from '~/config/app';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import { motion } from 'framer-motion';

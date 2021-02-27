@@ -1,5 +1,5 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
-import appConfig from '~/config/app.ts';
+import appConfig from '~/config/app';
 
 class Document extends NextDocument {
   render() {
