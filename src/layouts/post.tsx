@@ -33,6 +33,7 @@ const PostPageLayout: NextPage<Props> = ({ post, type }) => {
       <Layout>
         <Head>
           <title>{title}</title>
+          <meta property="og:title" content={title} />
         </Head>
         <article>
           <LinkButton onClick={() => Router.back()} style={{ width: 110 }}>

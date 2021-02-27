@@ -1,4 +1,5 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+import appConfig from '~/config/app.ts';
 
 class Document extends NextDocument {
   render() {
@@ -6,9 +7,16 @@ class Document extends NextDocument {
       <Html lang="ja">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <meta name="description" content="Ohira Yutaのポートフォリオ" />
-          <meta name="theme-color" content="#008CD6" />
+          <meta name="description" content={appConfig.description} />
+          <meta name="theme-color" content={appConfig.themeColor} />
           <link rel="manifest" href="/manifest.json" />
+
+          {/* OGP */}
+          <meta property="og:type" content={appConfig.type} />
+          <meta property="og:description" content={appConfig.description} />
+          <meta property="og:url" content={appConfig.url} />
+          <meta property="og:site_name" content={appConfig.siteName} />
+          <meta property="og:image" content={appConfig.image} />
 
           {/* 検索結果に表示されないようにする */}
           <meta name="robots" content="noindex" />

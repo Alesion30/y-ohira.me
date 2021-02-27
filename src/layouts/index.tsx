@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NextPage } from 'next';
+import appConfig from '~/config/app.ts';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import { motion } from 'framer-motion';
@@ -21,11 +22,12 @@ interface Props {
 
 const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const baseTitle = 'Web Engineer from Kyushu University';
+  const siteTitle = title ? `${title} | ${appConfig.title}` : `${appConfig.title}`
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>{title ? `${title} | ${baseTitle}` : `${baseTitle}`}</title>
+        <title>{siteTitle}</title>
+        <meta property="og:title" content={siteTitle} />
       </Head>
       <motion.div
         animate={{ opacity: 1 }}
