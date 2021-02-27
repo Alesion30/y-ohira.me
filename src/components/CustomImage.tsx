@@ -4,14 +4,16 @@ interface Props {
   src: string;
   alt: string;
   width?: number | string;
+  height?: number | string;
   style?: CSSProperties;
 }
 
-const CustomImage: FC<Props> = ({ src, alt, width, style }) => {
+const CustomImage: FC<Props> = ({ src, alt, width, height, style }) => {
   const _width = width ?? '100%';
+  const _height = height ?? 'auto';
   return (
     <div style={{ width: _width, ...style }}>
-      <img src={src} alt={alt} style={{ width: '100%', height: 'auto' }} />
+      <img src={src} alt={alt} style={{ width: '100%', height: _height }} />
     </div>
   );
 };

@@ -100,7 +100,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
     if (right === true) {
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
-          <CustomImage width="70%" src={img} alt={title} style={{ float: 'right' }} />
+          <CustomImage width="70%" height="100%" src={img} alt={title} style={{ float: 'right' }} />
           <div style={{ position: 'absolute', top: 10, left: 0, right: '62%' }}>
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
@@ -115,7 +115,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
     } else {
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
-          <CustomImage width="60%" src={img} alt={title} />
+          <CustomImage width="60%" height="100%" src={img} alt={title} />
           <div style={{ position: 'absolute', top: 10, left: '64%' }}>
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
             <p>{description}</p>
