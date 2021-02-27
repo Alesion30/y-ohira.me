@@ -32,7 +32,7 @@ const Hobby: NextPage<Props> = ({ allPostsData }) => {
           />
         ))}
       </Grid>
-      <CustomSpacer height={50} />
+      <CustomSpacer height={80} />
     </Layout>
   );
 };

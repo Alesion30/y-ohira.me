@@ -40,7 +40,7 @@ const About: NextPage<Props> = ({ skills }) => {
       </h1>
       <CustomSpacer height={50} />
       <SkillSection skills={skills} />
-      <CustomSpacer height={50} />
+      <CustomSpacer height={80} />
     </Layout>
   );
 };
