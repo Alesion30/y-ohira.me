@@ -22,7 +22,6 @@ const Home: NextPage = () => {
         <LinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
         <LinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
         <LinkCard href="https://github.com/Alesion30" target={true} title="GitHub" description="GitHubのアカウントはこちら" />
-        {/* <LinkCard href="/blog" title="Tech Blog" description="技術ブログ" /> */}
       </Grid>
       <CustomSpacer height={70} />
       <Grid container direction="column" justify="center" alignItems="center">

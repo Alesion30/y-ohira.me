@@ -53,13 +53,6 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
                 <CustomLinkCard href="/about" title="About" description="経歴・スキルなど" />
                 <CustomLinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
                 <CustomLinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
-                {/* <CustomLinkCard href="/blog" title="Tech Blog" description="技術ブログ" /> */}
-                {/* <LinkCard
-                  href="https://github.com/Alesion30"
-                  target={true}
-                  title="GitHub Account"
-                  description="Githubのアカウントはこちら"
-                /> */}
               </Grid>
             </Container>
             <CustomSpacer height={120} />
