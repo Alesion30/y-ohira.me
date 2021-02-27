@@ -11,6 +11,12 @@ class Document extends NextDocument {
           <meta name="theme-color" content={appConfig.themeColor} />
           <link rel="manifest" href="/manifest.json" />
 
+          {/* apple-touch-icon */}
+          <link rel="apple-touch-icon" href="/images/icons/icon-72x72.png" sizes="72x72" />
+          <link rel="apple-touch-icon" href="/images/icons/icon-96x96.png" sizes="96x96" />
+          <link rel="apple-touch-icon" href="/images/icons/icon-128x128.png" sizes="128x128" />
+          <link rel="apple-touch-icon" href="/images/icons/icon-144x144.png" sizes="144x144" />
+
           {/* OGP */}
           <meta property="og:type" content={appConfig.type} />
           <meta property="og:description" content={appConfig.description} />
