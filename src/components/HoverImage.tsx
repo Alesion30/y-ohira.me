@@ -26,8 +26,8 @@ const HoverImage: FC<Props> = ({ children, src, alt, onClick, width, height, mar
       className={HoverImageStyle.hoverImg}
       style={{ width: _width, height: _height, margin: _margin, cursor: _cursor, ...style }}
     >
-      <img src={src} alt={alt} style={{ width: '100%', height: 'auto' }} />
-      <div className={HoverImageStyle.hoverImgMask}>
+      <img src={src} alt={alt} style={{ width: _width, height: _height }} />
+      <div className={HoverImageStyle.hoverImgMask} style={{ width: _width, height: _height }}>
         <div className={HoverImageStyle.hoverImgCaptionWrapper}>
           <div
             className={HoverImageStyle.hoverImgCaption}
