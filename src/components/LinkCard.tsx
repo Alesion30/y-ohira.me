@@ -16,7 +16,7 @@ const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
     return (
       <Link href={href}>
         <a target="_blank" rel="noopener noreferrer" className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}>
-          <h3>{title} &rarr;</h3>
+          <p className={LinkCardStyle.title}>{title} &rarr;</p>
           <p>{description}</p>
         </a>
       </Link>
@@ -25,7 +25,7 @@ const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
     return (
       <Link href={href}>
         <a className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}>
-          <h3>{title} &rarr;</h3>
+          <p className={LinkCardStyle.title}>{title} &rarr;</p>
           <p>{description}</p>
         </a>
       </Link>
