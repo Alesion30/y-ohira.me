@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         <Block
           title="23株式会社"
           description="スタートアップから自治体まで、あらゆる挑戦に伴走する総合クリエイティブカンパニー"
-          img="/images/23.png"
+          img="https://firebasestorage.googleapis.com/v0/b/portfolio-41c9f.appspot.com/o/top%2F23.png?alt=media&token=ecbb8040-aead-484a-aad2-711d39ab1623"
           link={{
             href: 'https://23-creative.co.jp/',
             target: true,
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <Block
           title="受注案件・個人開発"
           description="Laravel・Reactを用いたフルスタック開発をはじめ、Flutterを用いたアプリ開発やWordPressを用いたCMS運用を行なっております"
-          img="/images/work.png"
+          img="https://firebasestorage.googleapis.com/v0/b/portfolio-41c9f.appspot.com/o/top%2Fwork.png?alt=media&token=9550959e-a786-4ac1-bf42-d0ac98155569"
           link={{
             href: '/product',
             text: 'PRODUCT一覧はこちら',
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
         <Block
           title="チャレキャラ2019"
           description="共有メモアプリ「Passtick」を制作し、Excite賞を受賞"
-          img="/images/challecara.png"
+          img="https://firebasestorage.googleapis.com/v0/b/portfolio-41c9f.appspot.com/o/top%2Fchallecara.png?alt=media&token=08079175-8354-46bf-8ab1-216d77be3d73"
           link={{
             href: '/product/passtick',
             text: 'Passtickについて',
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
         <Block
           title="GLEAP"
           description="九大発 プログラミングサークル"
-          img="/images/gleap.png"
+          img="https://firebasestorage.googleapis.com/v0/b/portfolio-41c9f.appspot.com/o/top%2Fgleap.png?alt=media&token=cc45c860-b9c5-43c9-8bc3-36be933e5e36"
           link={{
             href: 'https://gleap.tech/',
             target: true,

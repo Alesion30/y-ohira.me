@@ -1,7 +1,7 @@
 ---
 title: '漫画・アニメ'
 description: 'ジャンプ系の漫画をよく読みます'
-image: '/images/hobby/anime.png'
+image: 'https://firebasestorage.googleapis.com/v0/b/portfolio-41c9f.appspot.com/o/hobby%2Fanime.png?alt=media&token=58df509c-b548-48e4-91f0-8f7ff4c6338e'
 sort: 4
 ---
 
