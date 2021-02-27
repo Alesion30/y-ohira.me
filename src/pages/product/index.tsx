@@ -23,32 +23,34 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
       <CustomSpacer height={30} />
       <p className={TopSectionStyle.description}>受注案件</p>
       <Grid container direction="row" justify="center" alignItems="center">
-        {allPostsData.map((post) => (
-          post.type == 1 && (
-            <ProductImage
-              key={post.id}
-              href={`/product/${post.id}`}
-              title={post.title ?? ''}
-              description={post.description ?? ''}
-              src={post.image ?? ''}
-            />
-          )
-        ))}
+        {allPostsData.map(
+          (post) =>
+            post.type == 1 && (
+              <ProductImage
+                key={post.id}
+                href={`/product/${post.id}`}
+                title={post.title ?? ''}
+                description={post.description ?? ''}
+                src={post.image ?? ''}
+              />
+            )
+        )}
       </Grid>
       <CustomSpacer height={50} />
       <p className={TopSectionStyle.description}>個人開発</p>
       <Grid container direction="row" justify="center" alignItems="center">
-        {allPostsData.map((post) => (
-          post.type == 2 && (
-            <ProductImage
-              key={post.id}
-              href={`/product/${post.id}`}
-              title={post.title ?? ''}
-              description={post.description ?? ''}
-              src={post.image ?? ''}
-            />
-          )
-        ))}
+        {allPostsData.map(
+          (post) =>
+            post.type == 2 && (
+              <ProductImage
+                key={post.id}
+                href={`/product/${post.id}`}
+                title={post.title ?? ''}
+                description={post.description ?? ''}
+                src={post.image ?? ''}
+              />
+            )
+        )}
       </Grid>
       <CustomSpacer height={80} />
     </Layout>

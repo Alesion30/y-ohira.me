@@ -22,7 +22,7 @@ interface Props {
 
 const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const siteTitle = title ? `${title} | ${appConfig.title}` : `${appConfig.title}`
+  const siteTitle = title ? `${title} | ${appConfig.title}` : `${appConfig.title}`;
   return (
     <ThemeProvider theme={theme}>
       <Head>

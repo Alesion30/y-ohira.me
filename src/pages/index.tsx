@@ -21,7 +21,12 @@ const Home: NextPage = () => {
         <LinkCard href="/about" title="About" description="経歴・スキルなど" />
         <LinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
         <LinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
-        <LinkCard href="https://github.com/Alesion30" target={true} title="GitHub" description="GitHubのアカウントはこちら" />
+        <LinkCard
+          href="https://github.com/Alesion30"
+          target={true}
+          title="GitHub"
+          description="GitHubのアカウントはこちら"
+        />
       </Grid>
       <CustomSpacer height={70} />
       <Grid container direction="column" justify="center" alignItems="center">
@@ -131,7 +136,11 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
           <h1 style={{ color: '#008CD6' }}>{title}</h1>
           <p>{description}</p>
           {link && (
-            <LinkButton href={link.href} target={link.target} style={{ width: link.width, marginTop: 30, marginLeft: 10 }}>
+            <LinkButton
+              href={link.href}
+              target={link.target}
+              style={{ width: link.width, marginTop: 30, marginLeft: 10 }}
+            >
               {link.text} &rarr;
             </LinkButton>
           )}

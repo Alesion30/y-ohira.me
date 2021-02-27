@@ -19,7 +19,7 @@ const LinkCard: FC<Props> = ({ href, children, target, style, onClick }) => {
           </a>
         </Link>
       </div>
-    )
+    );
   } else if (href) {
     return (
       <div className={LinkStyle.link} style={style}>
@@ -29,7 +29,7 @@ const LinkCard: FC<Props> = ({ href, children, target, style, onClick }) => {
           </a>
         </Link>
       </div>
-    )
+    );
   } else {
     return (
       <div className={LinkStyle.link} style={style}>
@@ -37,7 +37,7 @@ const LinkCard: FC<Props> = ({ href, children, target, style, onClick }) => {
           <p>{children}</p>
         </a>
       </div>
-    )
+    );
   }
 };
 
