@@ -12,7 +12,6 @@ import Drawer from '@material-ui/core/Drawer';
 import MenuStyle from '~/styles/components/Menu.module.scss';
 import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
-import LinkCard from '~/components/LinkCard';
 import CustomLinkCard from '~/layouts/components/CustomLinkCard';
 
 interface Props {
@@ -22,10 +21,11 @@ interface Props {
 
 const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const baseTitle = 'Web Engineer from Kyushu University';
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>{title ?? 'ポートフォリオ'}</title>
+        <title>{title ? `${title} | ${baseTitle}` : `${baseTitle}`}</title>
       </Head>
       <motion.div
         animate={{ opacity: 1 }}

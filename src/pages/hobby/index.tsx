@@ -15,7 +15,7 @@ interface Props {
 
 const Hobby: NextPage<Props> = ({ allPostsData }) => {
   return (
-    <Layout>
+    <Layout title="HOBBY">
       <h1 className={TopSectionStyle.title}>
         <span className={TopSectionStyle.highlight}>HOBBY</span>
       </h1>

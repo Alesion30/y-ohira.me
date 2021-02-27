@@ -16,7 +16,7 @@ interface Props {
 
 const About: NextPage<Props> = ({ skills }) => {
   return (
-    <Layout>
+    <Layout title="ABOUT">
       <h1 className={TopSectionStyle.title}>
         <span className={TopSectionStyle.highlight}>PROFILE</span>
       </h1>
