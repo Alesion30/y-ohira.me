@@ -14,6 +14,7 @@ export interface PostList {
   image?: string;
   sort?: number;
   type?: number; // 1:仕事 2:個人
+  tags?: string[]; // タグ
 }
 
 export interface Blog extends BlogList {

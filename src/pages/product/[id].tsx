@@ -1,14 +1,14 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
 import { getAllPostIds, getPostData } from '~/libs/posts';
 import { Post } from '~/models';
-import PostPageLayout from '~/layouts/PostPage';
+import PostPageLayout from '~/layouts/post';
 
 interface Props {
   postData: Post | null;
 }
 
 const PostPage: NextPage<Props> = ({ postData }) => {
-  return <PostPageLayout postData={postData} />;
+  return <PostPageLayout type="product" post={postData} />;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

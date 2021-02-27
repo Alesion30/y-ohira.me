@@ -4,6 +4,12 @@ description: "エアコンのリモート制御アプリ"
 image: "/images/product/awecon.png"
 type: 2
 sort: 2
+tags:
+  - "React"
+  - "TypeScript"
+  - "Flutter"
+  - "NodeJS"
+  - "Arduino"
 ---
 
 <img src="/images/product/awecon.png" width="100%" />
