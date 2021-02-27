@@ -10,6 +10,9 @@ class Document extends NextDocument {
           <meta name="theme-color" content="#008CD6" />
           <link rel="manifest" href="/manifest.json" />
 
+          {/* 検索結果に表示されないようにする */}
+          <meta name="robots" content="noindex" />
+
           {/* Google Fonts */}
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
