@@ -34,6 +34,8 @@ const PostPageLayout: NextPage<Props> = ({ post, type }) => {
         <Head>
           <title>{title}</title>
           <meta property="og:title" content={title} />
+          {post.description && <meta property="og:description" content={post.description} />}
+          {post.image && <meta property="og:image" content={post.image} />}
         </Head>
         <article>
           <LinkButton onClick={() => Router.back()} style={{ width: 110 }}>
