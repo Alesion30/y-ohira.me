@@ -4,6 +4,7 @@ import CustomSpacer from '~/components/CustomSpacer';
 import LinkCard from '~/components/LinkCard';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import Avatar from '@material-ui/core/Avatar';
 
 interface Props {
   statusCode: number;
@@ -23,13 +24,17 @@ const ErrorPageLayout: NextPage<Props> = ({ statusCode, errorMessage }) => {
       <div style={{ textAlign: 'center', marginTop: 100, marginBottom: 100 }}>
         <h1>{status}</h1>
         <p>{error}</p>
-        <CustomSpacer height={20} />
         <Grid container direction="row" justify="center" alignItems="center">
+          <Avatar alt="una" variant="square" src="/images/una.png" style={{ width: 200, height: 300 }} />
+        </Grid>
+        <CustomSpacer height={40} />
+        <Grid container direction="row" justify="space-around" alignItems="center">
           <LinkCard href="/" title="Home" description="トップページ" />
           <LinkCard href="/about" title="About" description="経歴・スキルなど" />
           <LinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
           <LinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
         </Grid>
+        <CustomSpacer height={20} />
       </div>
     </Container>
   );
