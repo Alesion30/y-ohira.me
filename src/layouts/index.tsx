@@ -37,7 +37,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
       >
         <Container maxWidth="md">
           <Header active={menuOpen} onClick={() => setMenuOpen(!menuOpen)} close={menuOpen} />
-          <div style={{ minHeight: '100vh', paddingTop: marginTop ?? 150 }}>{children}</div>
+          <div style={{ minHeight: '85vh', paddingTop: marginTop ?? 150 }}>{children}</div>
           <ScrollTopButton />
           <Footer />
         </Container>

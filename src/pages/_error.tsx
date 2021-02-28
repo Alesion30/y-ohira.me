@@ -1,11 +1,14 @@
 import React from 'react';
 import { NextPage, NextPageContext } from 'next';
+import ErrorPageLayout from '~/layouts/error';
 
 interface ErrorProps {
   statusCode: number;
 }
 const Error: NextPage<ErrorProps> = ({ statusCode }) => {
-  return <p>{statusCode ? `An error ${statusCode} occurred on server` : 'An error occurred on client'}</p>;
+  return (
+    <ErrorPageLayout statusCode={statusCode} />
+  );
 };
 
 Error.getInitialProps = async ({ res, err }: NextPageContext) => {
