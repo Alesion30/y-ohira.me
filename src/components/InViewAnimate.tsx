@@ -35,7 +35,7 @@ const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay, thr
         if (inView) isVisible = true;
         return (
           <div ref={ref}>
-            <AnimatePresence>
+            <AnimatePresence initial={false}>
               <motion.div
                 animate={isVisible ? 'open' : 'closed'}
                 variants={variants}
