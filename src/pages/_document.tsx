@@ -19,10 +19,8 @@ class Document extends NextDocument {
 
           {/* OGP */}
           <meta property="og:type" content={appConfig.type} />
-          <meta property="og:description" content={appConfig.description} />
           <meta property="og:url" content={appConfig.url} />
           <meta property="og:site_name" content={appConfig.siteName} />
-          <meta property="og:image" content={appConfig.image} />
 
           {/* 検索結果に表示されないようにする */}
           <meta name="robots" content="noindex" />

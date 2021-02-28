@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import { NextPage } from 'next';
 import Router from 'next/router';
 import Layout from '~/layouts/index';
-import Head from 'next/head';
 import { Post } from '~/models';
 import CustomSpacer from '~/components/CustomSpacer';
 import TopSectionStyle from '~/styles/components/TopSection.module.scss';
@@ -21,22 +20,16 @@ const PostPageLayout: NextPage<Props> = ({ post, type }) => {
   let title = '';
   switch (type) {
     case 'product':
-      title = `PRODUCT - ${postTitle}`;
+      title = `PRODUCT | ${postTitle}`;
       break;
     case 'hobby':
-      title = `HOBBY - ${postTitle}`;
+      title = `HOBBY | ${postTitle}`;
       break;
   }
 
   if (post) {
     return (
-      <Layout>
-        <Head>
-          <title>{title}</title>
-          <meta property="og:title" content={title} />
-          {post.description && <meta property="og:description" content={post.description} />}
-          {post.image && <meta property="og:image" content={post.image} />}
-        </Head>
+      <Layout og={{ title: title, description: post.description, image: post.image }}>
         <article>
           <LinkButton onClick={() => Router.back()} style={{ width: 110 }}>
             &larr; 戻る

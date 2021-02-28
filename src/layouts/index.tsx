@@ -18,17 +18,33 @@ import CustomLinkCard from '~/layouts/components/CustomLinkCard';
 interface Props {
   title?: string;
   marginTop?: number;
+  og?: OG;
 }
 
-const DefaultLayout: NextPage<Props> = ({ children, title, marginTop }) => {
+interface OG {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const DefaultLayout: NextPage<Props> = ({ children, title, marginTop, og }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const siteTitle = title ? `${title} | ${appConfig.title}` : `${appConfig.title}`;
+
+  // OGP情報
+  const ogtitle = og?.title ?? siteTitle;
+  const ogdescription = og?.description ?? appConfig.description;
+  const ogimage = og?.image ?? appConfig.image;
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>{siteTitle}</title>
-        <meta property="og:title" content={siteTitle} />
+        <title>{ogtitle}</title>
+        <meta property="og:title" content={ogtitle} />
+        <meta property="og:description" content={ogdescription} />
+        <meta property="og:image" content={ogimage} />
       </Head>
+
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
