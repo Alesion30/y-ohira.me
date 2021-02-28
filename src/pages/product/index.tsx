@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import { getAllPostsData } from '~/libs/posts';
 import { PostList } from '~/models';
 import InViewAnimate from '~/components/InViewAnimate';
+import breakpoint from '~/utils/breakpoint';
 
 interface Props {
   allPostsData: PostList[];
@@ -29,9 +30,8 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
         {allPostsData.map(
           (post) =>
             post.type == 1 && (
-              <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+              <InViewAnimate key={post.id} delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
                 <ProductImage
-                  key={post.id}
                   href={`/product/${post.id}`}
                   title={post.title ?? ''}
                   description={post.description ?? ''}
@@ -49,9 +49,8 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
         {allPostsData.map(
           (post) =>
             post.type == 2 && (
-              <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+              <InViewAnimate key={post.id} delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
                 <ProductImage
-                  key={post.id}
                   href={`/product/${post.id}`}
                   title={post.title ?? ''}
                   description={post.description ?? ''}
@@ -82,13 +81,15 @@ interface ProductImageProps {
   href: string;
 }
 const ProductImage: FC<ProductImageProps> = ({ src, title, description, href }) => {
+  const isSm = breakpoint('sm');
+  const width = isSm ? 400 : 300;
   return (
     <HoverImage
       onClick={() => Router.push(href)}
       src={src}
       alt={title}
-      width={400}
-      height={300}
+      width={width}
+      height={width * 0.75}
       margin={10}
       bottom={10}
       left={20}
