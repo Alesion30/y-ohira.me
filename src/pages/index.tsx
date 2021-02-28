@@ -9,6 +9,7 @@ import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 import withWidth from '@material-ui/core/withWidth';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
+import InViewAnimate from '~/components/InViewAnimate';
 
 const Home: NextPage = () => {
   return (
@@ -96,55 +97,62 @@ interface IBlockProps {
 
 const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }) => {
   const bp = width === 'xl' || width === 'lg' || width === 'md';
+
   if (bp) {
     if (right === true) {
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
-          <CustomImage width="70%" height="100%" src={img} alt={title} style={{ float: 'right' }} />
-          <div style={{ position: 'absolute', top: 10, left: 0, right: '62%' }}>
-            <h1 style={{ color: '#008CD6' }}>{title}</h1>
-            <p>{description}</p>
-            {link && (
-              <LinkButton href={link.href} target={link.target} style={{ width: link.width, marginTop: 30 }}>
-                {link.text} &rarr;
-              </LinkButton>
-            )}
-          </div>
+          <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-20%' }}>
+            <CustomImage width="70%" height="100%" src={img} alt={title} style={{ float: 'right' }} />
+            <div style={{ position: 'absolute', top: 10, left: 0, right: '62%' }}>
+              <h1 style={{ color: '#008CD6' }}>{title}</h1>
+              <p>{description}</p>
+              {link && (
+                <LinkButton href={link.href} target={link.target} style={{ width: link.width, marginTop: 30 }}>
+                  {link.text} &rarr;
+                </LinkButton>
+              )}
+            </div>
+          </InViewAnimate>
         </div>
       );
     } else {
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
-          <CustomImage width="60%" height="100%" src={img} alt={title} />
-          <div style={{ position: 'absolute', top: 10, left: '64%' }}>
-            <h1 style={{ color: '#008CD6' }}>{title}</h1>
-            <p>{description}</p>
-            {link && (
-              <LinkButton href={link.href} target={link.target} style={{ width: link.width, marginTop: 30 }}>
-                &larr; {link.text}
-              </LinkButton>
-            )}
-          </div>
+          <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '20%' }}>
+            <CustomImage width="60%" height="100%" src={img} alt={title} />
+            <div style={{ position: 'absolute', top: 10, left: '64%' }}>
+              <h1 style={{ color: '#008CD6' }}>{title}</h1>
+              <p>{description}</p>
+              {link && (
+                <LinkButton href={link.href} target={link.target} style={{ width: link.width, marginTop: 30 }}>
+                  &larr; {link.text}
+                </LinkButton>
+              )}
+            </div>
+          </InViewAnimate>
         </div>
       );
     }
   } else {
     return (
       <div style={{ marginBottom: 50 }}>
-        <CustomImage src={img} alt={title} />
-        <div style={{ marginTop: 20 }}>
-          <h1 style={{ color: '#008CD6' }}>{title}</h1>
-          <p>{description}</p>
-          {link && (
-            <LinkButton
-              href={link.href}
-              target={link.target}
-              style={{ width: link.width, marginTop: 30, marginLeft: 10 }}
-            >
-              {link.text} &rarr;
-            </LinkButton>
-          )}
-        </div>
+        <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-100%' }}>
+          <CustomImage src={img} alt={title} />
+          <div style={{ marginTop: 20 }}>
+            <h1 style={{ color: '#008CD6' }}>{title}</h1>
+            <p>{description}</p>
+            {link && (
+              <LinkButton
+                href={link.href}
+                target={link.target}
+                style={{ width: link.width, marginTop: 30, marginLeft: 10 }}
+              >
+                {link.text} &rarr;
+              </LinkButton>
+            )}
+          </div>
+        </InViewAnimate>
       </div>
     );
   }
