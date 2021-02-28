@@ -6,9 +6,7 @@ interface ErrorProps {
   statusCode: number;
 }
 const Error: NextPage<ErrorProps> = ({ statusCode }) => {
-  return (
-    <ErrorPageLayout statusCode={statusCode} />
-  );
+  return <ErrorPageLayout statusCode={statusCode} />;
 };
 
 Error.getInitialProps = async ({ res, err }: NextPageContext) => {

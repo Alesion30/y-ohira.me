@@ -74,7 +74,16 @@ interface ProductImageProps {
 }
 const ProductImage: FC<ProductImageProps> = ({ src, title, description, href }) => {
   return (
-    <HoverImage onClick={() => Router.push(href)} src={src} alt={title} width={400} height={300} margin={10} bottom={10} left={20}>
+    <HoverImage
+      onClick={() => Router.push(href)}
+      src={src}
+      alt={title}
+      width={400}
+      height={300}
+      margin={10}
+      bottom={10}
+      left={20}
+    >
       <h1 style={{ fontSize: 20 }}>{title}</h1>
       <p>{description}</p>
     </HoverImage>
