@@ -15,31 +15,33 @@ interface Props {
 const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
   if (target) {
     return (
-      <Link href={href}>
-        <motion.a
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
-        >
-          <p className={LinkCardStyle.title}>{title} &rarr;</p>
-          <p>{description}</p>
-        </motion.a>
-      </Link>
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
+      >
+        <Link href={href}>
+          <a target="_blank" rel="noopener noreferrer">
+            <p className={LinkCardStyle.title}>{title} &rarr;</p>
+            <p>{description}</p>
+          </a>
+        </Link>
+      </motion.div>
     );
   } else {
     return (
-      <Link href={href}>
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
-        >
-          <p className={LinkCardStyle.title}>{title} &rarr;</p>
-          <p>{description}</p>
-        </motion.a>
-      </Link>
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
+      >
+        <Link href={href}>
+          <a>
+            <p className={LinkCardStyle.title}>{title} &rarr;</p>
+            <p>{description}</p>
+          </a>
+        </Link>
+      </motion.div>
     );
   }
 };

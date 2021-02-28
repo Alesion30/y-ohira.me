@@ -6,7 +6,7 @@ const Footer: FC = () => {
   return (
     <Grid container direction="row" justify="center" alignItems="center">
       <footer className={FooterStyle.footer}>
-        <p>&#64;2021 Ohira's Portfolio</p>
+        <p>&#64;2021 Yuta Ohira</p>
       </footer>
     </Grid>
   );
