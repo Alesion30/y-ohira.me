@@ -8,6 +8,7 @@ import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 import { getAllPostsData } from '~/libs/posts';
 import { PostList } from '~/models';
+import InViewAnimate from '~/components/InViewAnimate';
 
 interface Props {
   allPostsData: PostList[];
@@ -23,13 +24,15 @@ const Hobby: NextPage<Props> = ({ allPostsData }) => {
       <CustomSpacer height={30} />
       <Grid container direction="row" justify="center" alignItems="center">
         {allPostsData.map((post) => (
-          <ProductImage
-            key={post.id}
-            href={`/hobby/${post.id}`}
-            title={post.title ?? ''}
-            description={post.description ?? ''}
-            src={post.image ?? ''}
-          />
+          <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+            <ProductImage
+              key={post.id}
+              href={`/hobby/${post.id}`}
+              title={post.title ?? ''}
+              description={post.description ?? ''}
+              src={post.image ?? ''}
+            />
+          </InViewAnimate>
         ))}
       </Grid>
       <CustomSpacer height={80} />

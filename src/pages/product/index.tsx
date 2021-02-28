@@ -8,6 +8,7 @@ import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 import { getAllPostsData } from '~/libs/posts';
 import { PostList } from '~/models';
+import InViewAnimate from '~/components/InViewAnimate';
 
 interface Props {
   allPostsData: PostList[];
@@ -21,34 +22,42 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
       </h1>
       <p className={TopSectionStyle.description}>今まで作ってきたアプリ</p>
       <CustomSpacer height={30} />
-      <p className={TopSectionStyle.description}>受注案件</p>
+      <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+        <p className={TopSectionStyle.description}>受注案件</p>
+      </InViewAnimate>
       <Grid container direction="row" justify="center" alignItems="center">
         {allPostsData.map(
           (post) =>
             post.type == 1 && (
-              <ProductImage
-                key={post.id}
-                href={`/product/${post.id}`}
-                title={post.title ?? ''}
-                description={post.description ?? ''}
-                src={post.image ?? ''}
-              />
+              <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+                <ProductImage
+                  key={post.id}
+                  href={`/product/${post.id}`}
+                  title={post.title ?? ''}
+                  description={post.description ?? ''}
+                  src={post.image ?? ''}
+                />
+              </InViewAnimate>
             )
         )}
       </Grid>
       <CustomSpacer height={50} />
-      <p className={TopSectionStyle.description}>個人開発</p>
+      <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+        <p className={TopSectionStyle.description}>個人開発</p>
+      </InViewAnimate>
       <Grid container direction="row" justify="center" alignItems="center">
         {allPostsData.map(
           (post) =>
             post.type == 2 && (
-              <ProductImage
-                key={post.id}
-                href={`/product/${post.id}`}
-                title={post.title ?? ''}
-                description={post.description ?? ''}
-                src={post.image ?? ''}
-              />
+              <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+                <ProductImage
+                  key={post.id}
+                  href={`/product/${post.id}`}
+                  title={post.title ?? ''}
+                  description={post.description ?? ''}
+                  src={post.image ?? ''}
+                />
+              </InViewAnimate>
             )
         )}
       </Grid>

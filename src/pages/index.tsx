@@ -102,7 +102,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
     if (right === true) {
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
-          <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-20%' }}>
+          <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-10%' }}>
             <CustomImage width="70%" height="100%" src={img} alt={title} style={{ float: 'right' }} />
             <div style={{ position: 'absolute', top: 10, left: 0, right: '62%' }}>
               <h1 style={{ color: '#008CD6' }}>{title}</h1>
@@ -119,7 +119,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
     } else {
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
-          <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '20%' }}>
+          <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '10%' }}>
             <CustomImage width="60%" height="100%" src={img} alt={title} />
             <div style={{ position: 'absolute', top: 10, left: '64%' }}>
               <h1 style={{ color: '#008CD6' }}>{title}</h1>
@@ -137,7 +137,7 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
   } else {
     return (
       <div style={{ marginBottom: 50 }}>
-        <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-100%' }}>
+        <InViewAnimate open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-10%' }}>
           <CustomImage src={img} alt={title} />
           <div style={{ marginTop: 20 }}>
             <h1 style={{ color: '#008CD6' }}>{title}</h1>
