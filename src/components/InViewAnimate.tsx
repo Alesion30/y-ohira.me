@@ -7,9 +7,10 @@ interface Props {
   open: object;
   closed: object;
   duration?: number;
+  delay?: number;
 }
 
-const InViewAnimate: FC<Props> = ({ children, open, closed, duration }) => {
+const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay }) => {
   const variants = {
     open: open,
     closed: closed,
@@ -28,7 +29,7 @@ const InViewAnimate: FC<Props> = ({ children, open, closed, duration }) => {
   }
 
   return (
-    <InView>
+    <InView delay={delay}>
       {({ inView, ref }) => {
         if (isTop) isVisible = false;
         if (inView) isVisible = true;

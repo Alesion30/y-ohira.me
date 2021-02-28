@@ -24,7 +24,7 @@ const Hobby: NextPage<Props> = ({ allPostsData }) => {
       <CustomSpacer height={30} />
       <Grid container direction="row" justify="center" alignItems="center">
         {allPostsData.map((post) => (
-          <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+          <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
             <ProductImage
               key={post.id}
               href={`/hobby/${post.id}`}

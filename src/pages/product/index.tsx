@@ -29,7 +29,7 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
         {allPostsData.map(
           (post) =>
             post.type == 1 && (
-              <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+              <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
                 <ProductImage
                   key={post.id}
                   href={`/product/${post.id}`}
@@ -49,7 +49,7 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
         {allPostsData.map(
           (post) =>
             post.type == 2 && (
-              <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+              <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
                 <ProductImage
                   key={post.id}
                   href={`/product/${post.id}`}
