@@ -1,6 +1,7 @@
 import React, { FC, CSSProperties } from 'react';
 import LinkStyle from '~/styles/components/Link.module.scss';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 interface Props {
   href?: string;
@@ -12,31 +13,31 @@ interface Props {
 const LinkCard: FC<Props> = ({ href, children, target, style, onClick }) => {
   if (href && target) {
     return (
-      <div className={LinkStyle.link} style={style}>
+      <motion.div className={LinkStyle.link} style={style} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
         <Link href={href}>
           <a target="_blank" rel="noopener noreferrer" onClick={onClick} style={{ width: '100%' }}>
             <p>{children}</p>
           </a>
         </Link>
-      </div>
+      </motion.div>
     );
   } else if (href) {
     return (
-      <div className={LinkStyle.link} style={style}>
+      <motion.div className={LinkStyle.link} style={style} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
         <Link href={href}>
           <a onClick={onClick} style={{ width: '100%' }}>
             <p>{children}</p>
           </a>
         </Link>
-      </div>
+      </motion.div>
     );
   } else {
     return (
-      <div className={LinkStyle.link} style={style}>
+      <motion.div className={LinkStyle.link} style={style} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
         <a onClick={onClick} style={{ width: '100%', cursor: 'pointer' }}>
           <p>{children}</p>
         </a>
-      </div>
+      </motion.div>
     );
   }
 };

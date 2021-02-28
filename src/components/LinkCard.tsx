@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import LinkCardStyle from '~/styles/components/LinkCard.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
+import { motion } from 'framer-motion';
 
 interface Props {
   href: string;
@@ -15,23 +16,29 @@ const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
   if (target) {
     return (
       <Link href={href}>
-        <a
+        <motion.a
           target="_blank"
           rel="noopener noreferrer"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
         >
           <p className={LinkCardStyle.title}>{title} &rarr;</p>
           <p>{description}</p>
-        </a>
+        </motion.a>
       </Link>
     );
   } else {
     return (
       <Link href={href}>
-        <a className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
+        >
           <p className={LinkCardStyle.title}>{title} &rarr;</p>
           <p>{description}</p>
-        </a>
+        </motion.a>
       </Link>
     );
   }

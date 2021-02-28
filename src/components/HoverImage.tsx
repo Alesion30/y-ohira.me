@@ -1,5 +1,6 @@
 import { FC, CSSProperties } from 'react';
 import HoverImageStyle from '~/styles/components/HoverImage.module.scss';
+import { motion } from 'framer-motion';
 
 interface Props {
   src: string;
@@ -21,8 +22,11 @@ const HoverImage: FC<Props> = ({ children, src, alt, onClick, width, height, mar
   const _left = left ?? 0;
   const _cursor = onClick ? 'pointer' : undefined;
   return (
-    <div
+    <motion.div
       onClick={onClick}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.2 }}
       className={HoverImageStyle.hoverImg}
       style={{ width: _width, height: _height, margin: _margin, cursor: _cursor, ...style }}
     >
@@ -37,7 +41,7 @@ const HoverImage: FC<Props> = ({ children, src, alt, onClick, width, height, mar
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
