@@ -4,7 +4,6 @@ $main-color: #008CD6;
   min-width: 320px;
   margin: 1rem;
   flex-basis: 45%;
-  padding: 1.5rem;
   text-align: left;
   color: inherit;
   background-color: #fff;
@@ -25,6 +24,12 @@ $main-color: #008CD6;
 .card:active {
   color: $main-color;
   border-color: $main-color;
+}
+
+.card .link {
+  display: inline-block;
+  width: 100%;
+  padding: 1.5rem;
 }
 
 .card .title {
