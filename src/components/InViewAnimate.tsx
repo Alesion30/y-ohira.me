@@ -8,9 +8,10 @@ interface Props {
   closed: object;
   duration?: number;
   delay?: number;
+  threshold?: number; // 0~1
 }
 
-const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay }) => {
+const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay, threshold }) => {
   const variants = {
     open: open,
     closed: closed,
@@ -20,16 +21,15 @@ const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay }) =
   // 一番上かどうか
   let isTop = false;
   if (process.browser) {
-    const threshold = 50;
     isTop = !useScrollTrigger({
       target: window,
       disableHysteresis: true,
-      threshold: threshold,
+      threshold: 50,
     });
   }
 
   return (
-    <InView delay={delay}>
+    <InView delay={delay} threshold={threshold}>
       {({ inView, ref }) => {
         if (isTop) isVisible = false;
         if (inView) isVisible = true;
