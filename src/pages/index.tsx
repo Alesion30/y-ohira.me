@@ -10,6 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import withWidth from '@material-ui/core/withWidth';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
 import InViewAnimate from '~/components/InViewAnimate';
+import ScrollIcon from '~/components/ScrollIcon';
 
 const Home: NextPage = () => {
   return (
@@ -29,7 +30,9 @@ const Home: NextPage = () => {
           description="GitHubのアカウントはこちら"
         />
       </Grid>
-      <CustomSpacer height={70} />
+      <CustomSpacer height={30} />
+      <ScrollIcon />
+      <CustomSpacer height={50} />
       <Grid container direction="column" justify="center" alignItems="center">
         <Block
           title="23株式会社"
@@ -103,7 +106,13 @@ const _Block: FC<IBlockProps> = ({ width, right, title, description, img, link }
       return (
         <div style={{ position: 'relative', width: '100%', marginBottom: 80 }}>
           <InViewAnimate threshold={0.7} open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-10%' }}>
-            <CustomImage width="70%" height="100%" src={img} alt={title} style={{ display: 'block', marginLeft: 'auto' }} />
+            <CustomImage
+              width="70%"
+              height="100%"
+              src={img}
+              alt={title}
+              style={{ display: 'block', marginLeft: 'auto' }}
+            />
             <div style={{ position: 'absolute', top: 10, left: 0, right: '62%' }}>
               <h1 style={{ color: '#008CD6' }}>{title}</h1>
               <p>{description}</p>
