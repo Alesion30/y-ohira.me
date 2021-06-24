@@ -28,7 +28,7 @@ const About: NextPage<Props> = ({ skills }) => {
       <CustomSpacer height={50} />
       <Grid container justify="center" alignItems="center" spacing={5}>
         <Grid item>
-          <Avatar alt="icon" variant="square" src="/images/alesion.png" style={{ width: 180, height: 180 }} />
+          <Avatar alt="icon" variant="square" src="/images/alesion2.png" style={{ width: 334, height: 237 }} />
         </Grid>
         <Grid item>
           <AccountSection />
