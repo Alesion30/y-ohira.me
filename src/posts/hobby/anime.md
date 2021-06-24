@@ -5,14 +5,4 @@ image: '/images/hobby/anime.png'
 sort: 4
 ---
 
-<div>
-  <h4>個人的に面白かった漫画ランキング</h4>
-  <ol>
-    <li>HUNTER×HUNTER</li>
-    <li>ドラゴンボール</li>
-    <li>呪術廻戦</li>
-    <li>ワールドトリガー</li>
-    <li>かぐや様は告らせたい</li>
-    <li>マギ</li>
-  </ol>
-</div>
+<img src="/images/hobby/anime.png" width="100%" />
