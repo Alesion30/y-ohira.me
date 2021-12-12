@@ -1,6 +1,6 @@
 const path = require('path');
 const withSass = require('@zeit/next-sass');
-const withPWA = require('next-pwa')
+const withPWA = require('next-pwa');
 
 const nextConfig = {
   webpack: (config) => {
@@ -19,8 +19,8 @@ const nextConfig = {
   // PWA
   pwa: {
     disable: process.env.NODE_ENV === 'development',
-    dest: 'public'
-  }
+    dest: 'public',
+  },
 };
 
 module.exports = withPWA(withSass(nextConfig));

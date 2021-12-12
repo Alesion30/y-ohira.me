@@ -8,7 +8,7 @@
     "start": "next start",
     "ssg": "next build && next export",
     "ssg-start": "npx http-server ./out",
-    "format": "prettier --write ./src/**/*.{ts,tsx} && prettier --write ./src/**/**/*.{ts,tsx}",
+    "format": "prettier --write .",
     "lint": "eslint"
   },
   "dependencies": {
