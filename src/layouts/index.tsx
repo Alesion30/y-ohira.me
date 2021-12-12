@@ -70,7 +70,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop, og }) => {
                 <CustomLinkCard href="/" title="Home" description="トップページ" />
                 <CustomLinkCard href="/about" title="About" description="経歴・スキルなど" />
                 <CustomLinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
-                <CustomLinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
+                <CustomLinkCard href="/hobby" title="Hobby" description="趣味" />
               </Grid>
             </Container>
             <CustomSpacer height={120} />

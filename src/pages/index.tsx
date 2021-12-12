@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <Grid container direction="row" justify="center" alignItems="center">
         <LinkCard href="/about" title="About" description="経歴・スキルなど" />
         <LinkCard href="/product" title="Product" description="今まで作ってきたアプリ" />
-        <LinkCard href="/hobby" title="Hobby" description="個人的な趣味" />
+        <LinkCard href="/hobby" title="Hobby" description="趣味" />
         <LinkCard
           href="https://github.com/Alesion30"
           target={true}
