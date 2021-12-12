@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <h1 className={TopSectionStyle.title}>
-        My Name is <span className={TopSectionStyle.highlight}>Yuta Ohira!</span>
+        Hi There👋 I'm <span className={TopSectionStyle.highlight}>Yuta Ohira!</span>
       </h1>
       <p className={TopSectionStyle.description}>Web Engineer from Kyushu University</p>
       <Grid container direction="row" justify="center" alignItems="center">
