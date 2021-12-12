@@ -23,7 +23,7 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
       </h1>
       <p className={TopSectionStyle.description}>今まで作ってきたアプリ</p>
       <CustomSpacer height={30} />
-      <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+      {/* <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
         <p className={TopSectionStyle.description}>受注案件</p>
       </InViewAnimate>
       <Grid container direction="row" justify="center" alignItems="center">
@@ -41,7 +41,7 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
             )
         )}
       </Grid>
-      <CustomSpacer height={50} />
+      <CustomSpacer height={50} /> */}
       <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
         <p className={TopSectionStyle.description}>個人開発</p>
       </InViewAnimate>
