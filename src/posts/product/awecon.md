@@ -7,7 +7,6 @@ sort: 2
 tags:
   - 'React'
   - 'TypeScript'
-  - 'Flutter'
   - 'NodeJS'
   - 'Arduino'
 ---
