@@ -48,7 +48,7 @@ const Home: NextPage = () => {
         />
         <Block
           title="受注案件・個人開発"
-          description="Laravel・Reactを用いたフルスタック開発をはじめ、Flutterを用いたアプリ開発やWordPressを用いたCMS運用を行なっております"
+          description="React・Laravelを用いたWEB開発をはじめ、Flutterを用いたアプリ開発やArduino・Obnizを用いたIoTの開発など、さまざまなことにチャレンジしています"
           img="/images/work.png"
           link={{
             href: '/product',
