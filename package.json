@@ -9,7 +9,7 @@
     "ssg": "next build && next export",
     "ssg-start": "npx http-server ./out",
     "format": "prettier --write .",
-    "lint": "eslint",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "moment": "^2.29.1",
     "next": "12.0.8",
     "next-pwa": "^5.4.4",
+    "next-seo": "^4.29.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-intersection-observer": "^8.33.1",
