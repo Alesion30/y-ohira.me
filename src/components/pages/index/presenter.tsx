@@ -3,6 +3,7 @@ import Layout from '~/layouts/index';
 import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
 import { ScrollIcon } from '~/components/uiParts/ScrollIcon';
 import { TopLinkCard } from './TopLinkCard';
+import { Intro } from './Intro';
 
 export const TopPresenter: React.VFC = () => {
   return (
@@ -26,55 +27,28 @@ export const TopPresenter: React.VFC = () => {
       </div>
 
       <ScrollIcon />
+
       <CustomSpacer height={50} />
 
-      {/* <Grid container direction="column" justify="center" alignItems="center">
-        <Block
+      <div className={style.introList}>
+        <Intro
           title="23株式会社"
-          description="スタートアップから自治体まで、あらゆる挑戦に伴走する総合クリエイティブカンパニー"
-          img="/images/23.png"
-          link={{
-            href: 'https://23-creative.co.jp/',
-            target: true,
-            text: 'HPはこちら',
-            width: 180,
-          }}
-          right
+          description={`スタートアップから自治体まで、あらゆる挑戦に\n伴走する総合クリエイティブカンパニー`}
+          src="/images/intro/23.png"
+          link={{ title: 'HPはこちら', href: 'https://23-creative.co.jp/', blank: true }}
+          className={style.intro}
         />
-        <Block
+        <CustomSpacer height={100} />
+        <Intro
           title="受注案件・個人開発"
-          description="React・Laravelを用いたWEB開発をはじめ、Flutterを用いたアプリ開発やArduino・Obnizを用いたIoTの開発など、さまざまなことにチャレンジしています"
-          img="/images/work.png"
-          link={{
-            href: '/product',
-            text: 'PRODUCT一覧はこちら',
-            width: 300,
-          }}
+          description={`React・Laravelを用いたWEB開発をはじめ、Flutterを用いたアプリ開発やArduino・Obnizを用いたIoTの開発など、さまざまなことにチャレンジしています`}
+          src="/images/intro/work.png"
+          link={{ title: 'PRODUCT一覧', href: '/product' }}
+          className={style.intro}
         />
-        <Block
-          title="チャレキャラ2019"
-          description="共有メモアプリ「Passtick」を制作し、Excite賞を受賞"
-          img="/images/challecara.png"
-          link={{
-            href: '/product/passtick',
-            text: 'Passtickについて',
-            width: 220,
-          }}
-          right
-        />
-        <Block
-          title="GLEAP"
-          description="九大発 プログラミングサークル"
-          img="/images/gleap.png"
-          link={{
-            href: 'https://gleap.tech/',
-            target: true,
-            text: 'HPはこちら',
-            width: 180,
-          }}
-        />
-      </Grid> */}
-      <CustomSpacer height={50} />
+      </div>
+
+      <CustomSpacer height={80} />
     </Layout>
   );
 };

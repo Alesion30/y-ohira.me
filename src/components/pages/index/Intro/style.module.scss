@@ -1,0 +1,44 @@
+$main-color: #008cd6;
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.descContainer {
+  width: 50%;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  z-index: 1;
+}
+
+.title {
+  color: $main-color;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  word-break: keep-all;
+}
+
+.imgContainer {
+  width: 70%;
+}
+
+.linkCard {
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.linkCardDescription {
+  font-size: 1.2rem;
+}
