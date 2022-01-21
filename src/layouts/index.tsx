@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { NextPage } from 'next';
-import appConfig from '~/config/app';
-import Head from 'next/head';
+// import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import { motion } from 'framer-motion';
 import theme from '~/layouts/theme';
@@ -29,21 +28,21 @@ interface OG {
 
 const DefaultLayout: NextPage<Props> = ({ children, title, marginTop, og }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const siteTitle = title ? `${title} | ${appConfig.title}` : `${appConfig.title}`;
+  // const siteTitle = title ? `${title} | ${appConfig.title}` : `${appConfig.title}`;
 
   // OGP情報
-  const ogtitle = og?.title ?? siteTitle;
-  const ogdescription = og?.description ?? appConfig.description;
-  const ogimage = og?.image ?? appConfig.image;
+  // const ogtitle = og?.title ?? siteTitle;
+  // const ogdescription = og?.description ?? appConfig.description;
+  // const ogimage = og?.image ?? appConfig.image;
 
   return (
     <ThemeProvider theme={theme}>
-      <Head>
+      {/* <Head>
         <title>{ogtitle}</title>
         <meta property="og:title" content={ogtitle} />
         <meta property="og:description" content={ogdescription} />
         <meta property="og:image" content={ogimage} />
-      </Head>
+      </Head> */}
 
       <motion.div
         animate={{ opacity: 1 }}
