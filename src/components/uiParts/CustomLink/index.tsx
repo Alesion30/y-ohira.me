@@ -10,7 +10,7 @@ interface Props {
   style?: CSSProperties;
 }
 
-const CustomLink: FC<Props> = ({ title, href, target, color, style }) => {
+export const CustomLink: FC<Props> = ({ title, href, target, color, style }) => {
   const _color = color ?? '#000';
   if (target) {
     return (
@@ -30,5 +30,3 @@ const CustomLink: FC<Props> = ({ title, href, target, color, style }) => {
     );
   }
 };
-
-export default CustomLink;

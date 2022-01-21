@@ -2,15 +2,15 @@ import { NextPage } from 'next';
 import { FC } from 'react';
 import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import Layout from '~/layouts/index';
-import LinkCard from '~/components/LinkCard';
-import LinkButton from '~/components/LinkButton';
-import CustomImage from '~/components/CustomImage';
-import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 import withWidth from '@material-ui/core/withWidth';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
-import InViewAnimate from '~/components/InViewAnimate';
-import ScrollIcon from '~/components/ScrollIcon';
+import { CustomImage } from '~/components/uiParts/CustomImage';
+import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
+import { LinkButton } from '~/components/uiParts/LinkButton';
+import { ScrollIcon } from '~/components/uiParts/ScrollIcon';
+import { LinkCard } from '~/components/uiParts/LinkCard';
 
 const Home: NextPage = () => {
   return (

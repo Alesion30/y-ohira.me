@@ -10,7 +10,7 @@ interface Props {
   style?: CSSProperties;
 }
 
-const LinkCard: FC<Props> = ({ href, children, target, style, onClick }) => {
+export const LinkButton: FC<Props> = ({ href, children, target, style, onClick }) => {
   if (href && target) {
     return (
       <motion.div className={LinkStyle.link} style={style} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -41,5 +41,3 @@ const LinkCard: FC<Props> = ({ href, children, target, style, onClick }) => {
     );
   }
 };
-
-export default LinkCard;

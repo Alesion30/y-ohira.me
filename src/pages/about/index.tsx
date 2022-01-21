@@ -2,13 +2,13 @@ import { FC } from 'react';
 import { NextPage, GetStaticProps } from 'next';
 import Layout from '~/layouts/index';
 import TopSectionStyle from '~/styles/components/TopSection.module.scss';
-import CustomSpacer from '~/components/CustomSpacer';
-import CustomLink from '~/components/CustomLink';
-import Stars from '~/components/Stars';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import breakpoint from '~/utils/breakpoint';
 import { Skill } from '~/models';
+import { CustomLink } from '~/components/uiParts/CustomLink';
+import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { Stars } from '~/components/uiParts/Stars';
 
 interface Props {
   skills: Skill[];

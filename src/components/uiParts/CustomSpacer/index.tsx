@@ -4,8 +4,6 @@ interface Props {
   height: number;
 }
 
-const CustomSpacer: FC<Props> = ({ height }) => {
+export const CustomSpacer: FC<Props> = ({ height }) => {
   return <div style={{ height }} />;
 };
-
-export default CustomSpacer;

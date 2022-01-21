@@ -8,7 +8,7 @@ interface Props {
   style?: CSSProperties;
 }
 
-const CustomImage: FC<Props> = ({ src, alt, width, height, style }) => {
+export const CustomImage: FC<Props> = ({ src, alt, width, height, style }) => {
   const _width = width ?? '100%';
   const _height = height ?? 'auto';
   return (
@@ -17,5 +17,3 @@ const CustomImage: FC<Props> = ({ src, alt, width, height, style }) => {
     </div>
   );
 };
-
-export default CustomImage;

@@ -11,7 +11,7 @@ interface Props {
   threshold?: number; // 0~1
 }
 
-const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay, threshold }) => {
+export const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay, threshold }) => {
   const variants = {
     open: open,
     closed: closed,
@@ -50,5 +50,3 @@ const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay, thr
     </InView>
   );
 };
-
-export default InViewAnimate;

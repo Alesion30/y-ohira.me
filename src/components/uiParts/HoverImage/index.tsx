@@ -14,7 +14,7 @@ interface Props {
   left?: number;
 }
 
-const HoverImage: FC<Props> = ({ children, src, alt, onClick, width, height, margin, style, bottom, left }) => {
+export const HoverImage: FC<Props> = ({ children, src, alt, onClick, width, height, margin, style, bottom, left }) => {
   const _width = width ?? '100%';
   const _height = height ?? 'auto';
   const _margin = margin ?? 0;
@@ -44,5 +44,3 @@ const HoverImage: FC<Props> = ({ children, src, alt, onClick, width, height, mar
     </motion.div>
   );
 };
-
-export default HoverImage;

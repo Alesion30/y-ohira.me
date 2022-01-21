@@ -3,12 +3,12 @@ import { NextPage, GetStaticProps } from 'next';
 import Router from 'next/router';
 import Layout from '~/layouts/index';
 import TopSectionStyle from '~/styles/components/TopSection.module.scss';
-import HoverImage from '~/components/HoverImage';
-import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 import { PostList } from '~/models';
-import InViewAnimate from '~/components/InViewAnimate';
 import breakpoint from '~/utils/breakpoint';
+import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { HoverImage } from '~/components/uiParts/HoverImage';
+import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
 
 interface Props {
   allPostsData: PostList[];

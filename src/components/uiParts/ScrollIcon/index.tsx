@@ -3,7 +3,7 @@ import ScrollIconStyle from '~/styles/components/ScrollIcon.module.scss';
 
 interface Props {}
 
-const ScrollIcon: FC<Props> = ({}) => {
+export const ScrollIcon: FC<Props> = ({}) => {
   return (
     <div className={ScrollIconStyle.wrapper}>
       <span className={ScrollIconStyle.arrow}></span>
@@ -20,5 +20,3 @@ const ScrollIcon: FC<Props> = ({}) => {
     </div>
   );
 };
-
-export default ScrollIcon;

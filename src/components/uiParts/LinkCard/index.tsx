@@ -12,7 +12,7 @@ interface Props {
   active?: boolean;
 }
 
-const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
+export const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
   if (target) {
     return (
       <motion.div
@@ -45,5 +45,3 @@ const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
     );
   }
 };
-
-export default LinkCard;

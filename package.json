@@ -51,7 +51,7 @@
       "yarn format",
       "yarn lint"
     ],
-    "*.{html,json,md}": [
+    "*.{html,json}": [
       "yarn format"
     ]
   }
