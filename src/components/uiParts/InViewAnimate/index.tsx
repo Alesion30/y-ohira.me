@@ -1,18 +1,25 @@
-import { FC } from 'react';
 import { InView } from 'react-intersection-observer';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants, Variant } from 'framer-motion';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
-interface Props {
-  open: object;
-  closed: object;
+type InViewAnimateProps = {
+  open: Variant;
+  closed: Variant;
   duration?: number;
   delay?: number;
   threshold?: number; // 0~1
-}
+  children: React.ReactNode;
+};
 
-export const InViewAnimate: FC<Props> = ({ children, open, closed, duration, delay, threshold }) => {
-  const variants = {
+export const InViewAnimate: React.VFC<InViewAnimateProps> = ({
+  open,
+  closed,
+  duration,
+  delay,
+  threshold,
+  children,
+}) => {
+  const variants: Variants = {
     open: open,
     closed: closed,
   };

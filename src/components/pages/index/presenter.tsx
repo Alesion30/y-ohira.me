@@ -4,6 +4,7 @@ import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
 import { ScrollIcon } from '~/components/uiParts/ScrollIcon';
 import { TopLinkCard } from './TopLinkCard';
 import { Intro } from './Intro';
+import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
 
 export const TopPresenter: React.VFC = () => {
   return (
@@ -31,22 +32,26 @@ export const TopPresenter: React.VFC = () => {
       <CustomSpacer height={50} />
 
       <div className={style.introList}>
-        <Intro
-          title="23株式会社"
-          description={`スタートアップから自治体まで、あらゆる挑戦に\n伴走する総合クリエイティブカンパニー`}
-          src="/images/intro/23.png"
-          link={{ title: 'HPはこちら', href: 'https://23-creative.co.jp/', blank: true }}
-          className={style.intro}
-        />
+        <InViewAnimate threshold={0.7} open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-2%' }}>
+          <Intro
+            title="23株式会社"
+            description={`スタートアップから自治体まで、あらゆる挑戦に\n伴走する総合クリエイティブカンパニー`}
+            src="/images/intro/23.png"
+            link={{ title: 'HPはこちら', href: 'https://23-creative.co.jp/', blank: true }}
+            className={style.intro}
+          />
+        </InViewAnimate>
         <CustomSpacer height={100} />
-        <Intro
-          title="受注案件・個人開発"
-          description={`React・Laravelを用いたWEB開発をはじめ、Flutterを用いたアプリ開発やArduino・Obnizを用いたIoTの開発など、さまざまなことにチャレンジしています`}
-          src="/images/intro/work.png"
-          link={{ title: 'PRODUCT一覧', href: '/product' }}
-          className={style.intro}
-          right
-        />
+        <InViewAnimate threshold={0.7} open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '2%' }}>
+          <Intro
+            title="受注案件・個人開発"
+            description={`React・Laravelを用いたWEB開発をはじめ、Flutterを用いたアプリ開発やArduino・Obnizを用いたIoTの開発など、さまざまなことにチャレンジしています`}
+            src="/images/intro/work.png"
+            link={{ title: 'PRODUCT一覧', href: '/product' }}
+            className={style.intro}
+            right
+          />
+        </InViewAnimate>
       </div>
 
       <CustomSpacer height={80} />
