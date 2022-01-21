@@ -2,7 +2,8 @@ import { DefaultSeoProps } from 'next-seo';
 
 // https://github.com/garmeeh/next-seo
 const config: DefaultSeoProps = {
-  title: 'Web Engineer from Kyushu University',
+  defaultTitle: 'Web Engineer from Kyushu University',
+  titleTemplate: '%s | Web Engineer from Kyushu University',
   description:
     '九州大学出身の学生Webエンジニアです。LaravelやReactを用いたフルスタック開発をはじめ、Flutterを用いたアプリ開発やWordPressを用いたCMS運用を行なっております。',
   canonical: 'https://www.y-ohira.me/',
