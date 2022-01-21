@@ -1,0 +1,12 @@
+$main-color: #008cd6;
+
+.wrapper {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+
+  &:hover {
+    color: $main-color;
+    border-color: $main-color;
+  }
+}
