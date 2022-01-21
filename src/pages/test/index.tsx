@@ -1,5 +1,5 @@
-import { TopPresenter } from '~/components/pages/index/presenter';
+import { TopPage } from '~/components/pages/index';
 
 export default () => {
-  return <TopPresenter />;
+  return <TopPage />;
 };

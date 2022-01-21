@@ -1,5 +1,18 @@
 $main-color: #008cd6;
 
+.title {
+  color: $main-color;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  word-break: keep-all;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -28,19 +41,6 @@ $main-color: #008cd6;
     width: 37%;
     right: 0px;
   }
-}
-
-.title {
-  color: $main-color;
-  font-size: 2rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  word-break: keep-all;
 }
 
 .imgContainer {

@@ -1,5 +1,5 @@
 import { TopPresenter } from './presenter';
 
-export const TopContainer: React.VFC = () => {
+export const TopPage: React.VFC = () => {
   return <TopPresenter />;
 };
