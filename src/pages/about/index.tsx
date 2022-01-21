@@ -105,9 +105,9 @@ const AboutSection: FC = () => {
   ];
   return (
     <div>
-      {data.map((item) => {
+      {data.map((item, index) => {
         return (
-          <div style={{ display: 'flex' }}>
+          <div key={`about_section_${index}`} style={{ display: 'flex' }}>
             <p style={{ whiteSpace: 'nowrap', marginTop: 5, marginBottom: 5, marginRight: 10 }}>{item.date}</p>
             <p style={{ marginTop: 5, marginBottom: 5 }}>{item.content}</p>
           </div>

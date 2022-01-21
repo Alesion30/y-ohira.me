@@ -46,6 +46,7 @@ const PostPageLayout: NextPage<Props> = ({ post, type }) => {
           </Grid>
           <CustomSpacer height={30} />
           <div className={PostStyle.html}>
+            {/* eslint-disable-next-line react/no-danger */}
             <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
           </div>
         </article>
