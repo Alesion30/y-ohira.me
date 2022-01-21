@@ -6,7 +6,6 @@ import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import HoverImage from '~/components/HoverImage';
 import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
-import { getAllPostsData } from '~/libs/posts';
 import { PostList } from '~/models';
 import InViewAnimate from '~/components/InViewAnimate';
 import breakpoint from '~/utils/breakpoint';
@@ -23,25 +22,6 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
       </h1>
       <p className={TopSectionStyle.description}>今まで作ってきたアプリ</p>
       <CustomSpacer height={30} />
-      {/* <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
-        <p className={TopSectionStyle.description}>受注案件</p>
-      </InViewAnimate>
-      <Grid container direction="row" justify="center" alignItems="center">
-        {allPostsData.map(
-          (post) =>
-            post.type == 1 && (
-              <InViewAnimate key={post.id} delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
-                <ProductImage
-                  href={`/product/${post.id}`}
-                  title={post.title ?? ''}
-                  description={post.description ?? ''}
-                  src={post.image ?? ''}
-                />
-              </InViewAnimate>
-            )
-        )}
-      </Grid>
-      <CustomSpacer height={50} /> */}
       <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
         <p className={TopSectionStyle.description}>個人開発</p>
       </InViewAnimate>
@@ -66,7 +46,8 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getAllPostsData('product');
+  const allPostsData: PostList[] = [];
+
   return {
     props: {
       allPostsData,

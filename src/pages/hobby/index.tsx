@@ -6,7 +6,6 @@ import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import HoverImage from '~/components/HoverImage';
 import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
-import { getAllPostsData } from '~/libs/posts';
 import { PostList } from '~/models';
 import InViewAnimate from '~/components/InViewAnimate';
 import breakpoint from '~/utils/breakpoint';
@@ -41,7 +40,7 @@ const Hobby: NextPage<Props> = ({ allPostsData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getAllPostsData('hobby');
+  const allPostsData: PostList[] = [];
   return {
     props: {
       allPostsData,
