@@ -1,11 +1,11 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import CustomSpacer from '~/components/CustomSpacer';
-import LinkCard from '~/components/LinkCard';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import { motion } from 'framer-motion';
+import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { LinkCard } from '~/components/uiParts/LinkCard';
 
 interface Props {
   statusCode: number;

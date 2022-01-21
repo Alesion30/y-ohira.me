@@ -10,9 +10,9 @@ import ScrollTopButton from '~/layouts/components/ScrollTopButton';
 import Container from '@material-ui/core/Container';
 import Drawer from '@material-ui/core/Drawer';
 import MenuStyle from '~/styles/components/Menu.module.scss';
-import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 import CustomLinkCard from '~/layouts/components/CustomLinkCard';
+import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
 
 interface Props {
   title?: string;
