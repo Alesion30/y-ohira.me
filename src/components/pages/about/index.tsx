@@ -1,4 +1,4 @@
-import { AboutPresenter, Carrier } from './presenter';
+import { AboutPresenter, Carrier, Skill } from './presenter';
 
 export const AboutPage: React.VFC = () => {
   const carriers: Carrier[] = [
@@ -31,5 +31,26 @@ export const AboutPage: React.VFC = () => {
     },
   ];
 
-  return <AboutPresenter carriers={carriers} />;
+  const skills: Skill[] = [
+    { name: 'React', star: 5 },
+    { name: 'TypeScript', star: 5 },
+    { name: 'Flutter', star: 5 },
+    { name: 'Docker', star: 4 },
+    { name: 'Laravel', star: 4 },
+    { name: 'Python', star: 3 },
+    { name: 'ReactNative', star: 4 },
+    { name: 'jQuery', star: 5 },
+    { name: 'WordPress', star: 2 },
+    { name: 'Nuxt(Vue)', star: 3 },
+    { name: 'AWS', star: 3 },
+    { name: 'Firebase', star: 4 },
+    { name: 'MySQL', star: 4 },
+    { name: 'C++(Arduino)', star: 2 },
+    { name: 'Unity', star: 2 },
+    { name: 'Swift', star: 1 },
+    { name: 'Go', star: 1 },
+    { name: '上記にない言語', star: 0 },
+  ];
+
+  return <AboutPresenter carriers={carriers} skills={skills} />;
 };
