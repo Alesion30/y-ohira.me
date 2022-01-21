@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import LinkCardStyle from '~/styles/components/LinkCard.module.scss';
 import Link from 'next/link';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
 interface Props {
@@ -18,7 +18,7 @@ const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
+        className={clsx(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
       >
         <Link href={href}>
           <a className={LinkCardStyle.link} target="_blank" rel="noopener noreferrer">
@@ -33,7 +33,7 @@ const LinkCard: FC<Props> = ({ href, target, title, description, active }) => {
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className={classNames(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
+        className={clsx(LinkCardStyle.card, { [LinkCardStyle.cardActive]: active === true })}
       >
         <Link href={href}>
           <a className={LinkCardStyle.link}>

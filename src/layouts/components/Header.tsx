@@ -1,6 +1,6 @@
 import React, { FC, Fragment } from 'react';
 import Link from 'next/link';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import HeaderLink from '~/layouts/components/HeaderLink';
 import HeaderStyle from '~/styles/components/Header.module.scss';
@@ -28,7 +28,7 @@ const Header: FC<Props> = ({ active, onClick, close }) => {
   if (isWeb && !close) {
     return (
       <Fragment>
-        <div className={classNames(HeaderStyle.appBar, { [HeaderStyle.active]: !open })}>
+        <div className={clsx(HeaderStyle.appBar, { [HeaderStyle.active]: !open })}>
           <div className={HeaderStyle.logoWrapper}>
             <p className={HeaderStyle.logo}>
               <Link href="/">
@@ -36,7 +36,7 @@ const Header: FC<Props> = ({ active, onClick, close }) => {
               </Link>
             </p>
           </div>
-          <div className={classNames(HeaderStyle.linkWrapper, { [HeaderStyle.active]: !open })}>
+          <div className={clsx(HeaderStyle.linkWrapper, { [HeaderStyle.active]: !open })}>
             <HeaderLink href="/" title="HOME" />
             <HeaderLink href="/about" title="ABOUT" />
             <HeaderLink href="/product" title="PRODUCT" />
@@ -78,7 +78,7 @@ interface HamburgerButtonProps {
 const HamburgerButton: FC<HamburgerButtonProps> = ({ onClick, active }) => {
   return (
     <div className={HeaderStyle.menuBtnWrapper} onClick={onClick}>
-      <span className={classNames(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
+      <span className={clsx(HeaderStyle.menuBtn, { [HeaderStyle.menuBtnShow]: active })}>
         <i></i>
         <i></i>
         <i></i>
