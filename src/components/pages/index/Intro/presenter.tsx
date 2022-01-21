@@ -30,7 +30,7 @@ export const IntroPresenter: React.VFC<IntroProps & InputHookProps> = ({
   windowWidth,
 }) => {
   console.log(windowWidth);
-  if (windowWidth >= 700) {
+  if (windowWidth >= 900) {
     return (
       <div className={clsx(style.container, right ? style.containerRight : style.containerLeft, className)}>
         <div className={clsx(style.descContainer, right ? style.descContainerRight : style.descContainerLeft)}>
