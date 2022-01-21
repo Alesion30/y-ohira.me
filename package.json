@@ -48,8 +48,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "yarn lint",
-      "yarn format"
+      "yarn format",
+      "yarn lint"
     ],
     "*.{html,json,md}": [
       "yarn format"
