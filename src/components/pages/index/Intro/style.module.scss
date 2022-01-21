@@ -3,16 +3,31 @@ $main-color: #008cd6;
 .container {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
   position: relative;
+
+  &Left {
+    justify-content: flex-end;
+  }
+
+  &Right {
+    justify-content: flex-start;
+  }
 }
 
 .descContainer {
-  width: 50%;
   position: absolute;
   top: 20px;
-  left: 0px;
   z-index: 1;
+
+  &Left {
+    width: 50%;
+    left: 0px;
+  }
+
+  &Right {
+    width: 37%;
+    right: 0px;
+  }
 }
 
 .title {
@@ -29,7 +44,13 @@ $main-color: #008cd6;
 }
 
 .imgContainer {
-  width: 70%;
+  &Left {
+    width: 70%;
+  }
+
+  &Right {
+    width: 60%;
+  }
 }
 
 .linkCard {

@@ -13,19 +13,20 @@ export type IntroProps = {
     blank?: boolean;
   };
   className?: string;
+  right?: boolean;
 };
 
-export const IntroPresenter: React.VFC<IntroProps> = ({ title, description, src, link, className }) => {
+export const IntroPresenter: React.VFC<IntroProps> = ({ title, description, src, link, className, right }) => {
   return (
-    <div className={clsx(style.container, className)}>
-      <div className={style.descContainer}>
+    <div className={clsx(style.container, right ? style.containerRight : style.containerLeft, className)}>
+      <div className={clsx(style.descContainer, right ? style.descContainerRight : style.descContainerLeft)}>
         <h2 className={style.title}>{title}</h2>
         <p className={style.description}>{description}</p>
         <MyCard href={link.href} blank={link.blank} className={style.linkCard}>
           <p className={style.linkCardDescription}>{link.title} &rarr;</p>
         </MyCard>
       </div>
-      <div className={style.imgContainer}>
+      <div className={clsx(style.imgContainer, right ? style.imgContainerRight : style.imgContainerLeft)}>
         <Image width={1600} height={900} src={src} />
       </div>
     </div>

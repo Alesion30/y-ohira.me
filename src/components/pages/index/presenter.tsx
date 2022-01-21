@@ -45,6 +45,7 @@ export const TopPresenter: React.VFC = () => {
           src="/images/intro/work.png"
           link={{ title: 'PRODUCT一覧', href: '/product' }}
           className={style.intro}
+          right
         />
       </div>
 
