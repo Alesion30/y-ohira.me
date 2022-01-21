@@ -16,11 +16,11 @@ export type IntroProps = {
   right?: boolean;
 };
 
-type InputOtherProps = {
+type InputHookProps = {
   windowWidth: number;
 };
 
-export const IntroPresenter: React.VFC<IntroProps & InputOtherProps> = ({
+export const IntroPresenter: React.VFC<IntroProps & InputHookProps> = ({
   title,
   description,
   src,
