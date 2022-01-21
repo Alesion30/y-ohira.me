@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import withWidth from '@material-ui/core/withWidth';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
 import { CustomImage } from '~/components/uiParts/CustomImage';
-import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { Spacer } from '~/components/uiParts/Spacer';
 import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
 import { LinkButton } from '~/components/uiParts/LinkButton';
 import { ScrollIcon } from '~/components/uiParts/ScrollIcon';
@@ -30,9 +30,9 @@ const Home: NextPage = () => {
           description="GitHubのアカウントはこちら"
         />
       </Grid>
-      <CustomSpacer height={30} />
+      <Spacer height={30} />
       <ScrollIcon />
-      <CustomSpacer height={50} />
+      <Spacer height={50} />
       <Grid container direction="column" justify="center" alignItems="center">
         <Block
           title="23株式会社"
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
           }}
         />
       </Grid>
-      <CustomSpacer height={50} />
+      <Spacer height={50} />
     </Layout>
   );
 };

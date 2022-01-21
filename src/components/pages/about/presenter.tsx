@@ -1,5 +1,5 @@
 import { CustomLink } from '~/components/uiParts/CustomLink';
-import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { Spacer } from '~/components/uiParts/Spacer';
 import { SectionTitle } from '~/components/uiParts/SectionTitle';
 import Layout from '~/layouts/index';
 import style from './style.module.scss';
@@ -23,7 +23,7 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
     <Layout>
       <SectionTitle title="PROFILE" description="経歴" />
 
-      <CustomSpacer height={50} />
+      <Spacer height={50} />
 
       <div>
         {carriers.map((item, index) => {
@@ -36,7 +36,7 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
         })}
       </div>
 
-      <CustomSpacer height={50} />
+      <Spacer height={50} />
 
       <div className={style.account}>
         <div className={style.accountImage}>
@@ -66,11 +66,11 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
         </div>
       </div>
 
-      <CustomSpacer height={80} />
+      <Spacer height={80} />
 
       <SectionTitle title="Skills & Languages" />
 
-      <CustomSpacer height={30} />
+      <Spacer height={30} />
 
       <div className={style.star}>
         {skills.map((skill) => (
@@ -81,7 +81,7 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
         ))}
       </div>
 
-      <CustomSpacer height={100} />
+      <Spacer height={100} />
     </Layout>
   );
 };

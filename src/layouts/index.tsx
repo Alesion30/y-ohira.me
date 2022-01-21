@@ -12,7 +12,7 @@ import Drawer from '@material-ui/core/Drawer';
 import MenuStyle from '~/styles/components/Menu.module.scss';
 import Grid from '@material-ui/core/Grid';
 import CustomLinkCard from '~/layouts/components/CustomLinkCard';
-import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { Spacer } from '~/components/uiParts/Spacer';
 
 interface Props {
   title?: string;
@@ -63,7 +63,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop, og }) => {
           transitionDuration={{ enter: 800, exit: 200 }}
         >
           <div className={MenuStyle.menu}>
-            <CustomSpacer height={150} />
+            <Spacer height={150} />
             <Container maxWidth="md">
               <Grid container direction="row" justify="center" alignItems="center">
                 <CustomLinkCard href="/" title="Home" description="トップページ" />
@@ -72,7 +72,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop, og }) => {
                 <CustomLinkCard href="/hobby" title="Hobby" description="趣味" />
               </Grid>
             </Container>
-            <CustomSpacer height={120} />
+            <Spacer height={120} />
           </div>
         </Drawer>
       </motion.div>

@@ -1,6 +1,6 @@
 import style from './style.module.scss';
 import Layout from '~/layouts/index';
-import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { Spacer } from '~/components/uiParts/Spacer';
 import { ScrollIcon } from '~/components/uiParts/ScrollIcon';
 import { TopLinkCard } from './TopLinkCard';
 import { Intro } from './Intro';
@@ -29,7 +29,7 @@ export const TopPresenter: React.VFC = () => {
 
       <ScrollIcon />
 
-      <CustomSpacer height={50} />
+      <Spacer height={50} />
 
       <div className={style.introList}>
         <InViewAnimate threshold={0.7} open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-2%' }}>
@@ -41,7 +41,7 @@ export const TopPresenter: React.VFC = () => {
             className={style.intro}
           />
         </InViewAnimate>
-        <CustomSpacer height={100} />
+        <Spacer height={100} />
         <InViewAnimate threshold={0.7} open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '2%' }}>
           <Intro
             title="受注案件・個人開発"
@@ -54,7 +54,7 @@ export const TopPresenter: React.VFC = () => {
         </InViewAnimate>
       </div>
 
-      <CustomSpacer height={80} />
+      <Spacer height={80} />
     </Layout>
   );
 };

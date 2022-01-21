@@ -6,7 +6,7 @@ import TopSectionStyle from '~/styles/components/TopSection.module.scss';
 import Grid from '@material-ui/core/Grid';
 import { PostList } from '~/models';
 import breakpoint from '~/utils/breakpoint';
-import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { Spacer } from '~/components/uiParts/Spacer';
 import { HoverImage } from '~/components/uiParts/HoverImage';
 import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
 
@@ -21,7 +21,7 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
         <span className={TopSectionStyle.highlight}>PRODUCT</span>
       </h1>
       <p className={TopSectionStyle.description}>今まで作ってきたアプリ</p>
-      <CustomSpacer height={30} />
+      <Spacer height={30} />
       <InViewAnimate open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
         <p className={TopSectionStyle.description}>個人開発</p>
       </InViewAnimate>
@@ -40,7 +40,7 @@ const Product: NextPage<Props> = ({ allPostsData }) => {
             )
         )}
       </Grid>
-      <CustomSpacer height={80} />
+      <Spacer height={80} />
     </Layout>
   );
 };

@@ -7,7 +7,7 @@ import Avatar from '@material-ui/core/Avatar';
 import breakpoint from '~/utils/breakpoint';
 import { Skill } from '~/models';
 import { CustomLink } from '~/components/uiParts/CustomLink';
-import { CustomSpacer } from '~/components/uiParts/CustomSpacer';
+import { Spacer } from '~/components/uiParts/Spacer';
 import { Stars } from '~/components/uiParts/Stars';
 
 interface Props {
@@ -21,11 +21,11 @@ const About: NextPage<Props> = ({ skills }) => {
         <span className={TopSectionStyle.highlight}>PROFILE</span>
       </h1>
       <p className={TopSectionStyle.description}>経歴</p>
-      <CustomSpacer height={20} />
+      <Spacer height={20} />
       <Grid container justify="center" alignItems="center">
         <AboutSection />
       </Grid>
-      <CustomSpacer height={50} />
+      <Spacer height={50} />
       <Grid container justify="center" alignItems="center" spacing={5}>
         <Grid item>
           <Avatar alt="icon" variant="square" src="/images/alesion.png" style={{ width: 334, height: 237 }} />
@@ -34,13 +34,13 @@ const About: NextPage<Props> = ({ skills }) => {
           <AccountSection />
         </Grid>
       </Grid>
-      <CustomSpacer height={120} />
+      <Spacer height={120} />
       <h1 className={TopSectionStyle.title}>
         <span className={TopSectionStyle.highlight}>Skills & Languages</span>
       </h1>
-      <CustomSpacer height={50} />
+      <Spacer height={50} />
       <SkillSection skills={skills} />
-      <CustomSpacer height={80} />
+      <Spacer height={80} />
     </Layout>
   );
 };
