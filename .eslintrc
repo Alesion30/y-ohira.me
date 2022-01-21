@@ -83,6 +83,7 @@
     "react/prop-types": "off",
     "react/self-closing-comp": "off",
     "react/destructuring-assignment": "off",
+    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": "off"
   }
 }
