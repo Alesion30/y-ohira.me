@@ -74,10 +74,10 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
 
       <div className={style.star}>
         {skills.map((skill) => (
-          <p key={`about_skill_${skill.name}`} className={style.starContainer}>
-            <span className={style.starName}>{skill.name}</span>
+          <div key={`about_skill_${skill.name}`} className={style.starContainer}>
+            <p className={style.starName}>{skill.name}</p>
             <Stars star={skill.star} />
-          </p>
+          </div>
         ))}
       </div>
 
