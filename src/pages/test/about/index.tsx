@@ -1,5 +1,11 @@
+import { NextSeo } from 'next-seo';
 import { AboutPage } from '~/components/pages/about';
 
 export default () => {
-  return <AboutPage />;
+  return (
+    <>
+      <NextSeo title="ABOUT" />
+      <AboutPage />
+    </>
+  );
 };
