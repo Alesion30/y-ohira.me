@@ -2,7 +2,7 @@ import { Container } from '@material-ui/core';
 import { motion } from 'framer-motion';
 
 export type DefaultLayoutProps = {
-  children: React.ReactNode;
+  children: React.ReactChild;
 };
 
 export const DefaultLayoutPresenter: React.VFC<DefaultLayoutProps> = ({ children }) => {
