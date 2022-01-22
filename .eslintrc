@@ -70,6 +70,8 @@
     ],
     "prefer-spread": "error",
     "prefer-template": "off",
+    // TypeScript
+    "@typescript-eslint/no-unused-vars": "off",
     // React
     "react/no-danger": "error",
     "react/no-deprecated": "error",
@@ -84,7 +86,6 @@
     "react/self-closing-comp": "off",
     "react/destructuring-assignment": "off",
     "react/react-in-jsx-scope": "off",
-    "react/display-name": "off",
-    "@typescript-eslint/no-unused-vars": "off"
+    "react/display-name": "off"
   }
 }
