@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    ".next": true,
+    ".husky": true,
+    "node_modules": true,
+    "yarn.lock": true,
+    "next-env.d.ts": true,
+    "*/next-env.d.ts": true,
+    ".editorconfig": true,
+    ".eslintrc": true,
+    ".eslintignore": true,
+    ".prettierrc": true,
+    ".prettierignore": true,
+    "tsconfig.json": true,
+    "tsconfig.tsbuildinfo": true,
+    ".gitignore": true
+  }
+}

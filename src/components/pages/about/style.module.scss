@@ -1,0 +1,57 @@
+$main-color: #008cd6;
+
+.carrier {
+  display: flex;
+  font-size: 1rem;
+
+  &Title {
+    white-space: nowrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+
+  &Description {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Image {
+    margin: 20px;
+  }
+
+  &Desc {
+    margin: 20px;
+
+    &P {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &Label {
+      margin-right: 10px;
+    }
+  }
+}
+
+.star {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &Container {
+    width: 135px;
+    margin: 10px 5px;
+  }
+
+  &Name {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+}

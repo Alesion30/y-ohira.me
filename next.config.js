@@ -1,5 +1,4 @@
 const path = require('path');
-const withSass = require('@zeit/next-sass');
 const withPWA = require('next-pwa');
 
 const nextConfig = {
@@ -15,6 +14,9 @@ const nextConfig = {
     optimizeFonts: true,
   },
   // SCSS
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'src')],
+  },
   cssModules: true,
   // PWA
   pwa: {
@@ -23,4 +25,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(withSass(nextConfig));
+module.exports = withPWA(nextConfig);

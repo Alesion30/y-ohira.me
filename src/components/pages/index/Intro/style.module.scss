@@ -1,0 +1,65 @@
+$main-color: #008cd6;
+
+.title {
+  color: $main-color;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  word-break: keep-all;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  &Left {
+    justify-content: flex-end;
+  }
+
+  &Right {
+    justify-content: flex-start;
+  }
+}
+
+.descContainer {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+
+  &Left {
+    width: 50%;
+    left: 0px;
+  }
+
+  &Right {
+    width: 37%;
+    right: 0px;
+  }
+}
+
+.imgContainer {
+  &Left {
+    width: 70%;
+  }
+
+  &Right {
+    width: 60%;
+  }
+}
+
+.linkCard {
+  width: max-content;
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.linkCardDescription {
+  font-size: 1.2rem;
+}

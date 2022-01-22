@@ -4,13 +4,7 @@
     "es6": true,
     "jest": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "prettier/react",
-    "prettier"
-  ],
+  "extends": ["plugin:react/recommended", "plugin:prettier/recommended", "plugin:react/recommended", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -76,6 +70,8 @@
     ],
     "prefer-spread": "error",
     "prefer-template": "off",
+    // TypeScript
+    "@typescript-eslint/no-unused-vars": "off",
     // React
     "react/no-danger": "error",
     "react/no-deprecated": "error",
@@ -89,6 +85,7 @@
     "react/prop-types": "off",
     "react/self-closing-comp": "off",
     "react/destructuring-assignment": "off",
-    "@typescript-eslint/no-unused-vars": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/display-name": "off"
   }
 }

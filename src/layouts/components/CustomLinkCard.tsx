@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { withRouter } from 'next/router';
 import { WithRouterProps } from 'next/dist/client/with-router';
-import LinkCard from '~/components/LinkCard';
+import { LinkCard } from '~/components/uiParts/LinkCard';
 
 interface Props {
   href: string;

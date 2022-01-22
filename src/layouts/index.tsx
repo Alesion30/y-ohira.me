@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { NextPage } from 'next';
-import appConfig from '~/config/app';
-import Head from 'next/head';
+// import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import { motion } from 'framer-motion';
 import theme from '~/layouts/theme';
@@ -11,9 +10,9 @@ import ScrollTopButton from '~/layouts/components/ScrollTopButton';
 import Container from '@material-ui/core/Container';
 import Drawer from '@material-ui/core/Drawer';
 import MenuStyle from '~/styles/components/Menu.module.scss';
-import CustomSpacer from '~/components/CustomSpacer';
 import Grid from '@material-ui/core/Grid';
 import CustomLinkCard from '~/layouts/components/CustomLinkCard';
+import { Spacer } from '~/components/uiParts/Spacer';
 
 interface Props {
   title?: string;
@@ -29,21 +28,21 @@ interface OG {
 
 const DefaultLayout: NextPage<Props> = ({ children, title, marginTop, og }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const siteTitle = title ? `${title} | ${appConfig.title}` : `${appConfig.title}`;
+  // const siteTitle = title ? `${title} | ${appConfig.title}` : `${appConfig.title}`;
 
   // OGP情報
-  const ogtitle = og?.title ?? siteTitle;
-  const ogdescription = og?.description ?? appConfig.description;
-  const ogimage = og?.image ?? appConfig.image;
+  // const ogtitle = og?.title ?? siteTitle;
+  // const ogdescription = og?.description ?? appConfig.description;
+  // const ogimage = og?.image ?? appConfig.image;
 
   return (
     <ThemeProvider theme={theme}>
-      <Head>
+      {/* <Head>
         <title>{ogtitle}</title>
         <meta property="og:title" content={ogtitle} />
         <meta property="og:description" content={ogdescription} />
         <meta property="og:image" content={ogimage} />
-      </Head>
+      </Head> */}
 
       <motion.div
         animate={{ opacity: 1 }}
@@ -64,7 +63,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop, og }) => {
           transitionDuration={{ enter: 800, exit: 200 }}
         >
           <div className={MenuStyle.menu}>
-            <CustomSpacer height={150} />
+            <Spacer height={150} />
             <Container maxWidth="md">
               <Grid container direction="row" justify="center" alignItems="center">
                 <CustomLinkCard href="/" title="Home" description="トップページ" />
@@ -73,7 +72,7 @@ const DefaultLayout: NextPage<Props> = ({ children, title, marginTop, og }) => {
                 <CustomLinkCard href="/hobby" title="Hobby" description="趣味" />
               </Grid>
             </Container>
-            <CustomSpacer height={120} />
+            <Spacer height={120} />
           </div>
         </Drawer>
       </motion.div>
