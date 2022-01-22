@@ -1,10 +1,10 @@
 import style from './style.module.scss';
 import Layout from '~/layouts/index';
-import { Spacer } from '~/components/uiParts/Spacer';
 import { ScrollIcon } from '~/components/uiParts/ScrollIcon';
 import { TopLinkCard } from './TopLinkCard';
 import { Intro } from './Intro';
 import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
+import { Spacer } from '~/components/uiParts/Spacer';
 
 export const TopPresenter: React.VFC = () => {
   return (
