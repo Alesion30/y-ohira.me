@@ -17,7 +17,6 @@ type StaticParams = {
 };
 
 export default ({ blog }: StaticProps) => {
-  console.log(blog);
   return (
     <>
       <NextSeo title={blog?.title} />
