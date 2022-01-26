@@ -1,8 +1,13 @@
 $main-color: #008cd6;
 
 .wrapper {
+  background-color: #fff;
+  z-index: 9999;
+
+  position: fixed;
+  top: 30px;
+
   padding: 30px 50px;
-  // background-color: red;
   border-radius: 60px;
 
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
