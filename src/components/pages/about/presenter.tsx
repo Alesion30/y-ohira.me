@@ -1,10 +1,10 @@
 import { CustomLink } from '~/components/uiParts/CustomLink';
 import { SectionTitle } from '~/components/uiParts/SectionTitle';
-import Layout from '~/layouts/index';
 import style from './style.module.scss';
 import Image from 'next/image';
 import { Stars } from '~/components/uiParts/Stars';
 import { Spacer } from '~/components/uiParts/Spacer';
+import { DefaultLayout } from '~/components/layouts/default';
 
 export type Carrier = { date: string; content: string };
 
@@ -20,7 +20,7 @@ export type AboutProps = {
 
 export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
   return (
-    <Layout>
+    <DefaultLayout>
       <SectionTitle title="PROFILE" description="経歴" />
 
       <Spacer height={50} />
@@ -80,8 +80,6 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
           </div>
         ))}
       </div>
-
-      <Spacer height={100} />
-    </Layout>
+    </DefaultLayout>
   );
 };
