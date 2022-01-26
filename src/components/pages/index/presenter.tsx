@@ -1,14 +1,11 @@
 import style from './style.module.scss';
-import { ScrollIcon } from '~/components/uiParts/ScrollIcon';
 import { TopLinkCard } from './TopLinkCard';
-import { Intro } from './Intro';
-import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
-import { Spacer } from '~/components/uiParts/Spacer';
 import { DefaultLayout } from '~/components/layouts/default';
 import { useState, useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import NET from 'vanta/dist/vanta.net.min';
 import { Container } from '~/components/uiParts/Container';
+import { Spacer } from '~/components/uiParts/Spacer';
 
 export const TopPresenter: React.VFC = () => {
   const [vantaEffect, setVantaEffect] = useState<any>();
@@ -30,10 +27,9 @@ export const TopPresenter: React.VFC = () => {
   }, [vantaEffect]);
 
   return (
-    <DefaultLayout>
+    <DefaultLayout header={false}>
       <div ref={myRef}>
-        <Container>
-          <Spacer height={200} />
+        <Container className={style.wrapper}>
           <h1 className={style.title}>
             Hi There👋 I&apos;m <span className={style.highlight}>Yuta Ohira!</span>
           </h1>
@@ -50,12 +46,10 @@ export const TopPresenter: React.VFC = () => {
               className={style.card}
             />
           </div>
-          <ScrollIcon />
           <Spacer height={100} />
         </Container>
       </div>
-
-      <Container>
+      {/* <Container>
         <Spacer height={50} />
         <div className={style.introList}>
           <InViewAnimate threshold={0.7} open={{ opacity: 1, x: 0 }} closed={{ opacity: 0, x: '-2%' }}>
@@ -80,7 +74,7 @@ export const TopPresenter: React.VFC = () => {
           </InViewAnimate>
         </div>
         <Spacer height={100} />
-      </Container>
+      </Container> */}
     </DefaultLayout>
   );
 };
