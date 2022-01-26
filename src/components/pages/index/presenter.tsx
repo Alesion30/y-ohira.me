@@ -35,9 +35,9 @@ export const TopPresenter: React.VFC = () => {
           </h1>
           <p className={style.description}>Web Engineer from Kyushu University</p>
           <div className={style.cardList}>
-            <TopLinkCard title="About" description="経歴・スキルなど" href="/about" className={style.card} />
-            <TopLinkCard title="Product" description="今まで作ってきたアプリ" href="/product" className={style.card} />
-            <TopLinkCard title="Hobby" description="趣味" href="/hobby" className={style.card} />
+            <TopLinkCard title="ABOUT" description="経歴・スキルなど" href="/about" className={style.card} />
+            <TopLinkCard title="PRODUCT" description="今まで作ってきたアプリ" href="/product" className={style.card} />
+            <TopLinkCard title="BLOG" description="技術ブログ" href="/blog" className={style.card} />
             <TopLinkCard
               title="GitHub"
               description="GitHubのアカウントはこちら"

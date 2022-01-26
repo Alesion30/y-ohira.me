@@ -2,9 +2,9 @@ import { HeaderPresenter } from './presenter';
 
 export const Header: React.VFC = () => {
   const links = [
-    { href: '/about', name: 'About' },
-    { href: '/product', name: 'Product' },
-    { href: '/hobby', name: 'Hobby' },
+    { href: '/about', name: 'ABOUT' },
+    { href: '/product', name: 'PRODUCT' },
+    { href: '/blog', name: 'BLOG' },
   ];
   return <HeaderPresenter links={links} />;
 };
