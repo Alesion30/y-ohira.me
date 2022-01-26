@@ -3,21 +3,37 @@ import { TopLinkCard } from './TopLinkCard';
 import { DefaultLayout } from '~/components/layouts/default';
 import { useState, useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import NET from 'vanta/dist/vanta.clouds.min';
+import CLOUD from 'vanta/dist/vanta.clouds.min';
 import { Container } from '~/components/uiParts/Container';
 import { Spacer } from '~/components/uiParts/Spacer';
+
+type CLOUDProps = {
+  el: any;
+  THREE: typeof THREE;
+  backgroundColor?: number;
+  skyColor?: number;
+  cloudColor?: number;
+  cloudShadowColor?: number;
+  sunColor?: number;
+  sunGlareColor?: number;
+  sunlightColor?: number;
+  scale?: number;
+  scaleMobile?: number;
+  speed?: number;
+  mouseEase?: true;
+};
 
 export const TopPresenter: React.VFC = () => {
   const [vantaEffect, setVantaEffect] = useState<any>();
   const myRef = useRef(null);
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(
-        NET({
-          el: myRef.current,
-          THREE: THREE,
-        })
-      );
+      const props: CLOUDProps = {
+        el: myRef.current,
+        THREE: THREE,
+        skyColor: 0xffffff,
+      };
+      setVantaEffect(CLOUD(props));
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy();
