@@ -1,0 +1,35 @@
+$main-color: #008cd6;
+
+.wrapper {
+  padding: 30px 50px;
+  // background-color: red;
+  border-radius: 60px;
+
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.topLink {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  color: #333;
+
+  &:hover {
+    color: $main-color;
+  }
+}
