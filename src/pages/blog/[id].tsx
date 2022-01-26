@@ -9,7 +9,7 @@ import { DefaultLayout } from '~/components/layouts/default';
 import { Spacer } from '~/components/uiParts/Spacer';
 
 type StaticProps = {
-  blog: Blog;
+  blog?: Blog;
 };
 
 type StaticParams = {
@@ -20,11 +20,11 @@ export default ({ blog }: StaticProps) => {
   console.log(blog);
   return (
     <>
-      <NextSeo title={blog.title} />
+      <NextSeo title={blog?.title} />
       <DefaultLayout>
         <Container>
           <Spacer height={200} />
-          <ReactMarkdown>{blog.content}</ReactMarkdown>
+          <ReactMarkdown>{blog?.content ?? ''}</ReactMarkdown>
           <Spacer height={200} />
         </Container>
       </DefaultLayout>
@@ -33,12 +33,18 @@ export default ({ blog }: StaticProps) => {
 };
 
 export const getStaticProps: GetStaticProps<StaticProps, StaticParams> = async ({ params }) => {
-  const { data } = await getBlog(params?.id!);
-  return {
-    props: {
-      blog: data.blog,
-    },
-  };
+  try {
+    const { data } = await getBlog(params!.id);
+    return {
+      props: {
+        blog: data.blog,
+      },
+    };
+  } catch (err) {
+    return {
+      notFound: true,
+    };
+  }
 };
 
 export const getStaticPaths: GetStaticPaths<StaticParams> = async () => {
