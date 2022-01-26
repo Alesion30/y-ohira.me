@@ -1,6 +1,5 @@
 import { DefaultLayout } from '~/components/layouts/default';
 import { CaptionImage } from '~/components/uiParts/CaptionImage';
-import { Container } from '~/components/uiParts/Container';
 import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
 import { SectionTitle } from '~/components/uiParts/SectionTitle';
 import { Spacer } from '~/components/uiParts/Spacer';
@@ -19,29 +18,25 @@ export type HobbyProps = {
 export const HobbyPresenter: React.VFC<HobbyProps> = ({ contents }) => {
   return (
     <DefaultLayout>
-      <Container>
-        <Spacer height={200} />
-        <SectionTitle title="HOBBY" description="趣味" />
-        <Spacer height={50} />
-        <div className={style.images}>
-          {contents.map((content, index) => {
-            return (
-              <div key={`hobby_content_${index}`} className={style.image}>
-                <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
-                  <CaptionImage
-                    title={content.title}
-                    description={content.description}
-                    src={content.src}
-                    width={400}
-                    height={400 * 0.75}
-                  />
-                </InViewAnimate>
-              </div>
-            );
-          })}
-        </div>
-        <Spacer height={100} />
-      </Container>
+      <SectionTitle title="HOBBY" description="趣味" />
+      <Spacer height={50} />
+      <div className={style.images}>
+        {contents.map((content, index) => {
+          return (
+            <div key={`hobby_content_${index}`} className={style.image}>
+              <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+                <CaptionImage
+                  title={content.title}
+                  description={content.description}
+                  src={content.src}
+                  width={400}
+                  height={400 * 0.75}
+                />
+              </InViewAnimate>
+            </div>
+          );
+        })}
+      </div>
     </DefaultLayout>
   );
 };

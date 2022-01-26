@@ -1,12 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
-import { Container } from '~/components/uiParts/Container';
 import { getBlog } from '~/data/api/blog';
 import { getBlogs } from '~/data/api/blogs';
 import { Blog } from '~/data/model/blog';
 import ReactMarkdown from 'react-markdown';
 import { DefaultLayout } from '~/components/layouts/default';
-import { Spacer } from '~/components/uiParts/Spacer';
 
 type StaticProps = {
   blog?: Blog;
@@ -21,11 +19,7 @@ export default ({ blog }: StaticProps) => {
     <>
       <NextSeo title={blog?.title} />
       <DefaultLayout>
-        <Container>
-          <Spacer height={200} />
-          <ReactMarkdown>{blog?.content ?? ''}</ReactMarkdown>
-          <Spacer height={200} />
-        </Container>
+        <ReactMarkdown>{blog?.content ?? ''}</ReactMarkdown>
       </DefaultLayout>
     </>
   );

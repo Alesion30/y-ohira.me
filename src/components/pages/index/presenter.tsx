@@ -27,7 +27,7 @@ export const TopPresenter: React.VFC = () => {
   }, [vantaEffect]);
 
   return (
-    <DefaultLayout header={false}>
+    <DefaultLayout full>
       <div ref={myRef}>
         <Container className={style.wrapper}>
           <h1 className={style.title}>
