@@ -7,7 +7,7 @@ import { Spacer } from '~/components/uiParts/Spacer';
 import { DefaultLayout } from '~/components/layouts/default';
 import { useState, useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import CLOUDS from 'vanta/dist/vanta.clouds.min';
+import NET from 'vanta/dist/vanta.net.min';
 import { Container } from '~/components/uiParts/Container';
 
 export const TopPresenter: React.VFC = () => {
@@ -16,9 +16,11 @@ export const TopPresenter: React.VFC = () => {
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        CLOUDS({
+        NET({
           el: myRef.current,
           THREE: THREE,
+          color: 0xff3f81,
+          backgroundColor: 0xffffff,
         })
       );
     }
