@@ -23,7 +23,12 @@ export const BlogPresenter: React.VFC<BlogProps> = ({ blogs }) => {
             return (
               <div key={blog.id} className={style.blog}>
                 <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
-                  <BlogCard title={blog.title} date={blog.createdAt} href="/" src="/images/product/elepoke.png" />
+                  <BlogCard
+                    title={blog.title}
+                    date={blog.createdAt}
+                    href={`/blog/${blog.id}`}
+                    src="/images/product/elepoke.png"
+                  />
                 </InViewAnimate>
               </div>
             );
