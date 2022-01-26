@@ -6,31 +6,13 @@ import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
-import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-
-const httpLink = createHttpLink({
-  uri: process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT ?? '',
-});
-const authLink = setContext((_, { headers }) => {
-  const token = process.env.NEXT_PUBLIC_GRAPHCMS_TOKEN;
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : '',
-    },
-  };
-});
-const cache = new InMemoryCache();
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache,
-});
+import { ApolloProvider } from '@apollo/client';
+import { apolloClient } from '~/plugins/apollo';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <AnimatePresence exitBeforeEnter initial={true}>
-      <ApolloProvider client={client}>
+      <ApolloProvider client={apolloClient}>
         <DefaultSeo {...SEO} />
         <Head>
           <link rel="icon" href="/favicon.ico" />
