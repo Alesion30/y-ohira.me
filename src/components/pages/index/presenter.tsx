@@ -20,7 +20,7 @@ type CLOUDProps = {
   scale?: number;
   scaleMobile?: number;
   speed?: number;
-  mouseEase?: true;
+  mouseEase?: boolean;
 };
 
 export const TopPresenter: React.VFC = () => {
