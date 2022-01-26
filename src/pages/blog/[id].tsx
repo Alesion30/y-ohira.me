@@ -33,18 +33,12 @@ export default ({ blog }: StaticProps) => {
 };
 
 export const getStaticProps: GetStaticProps<StaticProps, StaticParams> = async ({ params }) => {
-  try {
-    const { data } = await getBlog(params!.id);
-    return {
-      props: {
-        blog: data.blog,
-      },
-    };
-  } catch (err) {
-    return {
-      notFound: true,
-    };
-  }
+  const { data } = await getBlog(params!.id);
+  return {
+    props: {
+      blog: data.blog,
+    },
+  };
 };
 
 export const getStaticPaths: GetStaticPaths<StaticParams> = async () => {
