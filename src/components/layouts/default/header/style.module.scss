@@ -6,6 +6,8 @@ $main-color: #008cd6;
   position: fixed;
   top: 30px;
   padding: 30px 50px;
+  max-width: 90vw;
+  overflow-x: auto;
 
   border: 0.5px solid #eaeaea;
   border-radius: 60px;
