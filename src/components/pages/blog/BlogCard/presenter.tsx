@@ -8,13 +8,14 @@ export type BlogCardType = {
   date: Date;
   src: string;
   href: string;
+  blank?: boolean;
 };
 
-export const BlogCardPresenter: React.VFC<BlogCardType> = ({ title, date, src, href }) => {
+export const BlogCardPresenter: React.VFC<BlogCardType> = ({ title, date, src, href, blank }) => {
   const width = 400;
-  const height = 400 * 0.75;
+  const height = (400 * 800) / 1280;
   return (
-    <MyCard href={href}>
+    <MyCard href={href} blank={blank}>
       <Image src={src} width={width} height={height} />
       <div className={style.wrapper} style={{ width }}>
         <p className={style.date}>{dayjs(date).format('YYYY/MM/DD')}</p>
