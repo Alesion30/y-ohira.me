@@ -9,6 +9,10 @@ const nextConfig = {
     };
     return config;
   },
+  // Next Image
+  images: {
+    domains: ['media.graphcms.com'],
+  },
   // Google Fonts
   experimental: {
     optimizeFonts: true,
