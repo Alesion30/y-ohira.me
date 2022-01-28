@@ -7,6 +7,12 @@ const QUERY = gql`
     blog(where: { id: $id }) {
       id
       title
+      link
+      image {
+        url
+        height
+        width
+      }
       content
       createdAt
     }

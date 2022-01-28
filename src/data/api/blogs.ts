@@ -7,6 +7,12 @@ const QUERY = gql`
     blogs {
       id
       title
+      link
+      image {
+        url
+        height
+        width
+      }
       createdAt
     }
   }
