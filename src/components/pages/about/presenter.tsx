@@ -1,10 +1,10 @@
 import { CustomLink } from '~/components/uiParts/CustomLink';
 import { SectionTitle } from '~/components/uiParts/SectionTitle';
-import Layout from '~/layouts/index';
 import style from './style.module.scss';
 import Image from 'next/image';
 import { Stars } from '~/components/uiParts/Stars';
 import { Spacer } from '~/components/uiParts/Spacer';
+import { DefaultLayout } from '~/components/layouts/default';
 
 export type Carrier = { date: string; content: string };
 
@@ -20,11 +20,9 @@ export type AboutProps = {
 
 export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
   return (
-    <Layout>
+    <DefaultLayout>
       <SectionTitle title="PROFILE" description="経歴" />
-
       <Spacer height={50} />
-
       <div>
         {carriers.map((item, index) => {
           return (
@@ -35,9 +33,7 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
           );
         })}
       </div>
-
       <Spacer height={50} />
-
       <div className={style.account}>
         <div className={style.accountImage}>
           <Image src="/images/alesion.png" width={334} height={237} />
@@ -65,13 +61,9 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
           </p>
         </div>
       </div>
-
       <Spacer height={80} />
-
       <SectionTitle title="Skills & Languages" />
-
       <Spacer height={30} />
-
       <div className={style.star}>
         {skills.map((skill) => (
           <div key={`about_skill_${skill.name}`} className={style.starContainer}>
@@ -80,8 +72,6 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
           </div>
         ))}
       </div>
-
-      <Spacer height={100} />
-    </Layout>
+    </DefaultLayout>
   );
 };

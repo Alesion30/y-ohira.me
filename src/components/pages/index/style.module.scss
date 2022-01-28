@@ -1,5 +1,12 @@
 $main-color: #008cd6;
 
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .title {
   margin: 0;
   margin-top: 20px;

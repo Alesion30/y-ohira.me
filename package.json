@@ -15,21 +15,24 @@
     "build-storybook": "build-storybook -s ./public"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.8",
     "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
     "clsx": "^1.1.1",
+    "dayjs": "^1.10.7",
     "framer-motion": "^6.0.0",
-    "gray-matter": "^4.0.3",
+    "graphql": "^16.2.0",
     "modern-css-reset": "^1.4.0",
     "next": "12.0.8",
     "next-pwa": "^5.4.4",
     "next-seo": "^4.29.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-globe.gl": "^2.20.1",
     "react-intersection-observer": "^8.33.1",
+    "react-markdown": "^8.0.0",
     "react-scroll": "^1.8.4",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "three": "^0.136.0",
+    "vanta": "^0.5.21"
   },
   "devDependencies": {
     "@babel/core": "^7.16.10",
@@ -43,6 +46,7 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@types/react-scroll": "^1.8.3",
+    "@types/three": "^0.136.1",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "babel-loader": "^8.2.3",

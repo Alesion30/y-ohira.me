@@ -1,8 +1,9 @@
+import { DefaultLayout } from '~/components/layouts/default';
 import { CaptionImage } from '~/components/uiParts/CaptionImage';
+import { Container } from '~/components/uiParts/Container';
 import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
 import { SectionTitle } from '~/components/uiParts/SectionTitle';
 import { Spacer } from '~/components/uiParts/Spacer';
-import Layout from '~/layouts/index';
 import style from './style.module.scss';
 
 export type Content = {
@@ -17,7 +18,7 @@ export type ProductProps = {
 
 export const ProductPresenter: React.VFC<ProductProps> = ({ contents }) => {
   return (
-    <Layout>
+    <DefaultLayout>
       <SectionTitle title="PRODUCT" description="今まで作ってきたアプリ" />
       <Spacer height={50} />
       <div className={style.images}>
@@ -37,7 +38,6 @@ export const ProductPresenter: React.VFC<ProductProps> = ({ contents }) => {
           );
         })}
       </div>
-      <Spacer height={80} />
-    </Layout>
+    </DefaultLayout>
   );
 };
