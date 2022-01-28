@@ -6,6 +6,7 @@ import * as THREE from 'three';
 import CLOUD from 'vanta/dist/vanta.clouds.min';
 import { Container } from '~/components/uiParts/Container';
 import { Spacer } from '~/components/uiParts/Spacer';
+import Image from 'next/image';
 
 type CLOUDProps = {
   el: any;
@@ -46,7 +47,12 @@ export const TopPresenter: React.VFC = () => {
         <Container className={style.wrapper}>
           <Spacer height={100} />
           <h1 className={style.title}>
-            Hi There👋 I&apos;m <span className={style.highlight}>Yuta Ohira!</span>
+            Hi There
+            <Image src="/images/handshake.gif" width={70} height={70} />
+            &nbsp;
+            <span>
+              I&apos;m <span className={style.highlight}>Yuta Ohira!</span>
+            </span>
           </h1>
           <p className={style.description}>Web Engineer from Kyushu University</p>
           <div className={style.cardList}>
