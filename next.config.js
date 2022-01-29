@@ -19,7 +19,7 @@ const nextConfig = {
   },
   // SCSS
   sassOptions: {
-    includePaths: [path.join(__dirname, 'src')],
+    includePaths: [path.join(__dirname, 'src/styles')],
   },
   cssModules: true,
   // PWA

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { AppProps } from 'next/app';
-import '../styles/globals.scss';
+import '~/styles/globals.scss';
 import 'modern-css-reset/dist/reset.min.css';
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';

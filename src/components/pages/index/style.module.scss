@@ -1,6 +1,14 @@
+@import 'variables';
 $main-color: #008cd6;
 
 .wrapper {
+  @include mq(md) {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;

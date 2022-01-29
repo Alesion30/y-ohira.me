@@ -1,6 +1,6 @@
 import { FC, CSSProperties } from 'react';
 import Link from 'next/link';
-import LinkStyle from '~/styles/components/CustomLink.module.scss';
+import LinkStyle from './style.module.scss';
 
 interface Props {
   title: string;
