@@ -12,7 +12,7 @@ export type TopLinkCardProps = {
 
 export const TopLinkCardPresenter: React.VFC<TopLinkCardProps> = ({ title, description, href, blank, className }) => {
   return (
-    <MyCard href={href} blank={blank} className={clsx(style.card, className)}>
+    <MyCard href={href} blank={blank} className={clsx(style.card, className)} disableScale>
       <h3 className={style.title}>{title} &rarr;</h3>
       <p className={style.description}>{description}</p>
     </MyCard>

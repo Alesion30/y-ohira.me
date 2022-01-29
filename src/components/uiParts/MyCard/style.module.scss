@@ -16,4 +16,6 @@ $main-color: #008cd6;
     color: $main-color;
     border-color: $main-color;
   }
+
+  transition: border-color 0.5s, color 0.5s;
 }
