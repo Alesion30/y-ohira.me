@@ -52,12 +52,16 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
             <CustomLink title="https://github.com/Alesion30" target={true} href="https://github.com/Alesion30" />
           </p>
           <p className={style.accountDescP}>
+            <span className={style.accountDescLabel}>Gmail:</span>
+            <CustomLink title="ohira.job720@gmail.com" href="mailto:ohira.job720@gmail.com" />
+          </p>
+          <p className={style.accountDescP}>
             <span className={style.accountDescLabel}>Qiita:</span>
             <CustomLink title="https://qiita.com/Alesion30" target={true} href="https://qiita.com/Alesion30" />
           </p>
           <p className={style.accountDescP}>
-            <span className={style.accountDescLabel}>Gmail:</span>
-            <CustomLink title="ohira.job720@gmail.com" href="mailto:ohira.job720@gmail.com" />
+            <span className={style.accountDescLabel}>Zenn:</span>
+            <CustomLink title="https://zenn.dev/alesion" target={true} href="https://zenn.dev/alesion" />
           </p>
         </div>
       </div>
