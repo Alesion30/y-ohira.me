@@ -1,26 +1,24 @@
-$main-color: #008cd6;
-
 .link {
-  flex-basis: 45%;
-  text-align: left;
-  color: inherit;
-  background-color: #fff;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
+  position: relative;
+  padding: 2px 0px;
+  display: inline-block;
+  transition: 0.3s;
+  color: #000;
 
-.link:hover,
-.link:focus,
-.link:active {
-  color: $main-color;
-  border-color: $main-color;
-}
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    transition: 0.3s;
+    transform: translateX(-50%);
+  }
 
-.link p {
-  margin: 0;
-  padding: 10px 20px;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  &:hover::after {
+    width: 100%;
+  }
 }
