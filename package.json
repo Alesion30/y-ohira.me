@@ -30,7 +30,7 @@
     "react-globe.gl": "2.20.4",
     "react-intersection-observer": "8.33.1",
     "react-markdown": "8.0.0",
-    "react-scroll": "1.8.4",
+    "react-scroll": "1.8.5",
     "three": "0.137.5",
     "vanta": "0.5.21"
   },
