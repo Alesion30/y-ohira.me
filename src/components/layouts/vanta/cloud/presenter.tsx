@@ -23,7 +23,7 @@ type CLOUDProps = {
 };
 
 export const VantaCloudLayoutPresenter: VFC<VantaCloudLayoutProps> = ({ children }) => {
-  const [vantaEffect, setVantaEffect] = useState<any>();
+  const [vantaEffect, setVantaEffect] = useState<any>(false);
   const myRef = useRef(null);
   useEffect(() => {
     if (!vantaEffect) {

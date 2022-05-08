@@ -1,4 +1,4 @@
-import { ForwardRefComponent, HTMLMotionProps, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import style from './style.module.scss';
 import Link from 'next/link';
 import clsx from 'clsx';
