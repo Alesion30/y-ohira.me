@@ -12896,7 +12896,7 @@ __metadata:
     sass: ^1.51.0
     sass-loader: ^12.6.0
     style-loader: ^3.3.1
-    three: 0.140.0
+    three: 0.100.0
     typescript: ^4.6.4
     vanta: 0.5.22
   languageName: unknown
@@ -15515,10 +15515,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:0.140.0":
-  version: 0.140.0
-  resolution: "three@npm:0.140.0"
-  checksum: f7d16e643046c831741972d3caddf1f0b64ed42d454e13708e8d6cc329d700fa0544324942fc361d1bffb924a144750fce3662288208c2b7ed640e3a732a6d2a
+"three@npm:0.100.0":
+  version: 0.100.0
+  resolution: "three@npm:0.100.0"
+  checksum: fa6da565e3845817ebc51bc969bd42d870f8270dafa04b8951ee7384cb0a9474632b281b01cb160bedb3ccaf4141edf5c7793c9a34ee3896f4aa729a35b410e4
   languageName: node
   linkType: hard
 
