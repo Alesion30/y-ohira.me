@@ -11,4 +11,4 @@ declare module 'vanta/dist/vanta.rings.min';
 declare module 'vanta/dist/vanta.ripple.min';
 // declare module 'vanta/dist/vanta.topology.min';
 // declare module 'vanta/dist/vanta.trunk.min';
-// declare module 'vanta/dist/vanta.waves.min';
+declare module 'vanta/dist/vanta.waves.min';
