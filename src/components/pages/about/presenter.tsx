@@ -38,7 +38,7 @@ export const AboutPresenter: React.FC<AboutProps> = ({ carriers, skills }) => {
       <Spacer height={50} />
       <div className={style.account}>
         <div className={style.accountImage}>
-          <Image alt="alesion" height={237} src="/images/alesion.png" width={334} />
+          <Image alt="alesion" height={237} layout="fixed" src="/images/alesion.png" width={334} />
         </div>
         <div className={style.accountDesc}>
           <p className={style.accountDescP}>

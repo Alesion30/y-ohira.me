@@ -1,5 +1,14 @@
+@import 'variables';
+
 .carrier {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  @include mq(md) {
+    flex-direction: row;
+    margin: 0;
+  }
+
   font-size: 1rem;
 
   &Title {
@@ -17,6 +26,7 @@
 
 .account {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
