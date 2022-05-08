@@ -14,7 +14,7 @@ export type TopLinkCardProps = {
 
 export const TopLinkCardPresenter: React.FC<TopLinkCardProps> = ({ blank, className, description, href, title }) => {
   return (
-    <MyCard disableScale blank={blank} className={clsx(style.card, className)} href={href}>
+    <MyCard blank={blank} className={clsx(style.card, className)} href={href}>
       <h3 className={style.title}>{title} &rarr;</h3>
       <p className={style.description}>{description}</p>
     </MyCard>
