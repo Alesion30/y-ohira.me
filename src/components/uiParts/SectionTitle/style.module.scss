@@ -1,11 +1,11 @@
-$main-color: #008cd6;
+@import 'variables';
 
 .container {
   text-align: center;
 }
 
 .title {
-  color: $main-color;
+  color: $primary;
   font-size: 3rem;
   margin-bottom: 10px;
 }

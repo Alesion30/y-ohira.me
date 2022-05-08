@@ -1,10 +1,12 @@
+@import 'variables';
+
 .link {
   text-decoration: none;
   position: relative;
   padding: 2px 0px;
   display: inline-block;
   transition: 0.3s;
-  color: #000;
+  color: $onBackground;
 
   &::after {
     position: absolute;
@@ -13,7 +15,7 @@
     content: '';
     width: 0;
     height: 1px;
-    background-color: #000;
+    background-color: $onBackground;
     transition: 0.3s;
     transform: translateX(-50%);
   }

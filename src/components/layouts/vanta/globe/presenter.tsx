@@ -14,6 +14,10 @@ type GLOBEProps = {
   color?: number;
   color2?: number;
   size?: number;
+  points?: number;
+  maxDistance?: number;
+  spacing?: number;
+  showDots?: boolean;
 };
 
 export const VantaGlobeLayoutPresenter: FC<VantaGlobeLayoutProps> = ({ children }) => {
@@ -24,8 +28,8 @@ export const VantaGlobeLayoutPresenter: FC<VantaGlobeLayoutProps> = ({ children 
     if (!vantaEffect) {
       const props: GLOBEProps = {
         backgroundColor: 0x222222,
-        color: 0xff8820,
-        color2: 0xff8820,
+        color: 0x38b6ff,
+        color2: 0x85150d,
         el: myRef.current,
         THREE: THREE,
       };

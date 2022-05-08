@@ -1,7 +1,7 @@
-$main-color: #008cd6;
+@import 'variables';
 
 .title {
-  color: $main-color;
+  color: $primary;
   font-size: 2rem;
   margin-top: 20px;
   margin-bottom: 20px;

@@ -7,16 +7,14 @@ interface Props {
   title: string;
   href: string;
   target?: boolean;
-  color?: string;
   style?: CSSProperties;
 }
 
-export const CustomLink: FC<Props> = ({ color, href, style, target, title }) => {
-  const _color = color ?? '#000';
+export const CustomLink: FC<Props> = ({ href, style, target, title }) => {
   if (target) {
     return (
       <Link href={href}>
-        <a className={LinkStyle.link} rel="noopener noreferrer" style={{ color: _color, ...style }} target="_blank">
+        <a className={LinkStyle.link} rel="noopener noreferrer" style={style} target="_blank">
           {title}
         </a>
       </Link>
@@ -24,7 +22,7 @@ export const CustomLink: FC<Props> = ({ color, href, style, target, title }) => 
   } else {
     return (
       <Link href={href}>
-        <a className={LinkStyle.link} style={{ color: _color, ...style }}>
+        <a className={LinkStyle.link} style={style}>
           {title}
         </a>
       </Link>

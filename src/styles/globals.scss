@@ -1,12 +1,16 @@
+@import 'variables';
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Lato', 'Noto Sans JP', sans-serif;
+  background-color: $background;
+  color: $onBackground;
 }
 
 a {
-  color: inherit;
+  color: $onBackground;
   text-decoration: none;
 }
 

@@ -4,7 +4,7 @@ import { TopLinkCard } from './TopLinkCard';
 import style from './style.module.scss';
 
 import { DefaultLayout } from '~/components/layouts/default';
-import { VantaCloudLayout } from '~/components/layouts/vanta';
+import { VantaGlobeLayout } from '~/components/layouts/vanta';
 import { Container } from '~/components/uiParts/Container';
 import { Spacer } from '~/components/uiParts/Spacer';
 
@@ -12,7 +12,7 @@ export const TopPresenter: React.FC = () => {
   return (
     <DefaultLayout full>
       <div className={style.wrapper}>
-        <VantaCloudLayout>
+        <VantaGlobeLayout>
           <Container className={style.container}>
             <Spacer height={50} />
             <h1 className={style.title}>
@@ -41,9 +41,9 @@ export const TopPresenter: React.FC = () => {
                 title="GitHub"
               />
             </div>
-            <Spacer height={150} />
+            <Spacer height={120} />
           </Container>
-        </VantaCloudLayout>
+        </VantaGlobeLayout>
       </div>
     </DefaultLayout>
   );
