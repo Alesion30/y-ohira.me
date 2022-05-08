@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "analyze": "ANALYZE=true next build",
     "ssg": "next build && next export",
     "ssg-start": "npx http-server ./out",
     "format": "prettier --write .",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.10",
+    "@next/bundle-analyzer": "^12.1.6",
     "@storybook/addon-actions": "^6.4.13",
     "@storybook/addon-essentials": "^6.4.13",
     "@storybook/addon-links": "^6.4.13",

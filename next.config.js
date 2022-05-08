@@ -1,6 +1,10 @@
 const path = require('path');
 const withPWA = require('next-pwa');
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
   webpack: (config) => {
     config.resolve.alias = {
@@ -29,4 +33,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(nextConfig);
+module.exports = withBundleAnalyzer(withPWA(nextConfig));
