@@ -1,15 +1,12 @@
-import { DefaultSeoProps } from 'next-seo';
+import { DefaultSeoProps } from 'next-seo/lib/types';
 
 // https://github.com/garmeeh/next-seo
 const config: DefaultSeoProps = {
+  canonical: 'https://www.y-ohira.me/',
   defaultTitle: 'Web Engineer from Kyushu University',
-  titleTemplate: '%s | Web Engineer from Kyushu University',
   description:
     '九州大学出身の学生Webエンジニアです。LaravelやReactを用いたフルスタック開発をはじめ、Flutterを用いたアプリ開発やWordPressを用いたCMS運用を行なっております。',
-  canonical: 'https://www.y-ohira.me/',
-  noindex: true,
   openGraph: {
-    title: 'Web Engineer from Kyushu University',
     description:
       '九州大学出身の学生Webエンジニアです。LaravelやReactを用いたフルスタック開発をはじめ、Flutterを用いたアプリ開発やWordPressを用いたCMS運用を行なっております。',
     // images: [
@@ -20,6 +17,8 @@ const config: DefaultSeoProps = {
     //   },
     // ],
     site_name: 'PORTFOLIO',
+    title: 'Web Engineer from Kyushu University',
   },
+  titleTemplate: '%s | Web Engineer from Kyushu University',
 };
 export default config;

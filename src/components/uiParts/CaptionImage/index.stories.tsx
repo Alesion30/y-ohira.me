@@ -6,8 +6,6 @@ import { CaptionImageProps } from './presenter';
 
 import { CaptionImage } from '.';
 
-export const Default = Template.bind({});
-
 const Template: ComponentStory<typeof CaptionImage> = (args) => <CaptionImage {...args} />;
 const defaultArgs: CaptionImageProps = {
   description: 'エアコンのリモート制御アプリ',
@@ -16,6 +14,8 @@ const defaultArgs: CaptionImageProps = {
   title: 'AWECON',
   width: 400,
 };
+
+export const Default = Template.bind({});
 
 export default {
   component: CaptionImage,

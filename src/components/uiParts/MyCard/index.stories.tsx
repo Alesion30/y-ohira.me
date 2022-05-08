@@ -4,8 +4,6 @@ import { MyCardProps } from './presenter';
 
 import { MyCard } from '.';
 
-export const Default = Template.bind({});
-
 const Template: ComponentStory<typeof MyCard> = (args) => <MyCard {...args} />;
 const defaultArgs: MyCardProps = {
   children: (
@@ -14,6 +12,8 @@ const defaultArgs: MyCardProps = {
     </div>
   ),
 };
+
+export const Default = Template.bind({});
 
 export default {
   component: MyCard,

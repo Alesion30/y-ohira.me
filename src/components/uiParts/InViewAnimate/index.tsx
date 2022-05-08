@@ -29,7 +29,7 @@ export const InViewAnimate: React.VFC<InViewAnimateProps> = ({
   let isTop = false;
   isTop = !useScrollTrigger({
     disableHysteresis: true,
-    target: window,
+    target: typeof window !== 'undefined' ? window : undefined,
     threshold: 50,
   });
 

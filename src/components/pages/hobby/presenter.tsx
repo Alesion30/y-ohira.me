@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 import style from './style.module.scss';
 
 import { DefaultLayout } from '~/components/layouts/default';

@@ -2,12 +2,12 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Container, ContainerProps } from '.';
 
-export const Default = Template.bind({});
-
 const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
 const defaultArgs: ContainerProps = {
   children: <h1>コンテナです</h1>,
 };
+
+export const Default = Template.bind({});
 
 export default {
   component: Container,

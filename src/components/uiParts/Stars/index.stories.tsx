@@ -4,12 +4,12 @@ import { StarsProps } from './presenter';
 
 import { Stars } from '.';
 
-export const Default = Template.bind({});
-
 const Template: ComponentStory<typeof Stars> = (args) => <Stars {...args} />;
 const defaultArgs: StarsProps = {
   star: 4,
 };
+
+export const Default = Template.bind({});
 
 export default {
   component: Stars,

@@ -4,13 +4,13 @@ import { SectionTitleProps } from './presenter';
 
 import { SectionTitle } from '.';
 
-export const Default = Template.bind({});
-
 const Template: ComponentStory<typeof SectionTitle> = (args) => <SectionTitle {...args} />;
 const defaultArgs: SectionTitleProps = {
   description: '経歴',
   title: 'PROFILE',
 };
+
+export const Default = Template.bind({});
 
 export default {
   component: SectionTitle,
