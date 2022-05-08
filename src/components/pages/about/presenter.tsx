@@ -68,7 +68,7 @@ export const AboutPresenter: React.FC<AboutProps> = ({ carriers, skills }) => {
         </div>
       </div>
       <Spacer height={80} />
-      <SectionTitle title="Skills & Languages" />
+      <SectionTitle description="スキルセット" title="My Skills" />
       <Spacer height={30} />
       <div className={style.star}>
         {skills.map((skill) => (
