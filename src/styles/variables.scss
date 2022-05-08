@@ -1,3 +1,4 @@
+// breakpoint
 $breakpoints: (
   'sm': 'screen and (min-width: 400px)',
   'md': 'screen and (min-width: 768px)',
@@ -10,3 +11,14 @@ $breakpoints: (
     @content;
   }
 }
+
+// color
+// https://material.io/design/color/the-color-system.html#color-theme-creation
+$primary: #38b6ff;
+$onPrimary: #222222;
+$secondary: #85150d;
+$onSecondary: #ffffff;
+$background: #222222;
+$onBackground: #ffffff;
+$surface: #313131;
+$onSurface: #ffffff;
