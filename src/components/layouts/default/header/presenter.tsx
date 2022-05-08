@@ -6,7 +6,7 @@ export type HeaderProps = {
   links: { href: string; name: string }[];
 };
 
-export const HeaderPresenter: React.VFC<HeaderProps> = ({ links }) => {
+export const HeaderPresenter: React.FC<HeaderProps> = ({ links }) => {
   return (
     <div className={style.wrapper}>
       <div className={style.links}>

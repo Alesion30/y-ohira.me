@@ -1,6 +1,6 @@
 import { Content, ProductPresenter } from './presenter';
 
-export const ProductPage: React.VFC = () => {
+export const ProductPage: React.FC = () => {
   const contents: Content[] = [
     { description: 'ポケモン選出最適化アプリ', src: '/images/product/elepoke.png', title: 'ELEPOKE' },
     { description: 'エアコンのリモート制御アプリ', src: '/images/product/awecon.png', title: 'AWECON' },

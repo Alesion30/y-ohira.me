@@ -22,7 +22,7 @@ type InputHookProps = {
   windowWidth: number;
 };
 
-export const IntroPresenter: React.VFC<IntroProps & InputHookProps> = ({
+export const IntroPresenter: React.FC<IntroProps & InputHookProps> = ({
   className,
   description,
   link,

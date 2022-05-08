@@ -1,6 +1,6 @@
 import { AboutPresenter, Carrier, Skill } from './presenter';
 
-export const AboutPage: React.VFC = () => {
+export const AboutPage: React.FC = () => {
   const carriers: Carrier[] = [
     { content: '九州大学工学部電気情報工学科に入学。', date: '2018年04月' },
     { content: 'プログラミングの学習を始める。当時は、Unityを用いた3Dゲームの開発に熱中する。', date: '2018年12月' },

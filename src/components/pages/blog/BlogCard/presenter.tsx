@@ -13,7 +13,7 @@ export type BlogCardType = {
   blank?: boolean;
 };
 
-export const BlogCardPresenter: React.VFC<BlogCardType> = ({ blank, date, href, src, title }) => {
+export const BlogCardPresenter: React.FC<BlogCardType> = ({ blank, date, href, src, title }) => {
   const width = 400;
   const height = (400 * 800) / 1280;
   return (

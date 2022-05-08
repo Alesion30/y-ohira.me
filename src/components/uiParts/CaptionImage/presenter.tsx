@@ -12,7 +12,7 @@ export type CaptionImageProps = {
   imgAspectRatio?: number; // 画像のアスペクト比（height / width）
 };
 
-export const CaptionImagePresenter: React.VFC<CaptionImageProps> = ({
+export const CaptionImagePresenter: React.FC<CaptionImageProps> = ({
   description,
   height,
   imgAspectRatio,

@@ -2,6 +2,6 @@ export type SpacerProps = {
   height: number;
 };
 
-export const Spacer: React.VFC<SpacerProps> = ({ height }) => {
+export const Spacer: React.FC<SpacerProps> = ({ height }) => {
   return <div style={{ height }} />;
 };

@@ -1,5 +1,5 @@
 import { CaptionImagePresenter, CaptionImageProps } from './presenter';
 
-export const CaptionImage: React.VFC<CaptionImageProps> = (props) => {
+export const CaptionImage: React.FC<CaptionImageProps> = (props) => {
   return <CaptionImagePresenter {...props} />;
 };

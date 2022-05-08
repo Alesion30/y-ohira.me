@@ -2,7 +2,7 @@ export type StarsProps = {
   star: 0 | 1 | 2 | 3 | 4 | 5;
 };
 
-export const StarsPresenter: React.VFC<StarsProps> = ({ star }) => {
+export const StarsPresenter: React.FC<StarsProps> = ({ star }) => {
   return (
     <div>
       {[...new Array(star)].map((_, index) => (

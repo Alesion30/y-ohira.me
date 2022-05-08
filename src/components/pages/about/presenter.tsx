@@ -20,7 +20,7 @@ export type AboutProps = {
   skills: Skill[];
 };
 
-export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
+export const AboutPresenter: React.FC<AboutProps> = ({ carriers, skills }) => {
   return (
     <DefaultLayout>
       <SectionTitle description="経歴" title="PROFILE" />

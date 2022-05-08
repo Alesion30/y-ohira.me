@@ -7,7 +7,7 @@ export type SectionTitleProps = {
   description?: string;
 } & DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-export const SectionTitlePresenter: React.VFC<SectionTitleProps> = ({ description, title, ...divProps }) => {
+export const SectionTitlePresenter: React.FC<SectionTitleProps> = ({ description, title, ...divProps }) => {
   return (
     <div className={style.container} {...divProps}>
       <h2 className={style.title}>{title}</h2>

@@ -1,6 +1,6 @@
 import { Content, HobbyPresenter } from './presenter';
 
-export const HobbyPage: React.VFC = () => {
+export const HobbyPage: React.FC = () => {
   const contents: Content[] = [
     { description: 'ジャンプ系の漫画をよく読みます', src: '/images/hobby/anime.png', title: '漫画・アニメ' },
     { description: 'ポケモンとモンハンが特に好きです', src: '/images/hobby/game.png', title: 'ゲーム' },

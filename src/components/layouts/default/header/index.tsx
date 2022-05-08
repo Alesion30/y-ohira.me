@@ -1,6 +1,6 @@
 import { HeaderPresenter } from './presenter';
 
-export const Header: React.VFC = () => {
+export const Header: React.FC = () => {
   const links = [
     { href: '/about', name: 'ABOUT' },
     { href: '/product', name: 'PRODUCT' },

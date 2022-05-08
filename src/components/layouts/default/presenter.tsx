@@ -11,7 +11,7 @@ export type DefaultLayoutProps = {
   full?: boolean;
 };
 
-export const DefaultLayoutPresenter: React.VFC<DefaultLayoutProps> = ({ children, full = false }) => {
+export const DefaultLayoutPresenter: React.FC<DefaultLayoutProps> = ({ children, full = false }) => {
   return (
     <motion.div animate={{ opacity: 1 }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} transition={{ duration: 0.4 }}>
       {full && <Fragment>{children}</Fragment>}

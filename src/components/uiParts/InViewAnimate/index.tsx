@@ -11,14 +11,7 @@ type InViewAnimateProps = {
   children: React.ReactNode;
 };
 
-export const InViewAnimate: React.VFC<InViewAnimateProps> = ({
-  children,
-  closed,
-  delay,
-  duration,
-  open,
-  threshold,
-}) => {
+export const InViewAnimate: React.FC<InViewAnimateProps> = ({ children, closed, delay, duration, open, threshold }) => {
   const variants: Variants = {
     closed: closed,
     open: open,

@@ -18,7 +18,7 @@ export type ProductProps = {
   contents: Content[];
 };
 
-export const ProductPresenter: React.VFC<ProductProps> = ({ contents }) => {
+export const ProductPresenter: React.FC<ProductProps> = ({ contents }) => {
   return (
     <DefaultLayout>
       <SectionTitle description="今まで作ってきたアプリ" title="PRODUCT" />

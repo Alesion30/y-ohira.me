@@ -12,7 +12,7 @@ export type MyCardProps = {
   disableScale?: boolean;
 };
 
-export const MyCardPresenter: React.VFC<MyCardProps> = ({ blank, children, className, disableScale, href }) => {
+export const MyCardPresenter: React.FC<MyCardProps> = ({ blank, children, className, disableScale, href }) => {
   if (disableScale === true) {
     if (href) {
       return (

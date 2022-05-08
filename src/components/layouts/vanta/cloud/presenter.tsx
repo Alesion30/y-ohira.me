@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState, VFC } from 'react';
+import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import CLOUD from 'vanta/dist/vanta.clouds.min';
 
@@ -23,7 +23,7 @@ type CLOUDProps = {
   mouseEase?: boolean;
 };
 
-export const VantaCloudLayoutPresenter: VFC<VantaCloudLayoutProps> = ({ children }) => {
+export const VantaCloudLayoutPresenter: FC<VantaCloudLayoutProps> = ({ children }) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [vantaEffect, setVantaEffect] = useState<any>(false);
   const myRef = useRef(null);

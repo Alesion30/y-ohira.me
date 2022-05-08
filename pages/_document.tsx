@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
-const MyDocument: React.VFC = () => {
+const MyDocument: React.FC = () => {
   return (
     <Html lang="ja" prefix="og: https://www.y-ohira.me/">
       <Head>

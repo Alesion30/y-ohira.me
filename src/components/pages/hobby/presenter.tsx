@@ -18,7 +18,7 @@ export type HobbyProps = {
   contents: Content[];
 };
 
-export const HobbyPresenter: React.VFC<HobbyProps> = ({ contents }) => {
+export const HobbyPresenter: React.FC<HobbyProps> = ({ contents }) => {
   return (
     <DefaultLayout>
       <SectionTitle description="趣味" title="HOBBY" />

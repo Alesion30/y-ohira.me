@@ -8,7 +8,7 @@ import { VantaCloudLayout } from '~/components/layouts/vanta';
 import { Container } from '~/components/uiParts/Container';
 import { Spacer } from '~/components/uiParts/Spacer';
 
-export const TopPresenter: React.VFC = () => {
+export const TopPresenter: React.FC = () => {
   return (
     <DefaultLayout full>
       <div className={style.wrapper}>

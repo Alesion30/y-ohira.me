@@ -11,7 +11,7 @@ export type BlogProps = {
   blogs: Blogs;
 };
 
-export const BlogPresenter: React.VFC<BlogProps> = ({ blogs }) => {
+export const BlogPresenter: React.FC<BlogProps> = ({ blogs }) => {
   return (
     <DefaultLayout>
       <SectionTitle description="技術ブログ" title="TECH BLOG" />
