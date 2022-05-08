@@ -11,7 +11,7 @@ const nextConfig = {
   },
   // Next Image
   images: {
-    domains: ['media.graphcms.com'],
+    domains: ['media.graphcms.com', 'media.graphassets.com'],
   },
   // Google Fonts
   experimental: {
