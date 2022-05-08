@@ -23,8 +23,9 @@ export const VantaGlobeLayoutPresenter: FC<VantaGlobeLayoutProps> = ({ children 
   useEffect(() => {
     if (!vantaEffect) {
       const props: GLOBEProps = {
-        backgroundColor: 0xffffff,
-        color2: 0x23153c,
+        backgroundColor: 0x222222,
+        color: 0xff8820,
+        color2: 0xff8820,
         el: myRef.current,
         THREE: THREE,
       };
