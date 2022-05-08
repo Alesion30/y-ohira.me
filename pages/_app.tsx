@@ -3,9 +3,8 @@ import { AppProps } from 'next/app';
 import '~/styles/globals.scss';
 import 'modern-css-reset/dist/reset.min.css';
 import { AnimatePresence } from 'framer-motion';
-import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
-import SEO from '../../next-seo.config';
+import SEO from '../next-seo.config';
 import { ApolloProvider } from '@apollo/client';
 import { apolloClient } from '~/plugins/apollo';
 
