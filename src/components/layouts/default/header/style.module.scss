@@ -1,41 +1,85 @@
-$main-color: #008cd6;
+@import 'variables';
 
 .wrapper {
-  background-color: #fff;
   z-index: 9999;
-  position: fixed;
-  top: 30px;
-  padding: 30px 50px;
-  max-width: 90vw;
-  overflow-x: auto;
-
-  border: 0.5px solid #eaeaea;
-  border-radius: 60px;
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.links {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .topLink {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-right: 40px;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 20px;
+  left: 30px;
 }
 
-.link {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-left: 20px;
-  margin-right: 20px;
+.menuBtnWrapper {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+}
 
-  color: #333;
+.menuBtn {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
 
-  &:hover {
-    color: $main-color;
+  & span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 13px;
+    height: 2px;
+    border-radius: 5px;
+    background: $onBackground;
+    width: 45%;
+
+    &:nth-of-type(1) {
+      top: 13px;
+    }
+    &:nth-of-type(2) {
+      top: 19px;
+    }
+    &:nth-of-type(3) {
+      top: 25px;
+      &::after {
+        content: 'Menu';
+        position: absolute;
+        top: 5px;
+        left: -3px;
+        color: $onBackground;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &Active {
+    & span {
+      &:nth-of-type(1) {
+        top: 14px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        top: 26px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+      }
+
+      &:nth-of-type(3)::after {
+        content: 'Close';
+        transform: translateY(0) rotate(-45deg);
+        top: 5px;
+        left: 3px;
+      }
+    }
   }
 }

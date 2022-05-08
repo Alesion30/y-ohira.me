@@ -18,7 +18,7 @@ export const DefaultLayoutPresenter: React.FC<DefaultLayoutProps> = ({ children,
       {!full && (
         <Container>
           <Header />
-          <Spacer height={200} />
+          <Spacer height={100} />
           {children}
           <Spacer height={100} />
         </Container>

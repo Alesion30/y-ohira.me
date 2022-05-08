@@ -1,4 +1,6 @@
+import clsx from 'clsx';
 import Link from 'next/link';
+import { useState } from 'react';
 
 import style from './style.module.scss';
 
@@ -6,20 +8,21 @@ export type HeaderProps = {
   links: { href: string; name: string }[];
 };
 
-export const HeaderPresenter: React.FC<HeaderProps> = ({ links }) => {
+export const HeaderPresenter: React.FC<HeaderProps> = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className={style.wrapper}>
-      <div className={style.links}>
+    <div>
+      <div className={style.topLink}>
         <Link href="/">
-          <a className={style.topLink}>PORTFOLIO</a>
+          <a>YUTA OHIRA</a>
         </Link>
-        {links.map((link) => {
-          return (
-            <Link key={`header_link_${link.href}`} href={link.href}>
-              <a className={style.link}>{link.name}</a>
-            </Link>
-          );
-        })}
+      </div>
+      <div className={style.menuBtnWrapper} onClick={() => setOpen(!open)}>
+        <div className={clsx(style.menuBtn, open && style.menuBtnActive)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   );
