@@ -1,18 +1,22 @@
 {
+  "[markdown]": {
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.formatOnSave": false,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
   "files.exclude": {
+    "**/node_modules": true,
     ".next": true,
-    // ".husky": true,
-    // "node_modules": true,
-    "yarn.lock": true,
-    // "next-env.d.ts": true,
-    // "*/next-env.d.ts": true,
-    // ".editorconfig": true,
-    // ".eslintrc": true,
-    // ".eslintignore": true,
-    // ".prettierrc": true,
-    // ".prettierignore": true,
-    // "tsconfig.json": true,
-    "tsconfig.tsbuildinfo": true
-    // ".gitignore": true
-  }
+    ".yarn": true,
+    "yarn.lock": true
+  },
+  "npm.packageManager": "yarn",
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }
