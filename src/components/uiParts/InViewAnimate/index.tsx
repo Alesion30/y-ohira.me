@@ -1,6 +1,6 @@
-import { InView } from 'react-intersection-observer';
-import { motion, AnimatePresence, Variants, Variant } from 'framer-motion';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import { AnimatePresence, motion, Variant, Variants } from 'framer-motion';
+import { InView } from 'react-intersection-observer';
 
 type InViewAnimateProps = {
   open: Variant;
@@ -12,28 +12,26 @@ type InViewAnimateProps = {
 };
 
 export const InViewAnimate: React.VFC<InViewAnimateProps> = ({
-  open,
-  closed,
-  duration,
-  delay,
-  threshold,
   children,
+  closed,
+  delay,
+  duration,
+  open,
+  threshold,
 }) => {
   const variants: Variants = {
-    open: open,
     closed: closed,
+    open: open,
   };
   let isVisible = false;
 
   // 一番上かどうか
   let isTop = false;
-  if (process.browser) {
-    isTop = !useScrollTrigger({
-      target: window,
-      disableHysteresis: true,
-      threshold: 50,
-    });
-  }
+  isTop = !useScrollTrigger({
+    disableHysteresis: true,
+    target: window,
+    threshold: 50,
+  });
 
   return (
     <InView delay={delay} threshold={threshold}>
@@ -45,8 +43,8 @@ export const InViewAnimate: React.VFC<InViewAnimateProps> = ({
             <AnimatePresence initial={false}>
               <motion.div
                 animate={isVisible ? 'open' : 'closed'}
-                variants={variants}
                 transition={{ duration: duration ?? 1 }}
+                variants={variants}
               >
                 {children}
               </motion.div>

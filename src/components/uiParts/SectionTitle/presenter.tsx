@@ -1,4 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
+
 import style from './style.module.scss';
 
 export type SectionTitleProps = {
@@ -6,7 +7,7 @@ export type SectionTitleProps = {
   description?: string;
 } & DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-export const SectionTitlePresenter: React.VFC<SectionTitleProps> = ({ title, description, ...divProps }) => {
+export const SectionTitlePresenter: React.VFC<SectionTitleProps> = ({ description, title, ...divProps }) => {
   return (
     <div className={style.container} {...divProps}>
       <h2 className={style.title}>{title}</h2>

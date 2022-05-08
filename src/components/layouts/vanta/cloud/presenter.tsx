@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, ReactNode, VFC } from 'react';
+import { ReactNode, useEffect, useRef, useState, VFC } from 'react';
 import * as THREE from 'three';
 import CLOUD from 'vanta/dist/vanta.clouds.min';
 
@@ -7,6 +7,7 @@ export type VantaCloudLayoutProps = {
 };
 
 type CLOUDProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   el: any;
   THREE: typeof THREE;
   backgroundColor?: number;
@@ -23,14 +24,15 @@ type CLOUDProps = {
 };
 
 export const VantaCloudLayoutPresenter: VFC<VantaCloudLayoutProps> = ({ children }) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [vantaEffect, setVantaEffect] = useState<any>(false);
   const myRef = useRef(null);
   useEffect(() => {
     if (!vantaEffect) {
       const props: CLOUDProps = {
         el: myRef.current,
-        THREE: THREE,
         skyColor: 0xffffff,
+        THREE: THREE,
       };
       setVantaEffect(CLOUD(props));
     }

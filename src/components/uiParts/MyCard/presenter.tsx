@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
-import style from './style.module.scss';
-import Link from 'next/link';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+import style from './style.module.scss';
 
 export type MyCardProps = {
   children: React.ReactNode;
@@ -11,13 +12,13 @@ export type MyCardProps = {
   disableScale?: boolean;
 };
 
-export const MyCardPresenter: React.VFC<MyCardProps> = ({ children, href, blank, className, disableScale }) => {
+export const MyCardPresenter: React.VFC<MyCardProps> = ({ blank, children, className, disableScale, href }) => {
   if (disableScale === true) {
     if (href) {
       return (
         <div className={clsx(style.wrapper, className)}>
           <Link href={href}>
-            <a target={blank ? '_blank' : undefined} rel={blank ? 'noopener noreferrer' : undefined}>
+            <a rel={blank ? 'noopener noreferrer' : undefined} target={blank ? '_blank' : undefined}>
               {children}
             </a>
           </Link>
@@ -29,9 +30,9 @@ export const MyCardPresenter: React.VFC<MyCardProps> = ({ children, href, blank,
 
   if (href) {
     return (
-      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 1.0 }} className={clsx(style.wrapper, className)}>
+      <motion.div className={clsx(style.wrapper, className)} whileHover={{ scale: 1.02 }} whileTap={{ scale: 1.0 }}>
         <Link href={href}>
-          <a target={blank ? '_blank' : undefined} rel={blank ? 'noopener noreferrer' : undefined}>
+          <a rel={blank ? 'noopener noreferrer' : undefined} target={blank ? '_blank' : undefined}>
             {children}
           </a>
         </Link>
@@ -40,7 +41,7 @@ export const MyCardPresenter: React.VFC<MyCardProps> = ({ children, href, blank,
   }
 
   return (
-    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 1.0 }} className={clsx(style.wrapper, className)}>
+    <motion.div className={clsx(style.wrapper, className)} whileHover={{ scale: 1.02 }} whileTap={{ scale: 1.0 }}>
       {!href && children}
     </motion.div>
   );

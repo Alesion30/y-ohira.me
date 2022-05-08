@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+
 import style from './style.module.scss';
 
 export type CaptionImageProps = {
@@ -12,21 +13,21 @@ export type CaptionImageProps = {
 };
 
 export const CaptionImagePresenter: React.VFC<CaptionImageProps> = ({
-  title,
   description,
-  src,
-  width,
   height,
   imgAspectRatio,
+  src,
+  title,
+  width,
 }) => {
   const _imgAspectRatio = imgAspectRatio ?? height / width;
   return (
     <motion.div
       className={style.wrapper}
+      style={{ height, width }}
+      transition={{ duration: 0.2 }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.2 }}
-      style={{ width, height }}
     >
       <div className={style.imgMask}>
         <div className={style.caption}>
@@ -34,7 +35,7 @@ export const CaptionImagePresenter: React.VFC<CaptionImageProps> = ({
           <p className={style.captionDescription}>{description}</p>
         </div>
       </div>
-      <Image src={src} width={width} height={width * _imgAspectRatio} />
+      <Image alt="" height={width * _imgAspectRatio} src={src} width={width} />
     </motion.div>
   );
 };

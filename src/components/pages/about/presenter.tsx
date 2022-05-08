@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
+import style from './style.module.scss';
+
+import { DefaultLayout } from '~/components/layouts/default';
 import { CustomLink } from '~/components/uiParts/CustomLink';
 import { SectionTitle } from '~/components/uiParts/SectionTitle';
-import style from './style.module.scss';
-import Image from 'next/image';
-import { Stars } from '~/components/uiParts/Stars';
 import { Spacer } from '~/components/uiParts/Spacer';
-import { DefaultLayout } from '~/components/layouts/default';
+import { Stars } from '~/components/uiParts/Stars';
 
 export type Carrier = { date: string; content: string };
 
@@ -21,7 +23,7 @@ export type AboutProps = {
 export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
   return (
     <DefaultLayout>
-      <SectionTitle title="PROFILE" description="経歴" />
+      <SectionTitle description="経歴" title="PROFILE" />
       <Spacer height={50} />
       <div>
         {carriers.map((item, index) => {
@@ -36,7 +38,7 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
       <Spacer height={50} />
       <div className={style.account}>
         <div className={style.accountImage}>
-          <Image src="/images/alesion.png" width={334} height={237} />
+          <Image alt="alesion" height={237} src="/images/alesion.png" width={334} />
         </div>
         <div className={style.accountDesc}>
           <p className={style.accountDescP}>
@@ -49,19 +51,19 @@ export const AboutPresenter: React.VFC<AboutProps> = ({ carriers, skills }) => {
           </p>
           <p className={style.accountDescP}>
             <span className={style.accountDescLabel}>GitHub:</span>
-            <CustomLink title="https://github.com/Alesion30" target={true} href="https://github.com/Alesion30" />
+            <CustomLink href="https://github.com/Alesion30" target={true} title="https://github.com/Alesion30" />
           </p>
           <p className={style.accountDescP}>
             <span className={style.accountDescLabel}>Gmail:</span>
-            <CustomLink title="ohira.job720@gmail.com" href="mailto:ohira.job720@gmail.com" />
+            <CustomLink href="mailto:ohira.job720@gmail.com" title="ohira.job720@gmail.com" />
           </p>
           <p className={style.accountDescP}>
             <span className={style.accountDescLabel}>Qiita:</span>
-            <CustomLink title="https://qiita.com/Alesion30" target={true} href="https://qiita.com/Alesion30" />
+            <CustomLink href="https://qiita.com/Alesion30" target={true} title="https://qiita.com/Alesion30" />
           </p>
           <p className={style.accountDescP}>
             <span className={style.accountDescLabel}>Zenn:</span>
-            <CustomLink title="https://zenn.dev/alesion" target={true} href="https://zenn.dev/alesion" />
+            <CustomLink href="https://zenn.dev/alesion" target={true} title="https://zenn.dev/alesion" />
           </p>
         </div>
       </div>

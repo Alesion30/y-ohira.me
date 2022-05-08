@@ -1,18 +1,20 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { SectionTitle } from '.';
+
 import { SectionTitleProps } from './presenter';
 
-export default {
-  title: 'Components/SectionTitle',
-  component: SectionTitle,
-} as ComponentMeta<typeof SectionTitle>;
+import { SectionTitle } from '.';
+
+export const Default = Template.bind({});
 
 const Template: ComponentStory<typeof SectionTitle> = (args) => <SectionTitle {...args} />;
 const defaultArgs: SectionTitleProps = {
-  title: 'PROFILE',
   description: '経歴',
+  title: 'PROFILE',
 };
 
-export const Default = Template.bind({});
+export default {
+  component: SectionTitle,
+  title: 'Components/SectionTitle',
+} as ComponentMeta<typeof SectionTitle>;
 Default.storyName = '各セクションのタイトル';
 Default.args = defaultArgs;

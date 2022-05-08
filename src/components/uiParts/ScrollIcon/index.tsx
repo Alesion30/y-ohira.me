@@ -1,5 +1,5 @@
-import { ScrollIconPresenter, ScrollIconProps } from './presenter';
+import { ScrollIconPresenter } from './presenter';
 
-export const ScrollIcon: React.VFC<ScrollIconProps> = ({}) => {
+export const ScrollIcon: React.VFC = () => {
   return <ScrollIconPresenter />;
 };

@@ -1,10 +1,11 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
+import ReactMarkdown from 'react-markdown';
+
+import { DefaultLayout } from '~/components/layouts/default';
 import { getBlog } from '~/data/api/blog';
 import { getBlogs } from '~/data/api/blogs';
 import { Blog } from '~/data/model/blog';
-import ReactMarkdown from 'react-markdown';
-import { DefaultLayout } from '~/components/layouts/default';
 
 type StaticProps = {
   blog?: Blog;
@@ -14,18 +15,8 @@ type StaticParams = {
   id: string;
 };
 
-export default ({ blog }: StaticProps) => {
-  return (
-    <>
-      <NextSeo title={blog?.title} />
-      <DefaultLayout>
-        <ReactMarkdown>{blog?.content ?? ''}</ReactMarkdown>
-      </DefaultLayout>
-    </>
-  );
-};
-
 export const getStaticProps: GetStaticProps<StaticProps, StaticParams> = async ({ params }) => {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const { data } = await getBlog(params!.id);
   return {
     props: {
@@ -47,3 +38,14 @@ export const getStaticPaths: GetStaticPaths<StaticParams> = async () => {
     paths,
   };
 };
+
+export default function Page({ blog }: StaticProps) {
+  return (
+    <>
+      <NextSeo title={blog?.title} />
+      <DefaultLayout>
+        <ReactMarkdown>{blog?.content ?? ''}</ReactMarkdown>
+      </DefaultLayout>
+    </>
+  );
+}

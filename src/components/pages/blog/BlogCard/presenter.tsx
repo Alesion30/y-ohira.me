@@ -1,7 +1,9 @@
-import { MyCard } from '~/components/uiParts/MyCard';
-import Image from 'next/image';
-import style from './style.module.scss';
 import dayjs from 'dayjs';
+import Image from 'next/image';
+
+import style from './style.module.scss';
+
+import { MyCard } from '~/components/uiParts/MyCard';
 
 export type BlogCardType = {
   title: string;
@@ -11,12 +13,12 @@ export type BlogCardType = {
   blank?: boolean;
 };
 
-export const BlogCardPresenter: React.VFC<BlogCardType> = ({ title, date, src, href, blank }) => {
+export const BlogCardPresenter: React.VFC<BlogCardType> = ({ blank, date, href, src, title }) => {
   const width = 400;
   const height = (400 * 800) / 1280;
   return (
-    <MyCard href={href} blank={blank}>
-      <Image src={src} width={width} height={height} />
+    <MyCard blank={blank} href={href}>
+      <Image alt="" height={height} src={src} width={width} />
       <div className={style.wrapper} style={{ width }}>
         <p className={style.date}>{dayjs(date).format('YYYY/MM/DD')}</p>
         <h3 className={style.title}>{title}</h3>

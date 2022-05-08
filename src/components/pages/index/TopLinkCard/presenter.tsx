@@ -1,6 +1,8 @@
-import { MyCard } from '~/components/uiParts/MyCard';
-import style from './style.module.scss';
 import clsx from 'clsx';
+
+import style from './style.module.scss';
+
+import { MyCard } from '~/components/uiParts/MyCard';
 
 export type TopLinkCardProps = {
   title: string;
@@ -10,9 +12,9 @@ export type TopLinkCardProps = {
   className?: string;
 };
 
-export const TopLinkCardPresenter: React.VFC<TopLinkCardProps> = ({ title, description, href, blank, className }) => {
+export const TopLinkCardPresenter: React.VFC<TopLinkCardProps> = ({ blank, className, description, href, title }) => {
   return (
-    <MyCard href={href} blank={blank} className={clsx(style.card, className)} disableScale>
+    <MyCard disableScale blank={blank} className={clsx(style.card, className)} href={href}>
       <h3 className={style.title}>{title} &rarr;</h3>
       <p className={style.description}>{description}</p>
     </MyCard>

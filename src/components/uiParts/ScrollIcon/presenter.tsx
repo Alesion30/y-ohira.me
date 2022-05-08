@@ -1,8 +1,6 @@
 import style from './style.module.scss';
 
-export type ScrollIconProps = {};
-
-export const ScrollIconPresenter: React.VFC<ScrollIconProps> = () => {
+export const ScrollIconPresenter: React.VFC = () => {
   return (
     <div className={style.wrapper}>
       <span className={style.arrow}></span>

@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
+
 import style from './style.module.scss';
 
 export type ContainerProps = {

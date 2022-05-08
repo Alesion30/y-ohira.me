@@ -1,5 +1,6 @@
-import { FC, CSSProperties } from 'react';
 import Link from 'next/link';
+import { CSSProperties, FC } from 'react';
+
 import LinkStyle from './style.module.scss';
 
 interface Props {
@@ -10,12 +11,12 @@ interface Props {
   style?: CSSProperties;
 }
 
-export const CustomLink: FC<Props> = ({ title, href, target, color, style }) => {
+export const CustomLink: FC<Props> = ({ color, href, style, target, title }) => {
   const _color = color ?? '#000';
   if (target) {
     return (
       <Link href={href}>
-        <a target="_blank" rel="noopener noreferrer" className={LinkStyle.link} style={{ color: _color, ...style }}>
+        <a className={LinkStyle.link} rel="noopener noreferrer" style={{ color: _color, ...style }} target="_blank">
           {title}
         </a>
       </Link>

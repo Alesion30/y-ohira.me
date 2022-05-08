@@ -1,10 +1,10 @@
+import style from './style.module.scss';
+
 import { DefaultLayout } from '~/components/layouts/default';
 import { CaptionImage } from '~/components/uiParts/CaptionImage';
-import { Container } from '~/components/uiParts/Container';
 import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
 import { SectionTitle } from '~/components/uiParts/SectionTitle';
 import { Spacer } from '~/components/uiParts/Spacer';
-import style from './style.module.scss';
 
 export type Content = {
   title: string;
@@ -19,19 +19,19 @@ export type ProductProps = {
 export const ProductPresenter: React.VFC<ProductProps> = ({ contents }) => {
   return (
     <DefaultLayout>
-      <SectionTitle title="PRODUCT" description="今まで作ってきたアプリ" />
+      <SectionTitle description="今まで作ってきたアプリ" title="PRODUCT" />
       <Spacer height={50} />
       <div className={style.images}>
         {contents.map((content, index) => {
           return (
             <div key={`product_content_${index}`} className={style.image}>
-              <InViewAnimate delay={300} open={{ opacity: 1, y: 0 }} closed={{ opacity: 0, y: '10%' }}>
+              <InViewAnimate closed={{ opacity: 0, y: '10%' }} delay={300} open={{ opacity: 1, y: 0 }}>
                 <CaptionImage
-                  title={content.title}
                   description={content.description}
-                  src={content.src}
-                  width={400}
                   height={400 * 0.75}
+                  src={content.src}
+                  title={content.title}
+                  width={400}
                 />
               </InViewAnimate>
             </div>

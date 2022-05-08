@@ -1,11 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { MyCard } from '.';
+
 import { MyCardProps } from './presenter';
 
-export default {
-  title: 'Components/MyCard',
-  component: MyCard,
-} as ComponentMeta<typeof MyCard>;
+import { MyCard } from '.';
+
+export const Default = Template.bind({});
 
 const Template: ComponentStory<typeof MyCard> = (args) => <MyCard {...args} />;
 const defaultArgs: MyCardProps = {
@@ -16,6 +15,9 @@ const defaultArgs: MyCardProps = {
   ),
 };
 
-export const Default = Template.bind({});
+export default {
+  component: MyCard,
+  title: 'Components/MyCard',
+} as ComponentMeta<typeof MyCard>;
 Default.storyName = 'カード';
 Default.args = defaultArgs;
