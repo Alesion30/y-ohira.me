@@ -17,3 +17,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Monaco';
+  src: url('../../public/fonts/Monaco.ttf');
+  font-weight: 400;
+}
