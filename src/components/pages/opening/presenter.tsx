@@ -13,7 +13,6 @@ export const OpeningPresenter: React.FC = () => {
   const pushLogEelement = (el: ReactElement) => setLogElement((state) => [...state, el]);
 
   useEffect(() => {
-    document.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
     return () => clearInterval(timerId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
