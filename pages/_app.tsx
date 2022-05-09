@@ -8,6 +8,7 @@ import 'modern-css-reset/dist/reset.min.css';
 
 import SEO from '../next-seo.config';
 
+import { OpeningLayout } from '~/components/layouts/opening';
 import { apolloClient } from '~/plugins/apollo';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
@@ -15,7 +16,9 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
     <AnimatePresence exitBeforeEnter initial={true}>
       <ApolloProvider client={apolloClient}>
         <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
+        <OpeningLayout>
+          <Component {...pageProps} />
+        </OpeningLayout>
       </ApolloProvider>
     </AnimatePresence>
   );
