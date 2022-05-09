@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { OpeningPage } from '~/components/pages/opening';
 
@@ -8,14 +8,9 @@ export type OpeningLayoutProps = {
 
 export const OpeningLayoutPresenter: React.FC<OpeningLayoutProps> = ({ children }) => {
   const [show, setShow] = useState(true);
-  useEffect(() => {
-    // 5秒後にコンテンツを表示する
-    const timer = setTimeout(() => setShow(false), 5000);
-    return () => clearTimeout(timer);
-  }, []);
 
   if (show) {
-    return <OpeningPage />;
+    return <OpeningPage onFinish={() => setShow(false)} />;
   } else {
     return <>{children}</>;
   }

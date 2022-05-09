@@ -7,7 +7,11 @@ import { TypingText } from '~/components/uiParts/TypingText';
 import { getRandom } from '~/utils/randomUtil';
 import { sleep } from '~/utils/sleepUtil';
 
-export const OpeningPresenter: React.FC = () => {
+export type OpeningProps = {
+  onFinish?: () => void;
+};
+
+export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
   let timerId: NodeJS.Timer;
   const [logElement, setLogElement] = useState<ReactElement[]>([]);
   const pushLogEelement = (el: ReactElement) => setLogElement((state) => [...state, el]);
@@ -25,6 +29,13 @@ export const OpeningPresenter: React.FC = () => {
       const now = new Date().getTime();
       // eslint-disable-next-line react-hooks/exhaustive-deps
       count += Math.round((now - start) / 10);
+
+      // タイマー値が20000を超えたら、オープニングを終了する
+      if (count > 20000) {
+        if (onFinish) {
+          onFinish();
+        }
+      }
     }, 100);
     return () => clearInterval(interval);
   }, []);
