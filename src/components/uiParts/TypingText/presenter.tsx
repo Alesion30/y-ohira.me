@@ -1,29 +1,41 @@
 import { useEffect, useState } from 'react';
 
+import { sleep } from '~/utils/sleepUtil';
+
 export type TypingTextProps = {
   text: string;
   className?: string;
   speed?: number;
   onFinishRender?: () => void;
+  delay?: number;
 };
 
-export const TypingTextPresenter: React.FC<TypingTextProps> = ({ className, onFinishRender, speed = 100, text }) => {
+export const TypingTextPresenter: React.FC<TypingTextProps> = ({
+  className,
+  delay = 0,
+  onFinishRender,
+  speed = 100,
+  text,
+}) => {
   const [value, setValue] = useState<string>('');
 
   useEffect(() => {
-    const charItr = text[Symbol.iterator]();
     let timerId: NodeJS.Timeout;
+    (async () => {
+      await sleep(delay);
+      const charItr = text[Symbol.iterator]();
 
-    (function showChar() {
-      const nextChar = charItr.next();
-      if (nextChar.done) {
-        if (onFinishRender) {
-          onFinishRender();
+      (function showChar() {
+        const nextChar = charItr.next();
+        if (nextChar.done) {
+          if (onFinishRender) {
+            onFinishRender();
+          }
+          return;
         }
-        return;
-      }
-      setValue((current) => current + nextChar.value);
-      timerId = setTimeout(showChar, speed);
+        setValue((current) => current + nextChar.value);
+        timerId = setTimeout(showChar, speed);
+      })();
     })();
 
     return () => clearTimeout(timerId);

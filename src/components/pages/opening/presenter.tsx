@@ -12,42 +12,46 @@ export type OpeningProps = {
 };
 
 export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
-  let timerId: NodeJS.Timer;
+  let timer: NodeJS.Timer;
+  let pushLogsTimer: NodeJS.Timer;
   const [logElement, setLogElement] = useState<ReactElement[]>([]);
   const pushLogEelement = (el: ReactElement) => setLogElement((state) => [...state, el]);
 
   useEffect(() => {
-    return () => clearInterval(timerId);
+    return () => {
+      clearInterval(timer);
+      clearInterval(pushLogsTimer);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // タイマー
   let count = 0;
-  useEffect(() => {
+  const startTimer = () => {
     const start = new Date().getTime();
-    const interval = setInterval(() => {
+    timer = setInterval(() => {
       const now = new Date().getTime();
       // eslint-disable-next-line react-hooks/exhaustive-deps
       count += Math.round((now - start) / 10);
 
-      // タイマー値が20000を超えたら、オープニングを終了する
-      if (count > 20000) {
+      // タイマー値がある値を超えたら、オープニングを終了する
+      if (count > 12000) {
         if (onFinish) {
           onFinish();
         }
       }
     }, 100);
-    return () => clearInterval(interval);
-  }, []);
+  };
 
   // ログを表示
   const showLog = async () => {
+    startTimer(); // タイマーを開始
     await sleep(1000);
     pushLogEelement(<StartLog />);
     await sleep(1000);
     pushLogEelement(<CompileLog modules={getRandom(0, 999)} ms={count} />);
     await sleep(500);
-    timerId = setInterval(() => pushLogEelement(<CompileLog modules={getRandom(0, 999)} ms={count} />), 20);
+    pushLogsTimer = setInterval(() => pushLogEelement(<CompileLog modules={getRandom(0, 999)} ms={count} />), 20);
   };
 
   // スクロール制御
@@ -66,7 +70,7 @@ export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
       <div ref={scrollBottomRef} className={style.container}>
         <div className={style.terminal}>
           <p>$&nbsp;</p>
-          <TypingText onFinishRender={showLog} text="yarn dev" />
+          <TypingText delay={1000} onFinishRender={showLog} text="yarn dev" />
           {logElement.map((el, i) => (
             <Fragment key={`log${i}`}>{el}</Fragment>
           ))}
