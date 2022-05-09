@@ -14,13 +14,12 @@ const MyDocument: React.FC = () => {
         <link href="/images/icons/icon-128x128.png" rel="apple-touch-icon" sizes="128x128" />
         <link href="/images/icons/icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
 
-        {/* Fonts */}
+        {/* Google Fonts */}
         <link href="https://fonts.gstatic.com" rel="preconnect" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Noto+Sans+JP:wght@100&display=swap"
           rel="stylesheet"
         />
-        <link href="http://fonts.cdnfonts.com/css/monaco" rel="stylesheet" />
 
         {/* Font Awesome */}
         <link
