@@ -33,9 +33,9 @@ export const OpeningPresenter: React.FC = () => {
     await sleep(1000);
     pushLogEelement(<StartLog />);
     await sleep(1000);
-    pushLogEelement(<CompileLog modules={getRandom(0, 1000)} ms={count} />);
+    pushLogEelement(<CompileLog modules={getRandom(0, 999)} ms={count} />);
     await sleep(500);
-    timerId = setInterval(() => pushLogEelement(<CompileLog modules={getRandom(0, 1000)} ms={count} />), 50);
+    timerId = setInterval(() => pushLogEelement(<CompileLog modules={getRandom(0, 999)} ms={count} />), 50);
   };
 
   // スクロール制御
