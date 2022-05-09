@@ -35,7 +35,7 @@ export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
       count += Math.round((now - start) / 10);
 
       // タイマー値がある値を超えたら、オープニングを終了する
-      if (count > 12000) {
+      if (count > 7000) {
         if (onFinish) {
           onFinish();
         }
@@ -48,9 +48,9 @@ export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
     startTimer(); // タイマーを開始
     await sleep(1000);
     pushLogEelement(<StartLog />);
-    await sleep(1000);
+    await sleep(800);
     pushLogEelement(<CompileLog modules={getRandom(0, 999)} ms={count} />);
-    await sleep(500);
+    await sleep(300);
     pushLogsTimer = setInterval(() => pushLogEelement(<CompileLog modules={getRandom(0, 999)} ms={count} />), 20);
   };
 
