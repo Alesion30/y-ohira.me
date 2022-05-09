@@ -20,11 +20,12 @@ export const OpeningPresenter: React.FC = () => {
   // タイマー
   let count = 0;
   useEffect(() => {
-    const diff = 1;
+    const start = new Date().getTime();
     const interval = setInterval(() => {
+      const now = new Date().getTime();
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      count += diff;
-    }, diff);
+      count += Math.round((now - start) / 10);
+    }, 100);
     return () => clearInterval(interval);
   }, []);
 
