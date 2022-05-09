@@ -1,0 +1,55 @@
+@import 'variables';
+@import url('http://fonts.cdnfonts.com/css/monaco');
+
+.container {
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal {
+  font-family: 'Monaco', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5em;
+  width: 1050px;
+
+  &Cursol {
+    height: 30px;
+    width: 12px;
+    background-color: $onBackground;
+    animation: typinganime 0.8s ease infinite;
+  }
+}
+
+.green {
+  color: #00c200;
+}
+
+.cyan {
+  color: #00c5c7;
+}
+
+.magenta {
+  color: #bf3fbd;
+}
+
+.flexBreak {
+  width: 100%;
+}
+
+@keyframes typinganime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
