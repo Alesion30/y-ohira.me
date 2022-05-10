@@ -14,8 +14,9 @@ export type BlogCardType = {
 };
 
 export const BlogCardPresenter: React.FC<BlogCardType> = ({ blank, date, href, src, title }) => {
+  const aspectRatio = 630 / 1200;
   const width = 400;
-  const height = (400 * 800) / 1280;
+  const height = width * aspectRatio;
   return (
     <MyCard blank={blank} href={href}>
       <Image alt="" height={height} src={src} width={width} />

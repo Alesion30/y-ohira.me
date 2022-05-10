@@ -1,10 +1,12 @@
 import { gql, useQuery } from '@apollo/client';
-import { apolloClient } from '~/plugins/apollo';
+
 import { Blogs } from '../model/blog';
+
+import { apolloClient } from '~/plugins/apollo';
 
 const QUERY = gql`
   query {
-    blogs {
+    blogs(orderBy: date_DESC) {
       id
       title
       link
@@ -13,7 +15,7 @@ const QUERY = gql`
         height
         width
       }
-      createdAt
+      date
     }
   }
 `;

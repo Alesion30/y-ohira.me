@@ -10,5 +10,5 @@ export type Blog = {
     height: number;
   };
   content: string;
-  createdAt: Date;
+  date: Date;
 };

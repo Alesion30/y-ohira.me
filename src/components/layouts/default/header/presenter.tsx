@@ -48,7 +48,7 @@ export const HeaderPresenter: React.FC<HeaderProps> = () => {
       <div className={clsx(style.menuOverlay, open && style.menuOverlayActive)}>
         <div className={style.menuLinks}>
           {links.map((link) => {
-            const isActive = router.asPath === link.href;
+            const isActive = router.route === link.href;
             return (
               <Link key={link.title} href={link.href}>
                 <a
