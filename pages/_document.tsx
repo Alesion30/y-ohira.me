@@ -5,14 +5,14 @@ const MyDocument: React.FC = () => {
     <Html lang="ja" prefix="og: https://www.y-ohira.me/">
       <Head>
         <link href="/favicon.ico" rel="icon" />
-        <meta content="#008CD6" name="theme-color" />
+        <meta content="#222222" name="theme-color" />
         <link href="/manifest.json" rel="manifest" />
 
         {/* apple-touch-icon */}
-        <link href="/images/icons/icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
-        <link href="/images/icons/icon-96x96.png" rel="apple-touch-icon" sizes="96x96" />
-        <link href="/images/icons/icon-128x128.png" rel="apple-touch-icon" sizes="128x128" />
-        <link href="/images/icons/icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+        <link href="/icons/icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+        <link href="/icons/icon-96x96.png" rel="apple-touch-icon" sizes="96x96" />
+        <link href="/icons/icon-128x128.png" rel="apple-touch-icon" sizes="128x128" />
+        <link href="/icons/icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
 
         {/* Google Fonts */}
         <link href="https://fonts.gstatic.com" rel="preconnect" />
