@@ -60,9 +60,9 @@ export const TopPresenter: React.FC = () => {
           whileTap={{ scale: 0.9 }}
         >
           <p>
-            オープニングを
+            再ビルドする
             <br />
-            もう一度見る
+            (yarn dev)
           </p>
         </motion.div>
       </div>

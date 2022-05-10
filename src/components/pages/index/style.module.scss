@@ -57,8 +57,6 @@
 .reshowOpeningBtn {
   position: fixed;
   z-index: 20;
-  bottom: 40px;
-  right: 40px;
   padding: 10px 15px;
   background-color: $primary;
   color: $onPrimary;
@@ -66,6 +64,13 @@
   text-align: center;
   user-select: none;
   cursor: pointer;
+
+  bottom: 20px;
+  right: 20px;
+  @include mq(md) {
+    bottom: 40px;
+    right: 40px;
+  }
 
   border-radius: 10px;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
