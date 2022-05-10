@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import handshake from '../../../../public/img/handshake.gif';
@@ -9,6 +10,7 @@ import { DefaultLayout } from '~/components/layouts/default';
 import { VantaGlobeLayout } from '~/components/layouts/vanta';
 import { Container } from '~/components/uiParts/Container';
 import { Spacer } from '~/components/uiParts/Spacer';
+import { setDoneOpening } from '~/utils/openingUtil';
 
 export const TopPresenter: React.FC = () => {
   return (
@@ -46,6 +48,23 @@ export const TopPresenter: React.FC = () => {
             <Spacer height={120} />
           </Container>
         </VantaGlobeLayout>
+
+        <motion.div
+          className={style.reshowOpeningBtn}
+          onClick={() => {
+            setDoneOpening(false);
+            window.location.reload();
+          }}
+          transition={{ duration: 0.2 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <p>
+            オープニングを
+            <br />
+            もう一度見る
+          </p>
+        </motion.div>
       </div>
     </DefaultLayout>
   );

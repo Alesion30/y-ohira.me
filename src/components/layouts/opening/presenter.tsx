@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { OpeningPage } from '~/components/pages/opening';
+import { getDoneOpening, setDoneOpening } from '~/utils/openingUtil';
 
 export type OpeningLayoutProps = {
   children: React.ReactNode;
@@ -10,8 +11,15 @@ export type OpeningLayoutProps = {
 export const OpeningLayoutPresenter: React.FC<OpeningLayoutProps> = ({ children, disabled = false }) => {
   const [show, setShow] = useState(!disabled);
 
-  if (show) {
-    return <OpeningPage onFinish={() => setShow(false)} />;
+  if (show && !getDoneOpening()) {
+    return (
+      <OpeningPage
+        onFinish={() => {
+          setShow(false);
+          setDoneOpening(true);
+        }}
+      />
+    );
   } else {
     return <>{children}</>;
   }

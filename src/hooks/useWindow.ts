@@ -5,16 +5,16 @@ export const useWindow = (): {
   height: number;
 } => {
   const [windowSize, setWindowSize] = useState({
-    width: 0,
     height: 0,
+    width: 0,
   });
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const handleResize = () => {
         setWindowSize({
-          width: window.innerWidth,
           height: window.innerHeight,
+          width: window.innerWidth,
         });
       };
 
