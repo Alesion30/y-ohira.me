@@ -23,7 +23,7 @@ export const BlogPresenter: React.FC<BlogProps> = ({ blogs }) => {
               <InViewAnimate closed={{ opacity: 0, y: '10%' }} delay={300} open={{ opacity: 1, y: 0 }}>
                 <BlogCard
                   blank
-                  date={blog.createdAt}
+                  date={blog.date}
                   // href={`/blog/${blog.id}`}
                   href={blog.link}
                   src={blog.image.url}
