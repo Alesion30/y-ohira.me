@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import AweconImage from '../../../../public/images/product/awecon.png';
+import AweconImage from '../../../../public/img/product/awecon.png';
 
 import { CaptionImageProps } from './presenter';
 
