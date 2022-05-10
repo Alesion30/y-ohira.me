@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import handshake from '../../../../public/img/handshake.gif';
+
 import { TopLinkCard } from './TopLinkCard';
 import style from './style.module.scss';
 
@@ -17,7 +19,7 @@ export const TopPresenter: React.FC = () => {
             <Spacer height={50} />
             <h1 className={style.title}>
               Hi There
-              <Image alt="handshake" height={70} src="/images/handshake.gif" width={70} />
+              <Image alt="handshake" height={70} src={handshake} width={70} />
               &nbsp;
               <span>
                 I&apos;m <span className={style.highlight}>Yuta Ohira!</span>
