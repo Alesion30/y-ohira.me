@@ -1,6 +1,8 @@
 import { gql, useQuery } from '@apollo/client';
-import { apolloClient } from '~/plugins/apollo';
+
 import { Blog } from '../model/blog';
+
+import { apolloClient } from '~/plugins/apollo';
 
 const QUERY = gql`
   query ($id: ID!) {
