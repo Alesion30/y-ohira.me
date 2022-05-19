@@ -31,6 +31,7 @@ export const AboutPage: React.FC = () => {
     },
     { content: '九州大学工学部電気情報工学科を卒業。', date: '2022年03月' },
     { content: '九州大学大学院システム情報科学府に入学。', date: '2022年04月' },
+    { content: '株式会社AbemaTVで1ヶ月間就業型インターンシップ（CA Tech JOB）に参加する。', date: '2022年05月' },
   ];
 
   const skills: Skill[] = [
