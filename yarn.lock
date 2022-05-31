@@ -28,9 +28,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.6.5":
-  version: 3.6.5
-  resolution: "@apollo/client@npm:3.6.5"
+"@apollo/client@npm:3.6.6":
+  version: 3.6.6
+  resolution: "@apollo/client@npm:3.6.6"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/context": ^0.6.0
@@ -56,7 +56,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: f4afbb311e4c599aafe384a4a2766546c5dfcdac320afc4ab336accbf9b43cae790d782284e21ff23a2cdf7670a3999b8d3098413e0638d8b6190c32b2b34bdd
+  checksum: 3cf430f406d3f4b5a316f36830a115452f27b7db47e1b7161725603e444332355e5a8fde992c3ec9268b44e8db8030e1ab021f965a186667eaa8af1d144c2beb
   languageName: node
   linkType: hard
 
@@ -8975,9 +8975,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:6.3.5":
-  version: 6.3.5
-  resolution: "framer-motion@npm:6.3.5"
+"framer-motion@npm:6.3.6":
+  version: 6.3.6
+  resolution: "framer-motion@npm:6.3.6"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     framesync: 6.0.1
@@ -8991,7 +8991,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 56ce084d6f6b329dcdde0c47e6dbe49756435c796d8bda7163f2f10d294fd74beaa1ca4e4fbcf1a488f7e7aa578609bc3d560b184515ca62ede59711e66053b1
+  checksum: 2d82ff7ce3fdac97a2e52aa6d92907f3ff4ba37389202e0b5efd2b0e9842ca5b3913ed325783e29edea8ccf7ba16077a0b48ec5ae548283f96b6e81ac6ae6cc5
   languageName: node
   linkType: hard
 
@@ -13486,7 +13486,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.6.5
+    "@apollo/client": 3.6.6
     "@babel/core": ^7.17.10
     "@material-ui/core": 4.12.4
     "@next/bundle-analyzer": ^12.1.6
@@ -13513,7 +13513,7 @@ __metadata:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.29.4
     eslint-plugin-sort: ^2.4.0
-    framer-motion: 6.3.5
+    framer-motion: 6.3.6
     graphql: 16.5.0
     husky: ^8.0.0
     lint-staged: ^12.4.1
