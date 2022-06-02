@@ -13567,7 +13567,7 @@ __metadata:
     prettier: ^2.6.2
     react: 18.1.0
     react-dom: 18.1.0
-    react-intersection-observer: 9.2.0
+    react-intersection-observer: 9.2.2
     react-markdown: 8.0.3
     sass: ^1.51.0
     sass-loader: ^13.0.0
@@ -14217,12 +14217,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:9.2.0":
-  version: 9.2.0
-  resolution: "react-intersection-observer@npm:9.2.0"
+"react-intersection-observer@npm:9.2.2":
+  version: 9.2.2
+  resolution: "react-intersection-observer@npm:9.2.2"
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
-  checksum: cab57ea88217d9697c9c3763fa9db3ac4cb31b8061f13990fedb8e732eac41f5ed196c6e31ba78181f1f60eaaa861aedcdb037d038338171703dea3e84c36868
+  checksum: b9fa5b5504d9e6334bac0f5068e33cfcac2ebc87f716584fde7ae7411632cf9472e98acb5a01bc109ce5282bf6b2be97eabbf02813b2c11dd89a4dacc73e52ae
   languageName: node
   linkType: hard
 
