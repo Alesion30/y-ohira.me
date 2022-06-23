@@ -28,9 +28,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.6.8":
-  version: 3.6.8
-  resolution: "@apollo/client@npm:3.6.8"
+"@apollo/client@npm:3.6.9":
+  version: 3.6.9
+  resolution: "@apollo/client@npm:3.6.9"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/context": ^0.6.0
@@ -56,7 +56,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: c29dd3f68952cf17229b72d39188e0d93ea672ae1e1615f90b1d95ba7553c6a03bc16dede7c13b23c60e9863d7ff183f56d62b233a761127000f544a490f63f7
+  checksum: a3c037ef3465cb5d736d8495c9c2dcb9741e39d9c102f147b479af1923c5913f710981a311d1098b9969ebe87769b749c22274decb5977ad0619032e7ac2cf26
   languageName: node
   linkType: hard
 
@@ -13529,7 +13529,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.6.8
+    "@apollo/client": 3.6.9
     "@babel/core": ^7.17.10
     "@material-ui/core": 4.12.4
     "@next/bundle-analyzer": ^12.1.6
@@ -13567,7 +13567,7 @@ __metadata:
     prettier: ^2.6.2
     react: 18.2.0
     react-dom: 18.2.0
-    react-intersection-observer: 9.3.3
+    react-intersection-observer: 9.3.4
     react-markdown: 8.0.3
     sass: ^1.51.0
     sass-loader: ^13.0.0
@@ -14217,12 +14217,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:9.3.3":
-  version: 9.3.3
-  resolution: "react-intersection-observer@npm:9.3.3"
+"react-intersection-observer@npm:9.3.4":
+  version: 9.3.4
+  resolution: "react-intersection-observer@npm:9.3.4"
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
-  checksum: cbfe044341cfe9c5a64d8af53d0b7da52a392e12d2cd6faa7638e93c110ce662ed78551d80e8747a62428dfdd0e530ea6c51920cd03a8403484a1e997c3974ca
+  checksum: d17c9a1440d53336448c096975616fda6e6701c4d46a7a80cab210eee5f87d6e2a964fcd44a4db4114d72a6d9fac60eef91f1448badc3e59f6e0015089da37f5
   languageName: node
   linkType: hard
 
