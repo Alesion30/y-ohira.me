@@ -6777,7 +6777,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:1.1.1, clsx@npm:^1.0.4, clsx@npm:^1.1.1":
+"clsx@npm:1.2.0":
+  version: 1.2.0
+  resolution: "clsx@npm:1.2.0"
+  checksum: 551a0b4f182270cf9ab26b5f4f93d3b01a663b66adeaff58e4c51bc5170a2bfaed03779513925c63d2d31d748c5bc4f1cbad7d3e76a051f5a9301754563ff43a
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^1.0.4, clsx@npm:^1.1.1":
   version: 1.1.1
   resolution: "clsx@npm:1.1.1"
   checksum: ff052650329773b9b245177305fc4c4dc3129f7b2be84af4f58dc5defa99538c61d4207be7419405a5f8f3d92007c954f4daba5a7b74e563d5de71c28c830063
@@ -13567,7 +13574,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.22.0
     "@typescript-eslint/parser": ^5.22.0
     babel-loader: ^8.2.5
-    clsx: 1.1.1
+    clsx: 1.2.0
     css-loader: ^6.7.1
     dayjs: 1.11.3
     eslint: ^8.15.0
@@ -13588,7 +13595,7 @@ __metadata:
     prettier: ^2.6.2
     react: 18.2.0
     react-dom: 18.2.0
-    react-intersection-observer: 9.3.4
+    react-intersection-observer: 9.3.5
     react-markdown: 8.0.3
     sass: ^1.51.0
     sass-loader: ^13.0.0
@@ -14238,12 +14245,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:9.3.4":
-  version: 9.3.4
-  resolution: "react-intersection-observer@npm:9.3.4"
+"react-intersection-observer@npm:9.3.5":
+  version: 9.3.5
+  resolution: "react-intersection-observer@npm:9.3.5"
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
-  checksum: d17c9a1440d53336448c096975616fda6e6701c4d46a7a80cab210eee5f87d6e2a964fcd44a4db4114d72a6d9fac60eef91f1448badc3e59f6e0015089da37f5
+  checksum: 218643acf5d34c8b9bf231e7a92a26a9c10b12159fe19c33c49b6aa92f1e25e5e1803deea0d8095797c101d36f8f57bc44d2edc55d085943b8a0c8391a96e336
   languageName: node
   linkType: hard
 
