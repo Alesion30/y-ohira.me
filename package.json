@@ -11,9 +11,7 @@
     "ssg-start": "npx http-server ./out",
     "format": "prettier --write .",
     "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public"
+    "lint:fix": "next lint --fix"
   },
   "dependencies": {
     "@apollo/client": "3.6.9",
