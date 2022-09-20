@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
-import Image, { StaticImageData } from 'next/image';
+import { motion } from 'framer-motion'
+import Image, { StaticImageData } from 'next/image'
 
-import style from './style.module.scss';
+import style from './style.module.scss'
 
 export type CaptionImageProps = {
-  title: string;
-  description: string;
-  src: string | StaticImageData;
-  width: number;
-  height: number;
-  imgAspectRatio?: number; // 画像のアスペクト比（height / width）
-};
+  title: string
+  description: string
+  src: string | StaticImageData
+  width: number
+  height: number
+  imgAspectRatio?: number // 画像のアスペクト比（height / width）
+}
 
 export const CaptionImagePresenter: React.FC<CaptionImageProps> = ({
   description,
@@ -20,7 +20,7 @@ export const CaptionImagePresenter: React.FC<CaptionImageProps> = ({
   title,
   width,
 }) => {
-  const _imgAspectRatio = imgAspectRatio ?? height / width;
+  const _imgAspectRatio = imgAspectRatio ?? height / width
   return (
     <motion.div
       className={style.wrapper}
@@ -35,7 +35,7 @@ export const CaptionImagePresenter: React.FC<CaptionImageProps> = ({
           <p className={style.captionDescription}>{description}</p>
         </div>
       </div>
-      <Image alt="" height={width * _imgAspectRatio} src={src} width={width} />
+      <Image alt='' height={width * _imgAspectRatio} src={src} width={width} />
     </motion.div>
-  );
-};
+  )
+}

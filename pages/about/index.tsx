@@ -1,12 +1,12 @@
-import { NextSeo } from 'next-seo';
+import { NextSeo } from 'next-seo'
 
-import { AboutPage } from '~/components/pages/about';
+import { AboutPage } from '~/components/pages/about'
 
 export default function Page() {
   return (
     <>
-      <NextSeo title="ABOUT" />
+      <NextSeo title='ABOUT' />
       <AboutPage />
     </>
-  );
+  )
 }

@@ -1,18 +1,24 @@
-import clsx from 'clsx';
+import clsx from 'clsx'
 
-import style from './style.module.scss';
+import style from './style.module.scss'
 
-import { MyCard } from '~/components/uiParts/MyCard';
+import { MyCard } from '~/components/uiParts/MyCard'
 
 export type TopLinkCardProps = {
-  title: string;
-  description: string;
-  href: string;
-  blank?: boolean;
-  className?: string;
-};
+  title: string
+  description: string
+  href: string
+  blank?: boolean
+  className?: string
+}
 
-export const TopLinkCardPresenter: React.FC<TopLinkCardProps> = ({ blank, className, description, href, title }) => {
+export const TopLinkCardPresenter: React.FC<TopLinkCardProps> = ({
+  blank,
+  className,
+  description,
+  href,
+  title,
+}) => {
   return (
     <MyCard blank={blank} className={clsx(style.card, className)} href={href}>
       <div className={style.cardContent}>
@@ -20,5 +26,5 @@ export const TopLinkCardPresenter: React.FC<TopLinkCardProps> = ({ blank, classN
         <p className={style.description}>{description}</p>
       </div>
     </MyCard>
-  );
-};
+  )
+}

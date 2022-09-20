@@ -1,5 +1,5 @@
-import { SectionTitlePresenter, SectionTitleProps } from './presenter';
+import { SectionTitlePresenter, SectionTitleProps } from './presenter'
 
 export const SectionTitle: React.FC<SectionTitleProps> = (props) => {
-  return <SectionTitlePresenter {...props} />;
-};
+  return <SectionTitlePresenter {...props} />
+}

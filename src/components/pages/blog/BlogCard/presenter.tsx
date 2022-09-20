@@ -1,29 +1,35 @@
-import dayjs from 'dayjs';
-import Image from 'next/image';
+import dayjs from 'dayjs'
+import Image from 'next/image'
 
-import style from './style.module.scss';
+import style from './style.module.scss'
 
-import { MyCard } from '~/components/uiParts/MyCard';
+import { MyCard } from '~/components/uiParts/MyCard'
 
 export type BlogCardType = {
-  title: string;
-  date: Date;
-  src: string;
-  href: string;
-  blank?: boolean;
-};
+  title: string
+  date: Date
+  src: string
+  href: string
+  blank?: boolean
+}
 
-export const BlogCardPresenter: React.FC<BlogCardType> = ({ blank, date, href, src, title }) => {
-  const aspectRatio = 630 / 1200;
-  const width = 400;
-  const height = width * aspectRatio;
+export const BlogCardPresenter: React.FC<BlogCardType> = ({
+  blank,
+  date,
+  href,
+  src,
+  title,
+}) => {
+  const aspectRatio = 630 / 1200
+  const width = 400
+  const height = width * aspectRatio
   return (
     <MyCard blank={blank} href={href}>
-      <Image alt="" height={height} src={src} width={width} />
+      <Image alt='' height={height} src={src} width={width} />
       <div className={style.wrapper} style={{ width }}>
         <p className={style.date}>{dayjs(date).format('YYYY/MM/DD')}</p>
         <h3 className={style.title}>{title}</h3>
       </div>
     </MyCard>
-  );
-};
+  )
+}

@@ -1,4 +1,4 @@
-import { DefaultSeoProps } from 'next-seo/lib/types';
+import { DefaultSeoProps } from 'next-seo/lib/types'
 
 // https://github.com/garmeeh/next-seo
 const config: DefaultSeoProps = {
@@ -20,5 +20,5 @@ const config: DefaultSeoProps = {
     title: 'Web Engineer from Kyushu University',
   },
   titleTemplate: '%s | Web Engineer from Kyushu University',
-};
-export default config;
+}
+export default config

@@ -1,29 +1,31 @@
-import { FC, ReactNode, useEffect, useRef, useState } from 'react';
-import * as THREE from 'three';
-import GLOBE from 'vanta/dist/vanta.globe.min';
+import { FC, ReactNode, useEffect, useRef, useState } from 'react'
+import * as THREE from 'three'
+import GLOBE from 'vanta/dist/vanta.globe.min'
 
 export type VantaGlobeLayoutProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 type GLOBEProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  el: any;
-  THREE: typeof THREE;
-  backgroundColor?: number;
-  color?: number;
-  color2?: number;
-  size?: number;
-  points?: number;
-  maxDistance?: number;
-  spacing?: number;
-  showDots?: boolean;
-};
+  el: any
+  THREE: typeof THREE
+  backgroundColor?: number
+  color?: number
+  color2?: number
+  size?: number
+  points?: number
+  maxDistance?: number
+  spacing?: number
+  showDots?: boolean
+}
 
-export const VantaGlobeLayoutPresenter: FC<VantaGlobeLayoutProps> = ({ children }) => {
+export const VantaGlobeLayoutPresenter: FC<VantaGlobeLayoutProps> = ({
+  children,
+}) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [vantaEffect, setVantaEffect] = useState<any>(false);
-  const myRef = useRef(null);
+  const [vantaEffect, setVantaEffect] = useState<any>(false)
+  const myRef = useRef(null)
   useEffect(() => {
     if (!vantaEffect) {
       const props: GLOBEProps = {
@@ -32,13 +34,13 @@ export const VantaGlobeLayoutPresenter: FC<VantaGlobeLayoutProps> = ({ children 
         color2: 0x85150d,
         el: myRef.current,
         THREE: THREE,
-      };
-      setVantaEffect(GLOBE(props));
+      }
+      setVantaEffect(GLOBE(props))
     }
     return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
 
-  return <div ref={myRef}>{children}</div>;
-};
+  return <div ref={myRef}>{children}</div>
+}

@@ -1,16 +1,20 @@
-import clsx from 'clsx';
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import clsx from 'clsx'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
-import style from './style.module.scss';
+import style from './style.module.scss'
 
 export type ContainerProps = {
-  children: React.ReactNode;
-} & DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+  children: React.ReactNode
+} & DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 
-export const Container: React.FC<ContainerProps> = ({ children, className, ...divProps }) => {
+export const Container: React.FC<ContainerProps> = ({
+  children,
+  className,
+  ...divProps
+}) => {
   return (
     <div className={clsx(style.container, className)} {...divProps}>
       {children}
     </div>
-  );
-};
+  )
+}

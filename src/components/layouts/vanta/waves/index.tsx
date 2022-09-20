@@ -1,5 +1,5 @@
-import { VantaWaveLayoutPresenter, VantaWaveLayoutProps } from './presenter';
+import { VantaWaveLayoutPresenter, VantaWaveLayoutProps } from './presenter'
 
 export const VantaWaveLayout: React.FC<VantaWaveLayoutProps> = (props) => {
-  return <VantaWaveLayoutPresenter {...props} />;
-};
+  return <VantaWaveLayoutPresenter {...props} />
+}

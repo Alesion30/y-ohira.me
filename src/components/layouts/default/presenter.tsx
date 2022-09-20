@@ -1,19 +1,27 @@
-import { motion } from 'framer-motion';
-import { Fragment } from 'react';
+import { motion } from 'framer-motion'
+import { Fragment } from 'react'
 
-import { Header } from './header';
+import { Header } from './header'
 
-import { Container } from '~/components/uiParts/Container';
-import { Spacer } from '~/components/uiParts/Spacer';
+import { Container } from '~/components/uiParts/Container'
+import { Spacer } from '~/components/uiParts/Spacer'
 
 export type DefaultLayoutProps = {
-  children: React.ReactNode;
-  full?: boolean;
-};
+  children: React.ReactNode
+  full?: boolean
+}
 
-export const DefaultLayoutPresenter: React.FC<DefaultLayoutProps> = ({ children, full = false }) => {
+export const DefaultLayoutPresenter: React.FC<DefaultLayoutProps> = ({
+  children,
+  full = false,
+}) => {
   return (
-    <motion.div animate={{ opacity: 1 }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} transition={{ duration: 0.4 }}>
+    <motion.div
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
       {full && <Fragment>{children}</Fragment>}
       {!full && (
         <Container>
@@ -24,5 +32,5 @@ export const DefaultLayoutPresenter: React.FC<DefaultLayoutProps> = ({ children,
         </Container>
       )}
     </motion.div>
-  );
-};
+  )
+}

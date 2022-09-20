@@ -1,4 +1,4 @@
-import style from './style.module.scss';
+import style from './style.module.scss'
 
 export const ScrollIconPresenter: React.FC = () => {
   return (
@@ -15,5 +15,5 @@ export const ScrollIconPresenter: React.FC = () => {
         <span>l</span>
       </p>
     </div>
-  );
-};
+  )
+}

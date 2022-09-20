@@ -1,5 +1,8 @@
-import { TypingTextPresenter, TypingTextProps } from '~/components/uiParts/TypingText/presenter';
+import {
+  TypingTextPresenter,
+  TypingTextProps,
+} from '~/components/uiParts/TypingText/presenter'
 
 export const TypingText: React.FC<TypingTextProps> = (props) => {
-  return <TypingTextPresenter {...props} />;
-};
+  return <TypingTextPresenter {...props} />
+}

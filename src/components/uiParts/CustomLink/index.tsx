@@ -1,24 +1,29 @@
-import Link from 'next/link';
-import { CSSProperties, FC } from 'react';
+import Link from 'next/link'
+import { CSSProperties, FC } from 'react'
 
-import LinkStyle from './style.module.scss';
+import LinkStyle from './style.module.scss'
 
 interface Props {
-  title: string;
-  href: string;
-  target?: boolean;
-  style?: CSSProperties;
+  title: string
+  href: string
+  target?: boolean
+  style?: CSSProperties
 }
 
 export const CustomLink: FC<Props> = ({ href, style, target, title }) => {
   if (target) {
     return (
       <Link href={href}>
-        <a className={LinkStyle.link} rel="noopener noreferrer" style={style} target="_blank">
+        <a
+          className={LinkStyle.link}
+          rel='noopener noreferrer'
+          style={style}
+          target='_blank'
+        >
           {title}
         </a>
       </Link>
-    );
+    )
   } else {
     return (
       <Link href={href}>
@@ -26,6 +31,6 @@ export const CustomLink: FC<Props> = ({ href, style, target, title }) => {
           {title}
         </a>
       </Link>
-    );
+    )
   }
-};
+}

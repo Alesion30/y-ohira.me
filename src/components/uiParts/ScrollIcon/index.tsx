@@ -1,5 +1,5 @@
-import { ScrollIconPresenter } from './presenter';
+import { ScrollIconPresenter } from './presenter'
 
 export const ScrollIcon: React.FC = () => {
-  return <ScrollIconPresenter />;
-};
+  return <ScrollIconPresenter />
+}

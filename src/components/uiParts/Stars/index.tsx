@@ -1,5 +1,5 @@
-import { StarsPresenter, StarsProps } from './presenter';
+import { StarsPresenter, StarsProps } from './presenter'
 
 export const Stars: React.FC<StarsProps> = (props) => {
-  return <StarsPresenter {...props} />;
-};
+  return <StarsPresenter {...props} />
+}

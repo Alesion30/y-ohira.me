@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 
-import handshake from '../../../../public/img/handshake.gif';
+import handshake from '../../../../public/img/handshake.gif'
 
-import { TopLinkCard } from './TopLinkCard';
-import style from './style.module.scss';
+import { TopLinkCard } from './TopLinkCard'
+import style from './style.module.scss'
 
-import { DefaultLayout } from '~/components/layouts/default';
-import { VantaGlobeLayout } from '~/components/layouts/vanta';
-import { Container } from '~/components/uiParts/Container';
-import { Spacer } from '~/components/uiParts/Spacer';
-import { setDoneOpening } from '~/utils/openingUtil';
+import { DefaultLayout } from '~/components/layouts/default'
+import { VantaGlobeLayout } from '~/components/layouts/vanta'
+import { Container } from '~/components/uiParts/Container'
+import { Spacer } from '~/components/uiParts/Spacer'
+import { setDoneOpening } from '~/utils/openingUtil'
 
 export const TopPresenter: React.FC = () => {
   return (
@@ -21,28 +21,46 @@ export const TopPresenter: React.FC = () => {
             <Spacer height={50} />
             <h1 className={style.title}>
               Hi There
-              <Image alt="handshake" height={70} priority={true} src={handshake} width={70} />
+              <Image
+                alt='handshake'
+                height={70}
+                priority={true}
+                src={handshake}
+                width={70}
+              />
               &nbsp;
               <span>
                 I&apos;m <span className={style.highlight}>Yuta Ohira!</span>
               </span>
             </h1>
-            <p className={style.description}>Web Engineer from Kyushu University</p>
+            <p className={style.description}>
+              Web Engineer from Kyushu University
+            </p>
             <div className={style.cardList}>
-              <TopLinkCard className={style.card} description="経歴・スキルなど" href="/about" title="ABOUT" />
               <TopLinkCard
                 className={style.card}
-                description="今まで作ってきたアプリ"
-                href="/product"
-                title="PRODUCT"
+                description='経歴・スキルなど'
+                href='/about'
+                title='ABOUT'
               />
-              <TopLinkCard className={style.card} description="技術ブログ" href="/blog" title="BLOG" />
+              <TopLinkCard
+                className={style.card}
+                description='今まで作ってきたアプリ'
+                href='/product'
+                title='PRODUCT'
+              />
+              <TopLinkCard
+                className={style.card}
+                description='技術ブログ'
+                href='/blog'
+                title='BLOG'
+              />
               <TopLinkCard
                 blank
                 className={style.card}
-                description="GitHubのアカウントはこちら"
-                href="https://github.com/Alesion30"
-                title="GitHub"
+                description='GitHubのアカウントはこちら'
+                href='https://github.com/Alesion30'
+                title='GitHub'
               />
             </div>
             <Spacer height={120} />
@@ -52,8 +70,8 @@ export const TopPresenter: React.FC = () => {
         <motion.div
           className={style.reshowOpeningBtn}
           onClick={() => {
-            setDoneOpening(false);
-            window.location.reload();
+            setDoneOpening(false)
+            window.location.reload()
           }}
           transition={{ duration: 0.2 }}
           whileHover={{ scale: 1.1 }}
@@ -67,5 +85,5 @@ export const TopPresenter: React.FC = () => {
         </motion.div>
       </div>
     </DefaultLayout>
-  );
-};
+  )
+}

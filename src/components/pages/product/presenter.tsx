@@ -1,33 +1,37 @@
-import { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image'
 
-import style from './style.module.scss';
+import style from './style.module.scss'
 
-import { DefaultLayout } from '~/components/layouts/default';
-import { CaptionImage } from '~/components/uiParts/CaptionImage';
-import { InViewAnimate } from '~/components/uiParts/InViewAnimate';
-import { SectionTitle } from '~/components/uiParts/SectionTitle';
-import { Spacer } from '~/components/uiParts/Spacer';
+import { DefaultLayout } from '~/components/layouts/default'
+import { CaptionImage } from '~/components/uiParts/CaptionImage'
+import { InViewAnimate } from '~/components/uiParts/InViewAnimate'
+import { SectionTitle } from '~/components/uiParts/SectionTitle'
+import { Spacer } from '~/components/uiParts/Spacer'
 
 export type Content = {
-  title: string;
-  description: string;
-  src: string | StaticImageData;
-};
+  title: string
+  description: string
+  src: string | StaticImageData
+}
 
 export type ProductProps = {
-  contents: Content[];
-};
+  contents: Content[]
+}
 
 export const ProductPresenter: React.FC<ProductProps> = ({ contents }) => {
   return (
     <DefaultLayout>
-      <SectionTitle description="今まで作ってきたアプリ" title="PRODUCT" />
+      <SectionTitle description='今まで作ってきたアプリ' title='PRODUCT' />
       <Spacer height={50} />
       <div className={style.images}>
         {contents.map((content, index) => {
           return (
             <div key={`product_content_${index}`} className={style.image}>
-              <InViewAnimate closed={{ opacity: 0, y: '10%' }} delay={300} open={{ opacity: 1, y: 0 }}>
+              <InViewAnimate
+                closed={{ opacity: 0, y: '10%' }}
+                delay={300}
+                open={{ opacity: 1, y: 0 }}
+              >
                 <CaptionImage
                   description={content.description}
                   height={400 * 0.75}
@@ -37,9 +41,9 @@ export const ProductPresenter: React.FC<ProductProps> = ({ contents }) => {
                 />
               </InViewAnimate>
             </div>
-          );
+          )
         })}
       </div>
     </DefaultLayout>
-  );
-};
+  )
+}

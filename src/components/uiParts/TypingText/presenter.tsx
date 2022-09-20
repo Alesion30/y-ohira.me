@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
-import { sleep } from '~/utils/sleepUtil';
+import { sleep } from '~/utils/sleepUtil'
 
 export type TypingTextProps = {
-  text: string;
-  className?: string;
-  speed?: number;
-  onFinishRender?: () => void;
-  delay?: number;
-};
+  text: string
+  className?: string
+  speed?: number
+  onFinishRender?: () => void
+  delay?: number
+}
 
 export const TypingTextPresenter: React.FC<TypingTextProps> = ({
   className,
@@ -17,30 +17,30 @@ export const TypingTextPresenter: React.FC<TypingTextProps> = ({
   speed = 100,
   text,
 }) => {
-  const [value, setValue] = useState<string>('');
+  const [value, setValue] = useState<string>('')
 
   useEffect(() => {
-    let timerId: NodeJS.Timeout;
-    (async () => {
-      await sleep(delay);
-      const charItr = text[Symbol.iterator]();
+    let timerId: NodeJS.Timeout
+    ;(async () => {
+      await sleep(delay)
+      const charItr = text[Symbol.iterator]()
 
-      (function showChar() {
-        const nextChar = charItr.next();
+      ;(function showChar() {
+        const nextChar = charItr.next()
         if (nextChar.done) {
           if (onFinishRender) {
-            onFinishRender();
+            onFinishRender()
           }
-          return;
+          return
         }
-        setValue((current) => current + nextChar.value);
-        timerId = setTimeout(showChar, speed);
-      })();
-    })();
+        setValue((current) => current + nextChar.value)
+        timerId = setTimeout(showChar, speed)
+      })()
+    })()
 
-    return () => clearTimeout(timerId);
+    return () => clearTimeout(timerId)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [])
 
-  return <p className={className}>{value}</p>;
-};
+  return <p className={className}>{value}</p>
+}

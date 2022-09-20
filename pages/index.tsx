@@ -1,6 +1,6 @@
-import { NextSeo } from 'next-seo';
+import { NextSeo } from 'next-seo'
 
-import { TopPage } from '~/components/pages/index';
+import { TopPage } from '~/components/pages/index'
 
 export default function Page() {
   return (
@@ -8,5 +8,5 @@ export default function Page() {
       <NextSeo />
       <TopPage />
     </>
-  );
+  )
 }

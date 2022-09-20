@@ -1,64 +1,64 @@
 {
-  "short_name": "PORTFOLIO",
-  "name": "Web Engineer from Kyushu University",
-  "description": "九州大学出身のWebエンジニアです。LaravelやReactを用いたフルスタック開発をはじめ、Flutterを用いたアプリ開発やWordPressを用いたCMS運用を行なっております。",
-  "theme_color": "#222222",
   "background_color": "#222222",
-  "scope": "/",
-  "start_url": "/",
+  "description": "九州大学出身のWebエンジニアです。LaravelやReactを用いたフルスタック開発をはじめ、Flutterを用いたアプリ開発やWordPressを用いたCMS運用を行なっております。",
   "display": "standalone",
-  "orientation": "natural",
   "icons": [
     {
-      "src": "icons/icon-72x72.png",
       "sizes": "72x72",
+      "src": "icons/icon-72x72.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-96x96.png",
       "sizes": "96x96",
+      "src": "icons/icon-96x96.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-120x120.png",
       "sizes": "120x120",
+      "src": "icons/icon-120x120.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-128x128.png",
       "sizes": "128x128",
+      "src": "icons/icon-128x128.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-144x144.png",
       "sizes": "144x144",
+      "src": "icons/icon-144x144.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-152x152.png",
       "sizes": "152x152",
+      "src": "icons/icon-152x152.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-180x180.png",
       "sizes": "180x180",
+      "src": "icons/icon-180x180.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-192x192.png",
       "sizes": "192x192",
+      "src": "icons/icon-192x192.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-384x384.png",
       "sizes": "384x384",
+      "src": "icons/icon-384x384.png",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-512x512.png",
       "sizes": "512x512",
+      "src": "icons/icon-512x512.png",
       "type": "image/png"
     }
   ],
-  "splash_pages": null
+  "name": "Web Engineer from Kyushu University",
+  "orientation": "natural",
+  "scope": "/",
+  "short_name": "PORTFOLIO",
+  "splash_pages": null,
+  "start_url": "/",
+  "theme_color": "#222222"
 }
