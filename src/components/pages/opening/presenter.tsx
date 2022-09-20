@@ -35,7 +35,7 @@ export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
       count += Math.round((now - start) / 10);
 
       // タイマー値がある値を超えたら、オープニングを終了する
-      if (count > 7000) {
+      if (count > 5000) {
         if (onFinish) {
           onFinish();
         }
