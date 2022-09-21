@@ -1,5 +1,7 @@
+import { FC } from 'react'
+
 import { BlogCardPresenter, BlogCardType } from './presenter'
 
-export const BlogCard: React.FC<BlogCardType> = (props) => {
+export const BlogCard: FC<BlogCardType> = (props) => {
   return <BlogCardPresenter {...props} />
 }

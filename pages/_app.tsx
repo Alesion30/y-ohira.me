@@ -15,7 +15,7 @@ import { apolloClient } from '~/plugins/apollo'
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
   return (
-    <AnimatePresence exitBeforeEnter initial={true}>
+    <AnimatePresence initial={true} exitBeforeEnter>
       <ApolloProvider client={apolloClient}>
         <DefaultSeo {...SEO} />
         <OpeningLayout disabled={router.route !== '/'}>

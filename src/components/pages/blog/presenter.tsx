@@ -1,3 +1,5 @@
+import { FC } from 'react'
+
 import { BlogCard } from './BlogCard'
 import style from './style.module.scss'
 
@@ -11,7 +13,7 @@ export type BlogProps = {
   blogs: Blogs
 }
 
-export const BlogPresenter: React.FC<BlogProps> = ({ blogs }) => {
+export const BlogPresenter: FC<BlogProps> = ({ blogs }) => {
   return (
     <DefaultLayout>
       <SectionTitle description='技術ブログ' title='TECH BLOG' />
@@ -26,12 +28,12 @@ export const BlogPresenter: React.FC<BlogProps> = ({ blogs }) => {
                 open={{ opacity: 1, y: 0 }}
               >
                 <BlogCard
-                  blank
                   date={blog.date}
-                  // href={`/blog/${blog.id}`}
                   href={blog.link}
+                  // href={`/blog/${blog.id}`}
                   src={blog.image.url}
                   title={blog.title}
+                  blank
                 />
               </InViewAnimate>
             </div>

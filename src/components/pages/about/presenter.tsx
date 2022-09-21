@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { FC } from 'react'
 
 import alesionImg from '../../../../public/img/alesion.png'
 
@@ -22,7 +23,7 @@ export type AboutProps = {
   skills: Skill[]
 }
 
-export const AboutPresenter: React.FC<AboutProps> = ({ carriers, skills }) => {
+export const AboutPresenter: FC<AboutProps> = ({ carriers, skills }) => {
   return (
     <DefaultLayout>
       <SectionTitle description='経歴' title='PROFILE' />

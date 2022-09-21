@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Fragment } from 'react'
+import { FC, Fragment } from 'react'
 
 import { Header } from './header'
 
@@ -11,7 +11,7 @@ export type DefaultLayoutProps = {
   full?: boolean
 }
 
-export const DefaultLayoutPresenter: React.FC<DefaultLayoutProps> = ({
+export const DefaultLayoutPresenter: FC<DefaultLayoutProps> = ({
   children,
   full = false,
 }) => {

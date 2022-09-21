@@ -1,5 +1,7 @@
+import { FC } from 'react'
+
 import { TopPresenter } from './presenter'
 
-export const TopPage: React.FC = () => {
+export const TopPage: FC = () => {
   return <TopPresenter />
 }

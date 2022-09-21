@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 import style from './style.module.scss'
 
@@ -9,7 +9,7 @@ export type HeaderProps = {
   links: { href: string; name: string }[]
 }
 
-export const HeaderPresenter: React.FC<HeaderProps> = () => {
+export const HeaderPresenter: FC<HeaderProps> = () => {
   const [open, setOpen] = useState(false)
   const router = useRouter()
 

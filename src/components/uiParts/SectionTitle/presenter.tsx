@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react'
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react'
 
 import style from './style.module.scss'
 
@@ -7,7 +7,7 @@ export type SectionTitleProps = {
   description?: string
 } & DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 
-export const SectionTitlePresenter: React.FC<SectionTitleProps> = ({
+export const SectionTitlePresenter: FC<SectionTitleProps> = ({
   description,
   title,
   ...divProps

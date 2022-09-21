@@ -1,6 +1,8 @@
+import { FC } from 'react'
+
 import { AboutPresenter, Carrier, Skill } from './presenter'
 
-export const AboutPage: React.FC = () => {
+export const AboutPage: FC = () => {
   const carriers: Carrier[] = [
     { content: '九州大学工学部電気情報工学科に入学。', date: '2018年04月' },
     {

@@ -1,5 +1,6 @@
 import dayjs from 'dayjs'
 import Image from 'next/image'
+import { FC } from 'react'
 
 import style from './style.module.scss'
 
@@ -13,7 +14,7 @@ export type BlogCardType = {
   blank?: boolean
 }
 
-export const BlogCardPresenter: React.FC<BlogCardType> = ({
+export const BlogCardPresenter: FC<BlogCardType> = ({
   blank,
   date,
   href,

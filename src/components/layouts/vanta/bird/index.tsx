@@ -1,5 +1,7 @@
+import { FC } from 'react'
+
 import { VantaBirdLayoutPresenter, VantaBirdLayoutProps } from './presenter'
 
-export const VantaBirdLayout: React.FC<VantaBirdLayoutProps> = (props) => {
+export const VantaBirdLayout: FC<VantaBirdLayoutProps> = (props) => {
   return <VantaBirdLayoutPresenter {...props} />
 }

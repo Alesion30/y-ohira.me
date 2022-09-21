@@ -1,5 +1,7 @@
+import { FC } from 'react'
+
 import { VantaGlobeLayoutPresenter, VantaGlobeLayoutProps } from './presenter'
 
-export const VantaGlobeLayout: React.FC<VantaGlobeLayoutProps> = (props) => {
+export const VantaGlobeLayout: FC<VantaGlobeLayoutProps> = (props) => {
   return <VantaGlobeLayoutPresenter {...props} />
 }

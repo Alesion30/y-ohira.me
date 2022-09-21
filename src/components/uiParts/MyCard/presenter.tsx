@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FC } from 'react'
 
 import style from './style.module.scss'
 
@@ -11,7 +12,7 @@ export type MyCardProps = {
   className?: string
 }
 
-export const MyCardPresenter: React.FC<MyCardProps> = ({
+export const MyCardPresenter: FC<MyCardProps> = ({
   blank,
   children,
   className,

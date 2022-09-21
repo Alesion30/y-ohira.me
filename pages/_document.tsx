@@ -1,6 +1,7 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import { FC } from 'react'
 
-const MyDocument: React.FC = () => {
+const MyDocument: FC = () => {
   return (
     <Html lang='ja' prefix='og: https://www.y-ohira.me/'>
       <Head>

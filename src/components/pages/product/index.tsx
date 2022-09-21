@@ -1,3 +1,5 @@
+import { FC } from 'react'
+
 import awecon from '../../../../public/img/product/awecon.png'
 import commit from '../../../../public/img/product/commit.png'
 import creamy from '../../../../public/img/product/creamy.png'
@@ -11,7 +13,7 @@ import shareCheese from '../../../../public/img/product/share-cheese.png'
 
 import { Content, ProductPresenter } from './presenter'
 
-export const ProductPage: React.FC = () => {
+export const ProductPage: FC = () => {
   const contents: Content[] = [
     {
       description: 'マップメモ共有アプリ',

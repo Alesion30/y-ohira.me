@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { FC } from 'react'
 
 import handshake from '../../../../public/img/handshake.gif'
 
@@ -12,7 +13,7 @@ import { Container } from '~/components/uiParts/Container'
 import { Spacer } from '~/components/uiParts/Spacer'
 import { setDoneOpening } from '~/utils/openingUtil'
 
-export const TopPresenter: React.FC = () => {
+export const TopPresenter: FC = () => {
   return (
     <DefaultLayout full>
       <div className={style.wrapper}>
@@ -56,11 +57,11 @@ export const TopPresenter: React.FC = () => {
                 title='BLOG'
               />
               <TopLinkCard
-                blank
                 className={style.card}
                 description='GitHubのアカウントはこちら'
                 href='https://github.com/Alesion30'
                 title='GitHub'
+                blank
               />
             </div>
             <Spacer height={120} />
@@ -69,13 +70,13 @@ export const TopPresenter: React.FC = () => {
 
         <motion.div
           className={style.reshowOpeningBtn}
+          transition={{ duration: 0.2 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           onClick={() => {
             setDoneOpening(false)
             window.location.reload()
           }}
-          transition={{ duration: 0.2 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
         >
           <p>
             再ビルドする

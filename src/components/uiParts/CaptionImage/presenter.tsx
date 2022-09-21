@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Image, { StaticImageData } from 'next/image'
+import { FC } from 'react'
 
 import style from './style.module.scss'
 
@@ -12,7 +13,7 @@ export type CaptionImageProps = {
   imgAspectRatio?: number // 画像のアスペクト比（height / width）
 }
 
-export const CaptionImagePresenter: React.FC<CaptionImageProps> = ({
+export const CaptionImagePresenter: FC<CaptionImageProps> = ({
   description,
   height,
   imgAspectRatio,

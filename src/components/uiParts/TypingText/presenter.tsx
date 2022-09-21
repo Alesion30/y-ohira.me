@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 import { sleep } from '~/utils/sleepUtil'
 
@@ -10,7 +10,7 @@ export type TypingTextProps = {
   delay?: number
 }
 
-export const TypingTextPresenter: React.FC<TypingTextProps> = ({
+export const TypingTextPresenter: FC<TypingTextProps> = ({
   className,
   delay = 0,
   onFinishRender,

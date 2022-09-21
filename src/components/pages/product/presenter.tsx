@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image'
+import { FC } from 'react'
 
 import style from './style.module.scss'
 
@@ -18,7 +19,7 @@ export type ProductProps = {
   contents: Content[]
 }
 
-export const ProductPresenter: React.FC<ProductProps> = ({ contents }) => {
+export const ProductPresenter: FC<ProductProps> = ({ contents }) => {
   return (
     <DefaultLayout>
       <SectionTitle description='今まで作ってきたアプリ' title='PRODUCT' />

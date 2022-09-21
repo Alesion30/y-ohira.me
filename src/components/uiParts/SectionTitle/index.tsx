@@ -1,5 +1,7 @@
+import { FC } from 'react'
+
 import { SectionTitlePresenter, SectionTitleProps } from './presenter'
 
-export const SectionTitle: React.FC<SectionTitleProps> = (props) => {
+export const SectionTitle: FC<SectionTitleProps> = (props) => {
   return <SectionTitlePresenter {...props} />
 }

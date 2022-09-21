@@ -1,4 +1,4 @@
-import { Fragment, ReactElement, useEffect, useRef, useState } from 'react'
+import { FC, Fragment, ReactElement, useEffect, useRef, useState } from 'react'
 
 import style from './style.module.scss'
 
@@ -11,7 +11,7 @@ export type OpeningProps = {
   onFinish?: () => void
 }
 
-export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
+export const OpeningPresenter: FC<OpeningProps> = ({ onFinish }) => {
   let timer: NodeJS.Timer
   let pushLogsTimer: NodeJS.Timer
   const [logElement, setLogElement] = useState<ReactElement[]>([])
@@ -75,7 +75,7 @@ export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
       <div ref={scrollBottomRef} className={style.container}>
         <div className={style.terminal}>
           <p>$&nbsp;</p>
-          <TypingText delay={1000} onFinishRender={showLog} text='yarn dev' />
+          <TypingText delay={1000} text='yarn dev' onFinishRender={showLog} />
           {logElement.map((el, i) => (
             <Fragment key={`log${i}`}>{el}</Fragment>
           ))}
@@ -86,7 +86,7 @@ export const OpeningPresenter: React.FC<OpeningProps> = ({ onFinish }) => {
   )
 }
 
-const StartLog: React.FC = () => {
+const StartLog: FC = () => {
   return (
     <Fragment>
       <div className={style.flexBreak} />
@@ -104,10 +104,7 @@ const StartLog: React.FC = () => {
   )
 }
 
-const CompileLog: React.FC<{ ms: number; modules: number }> = ({
-  modules,
-  ms,
-}) => {
+const CompileLog: FC<{ ms: number; modules: number }> = ({ modules, ms }) => {
   return (
     <Fragment>
       <div className={style.flexBreak} />

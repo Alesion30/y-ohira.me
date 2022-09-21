@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import { FC } from 'react'
 
 import { OpeningLayoutProps } from './presenter'
 const OpeningLayoutPresenter = dynamic(
@@ -8,6 +9,6 @@ const OpeningLayoutPresenter = dynamic(
   }
 )
 
-export const OpeningLayout: React.FC<OpeningLayoutProps> = (props) => {
+export const OpeningLayout: FC<OpeningLayoutProps> = (props) => {
   return <OpeningLayoutPresenter {...props} />
 }

@@ -1,5 +1,6 @@
 import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 import { AnimatePresence, motion, Variant, Variants } from 'framer-motion'
+import { FC } from 'react'
 import { InView } from 'react-intersection-observer'
 
 type InViewAnimateProps = {
@@ -11,7 +12,7 @@ type InViewAnimateProps = {
   children: React.ReactNode
 }
 
-export const InViewAnimate: React.FC<InViewAnimateProps> = ({
+export const InViewAnimate: FC<InViewAnimateProps> = ({
   children,
   closed,
   delay,

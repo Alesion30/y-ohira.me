@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 
 import { OpeningPage } from '~/components/pages/opening'
 import { getDoneOpening, setDoneOpening } from '~/utils/openingUtil'
@@ -8,7 +8,7 @@ export type OpeningLayoutProps = {
   disabled?: boolean
 }
 
-export const OpeningLayoutPresenter: React.FC<OpeningLayoutProps> = ({
+export const OpeningLayoutPresenter: FC<OpeningLayoutProps> = ({
   children,
   disabled = false,
 }) => {

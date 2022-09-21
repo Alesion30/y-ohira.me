@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import Image from 'next/image'
+import { FC } from 'react'
 
 import style from './style.module.scss'
 
@@ -22,7 +23,7 @@ type InputHookProps = {
   windowWidth: number
 }
 
-export const IntroPresenter: React.FC<IntroProps & InputHookProps> = ({
+export const IntroPresenter: FC<IntroProps & InputHookProps> = ({
   className,
   description,
   link,

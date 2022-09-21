@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { FC } from 'react'
 
 import style from './style.module.scss'
 
@@ -12,7 +13,7 @@ export type TopLinkCardProps = {
   className?: string
 }
 
-export const TopLinkCardPresenter: React.FC<TopLinkCardProps> = ({
+export const TopLinkCardPresenter: FC<TopLinkCardProps> = ({
   blank,
   className,
   description,

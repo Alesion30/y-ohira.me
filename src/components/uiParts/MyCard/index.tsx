@@ -1,5 +1,7 @@
+import { FC } from 'react'
+
 import { MyCardPresenter, MyCardProps } from './presenter'
 
-export const MyCard: React.FC<MyCardProps> = (props) => {
+export const MyCard: FC<MyCardProps> = (props) => {
   return <MyCardPresenter {...props} />
 }
