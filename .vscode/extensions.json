@@ -1,7 +1,9 @@
 {
   "recommendations": [
-    "esbenp.prettier-vscode",
-    "foxundermoon.shell-format",
-    "editorconfig.editorconfig"
+    "esbenp.prettier-vscode", // prettier
+    "dbaeumer.vscode-eslint", // eslint
+    "clinyong.vscode-css-modules", // css modules
+    "foxundermoon.shell-format", // shell-format
+    "editorconfig.editorconfig" // editorconfig
   ]
 }
