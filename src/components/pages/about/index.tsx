@@ -55,8 +55,26 @@ export const AboutPage: FC = () => {
     { content: '九州大学大学院システム情報科学府に入学。', date: '2022年04月' },
     {
       content:
-        '株式会社AbemaTVで1ヶ月間就業型インターンシップ（CA Tech JOB）に参加する。',
+        'ABEMAで1ヶ月間就業型インターンシップ（CA Tech JOB）に参加する。',
       date: '2022年05月',
+    },
+    {
+      content:
+        'CookpadのKomerco事業部で2ヶ月間就業型インターンシップに参加する。',
+      date: '2022年06月',
+    },
+    {
+      content: 'Yahoo! Newsのサマーインターンシップに参加する。',
+      date: '2022年08月',
+    },
+    {
+      content: 'DeNAの短期インターンシップに参加する。',
+      date: '2022年09月',
+    },
+    {
+      content:
+        'Yahoo!主催のDigital Hackdayで「マイルド翻訳」を開発し、Fun賞を受賞する。',
+      date: '2022年09月',
     },
   ]
 
