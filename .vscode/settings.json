@@ -36,11 +36,19 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    ".eslintrc": ".eslintignore",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    ".prettierrc": ".prettierignore",
+    "firebase.json": ".firebaserc, firestore.indexes.json, firestore.rules",
+    "package.json": "yarn.lock, .yarnrc.yml, .node-version, .npmrc, yarn-error.log"
+  },
   "files.exclude": {
     "**/node_modules": true,
     ".next": true,
-    ".yarn": true,
-    "yarn.lock": true
+    ".yarn": true
   },
   "npm.packageManager": "yarn",
   "typescript.preferences.importModuleSpecifier": "non-relative"
