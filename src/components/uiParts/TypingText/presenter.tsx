@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 
-import { sleep } from '~/utils/sleepUtil'
+import { sleep } from '~/utils'
 
 export type TypingTextProps = {
   text: string

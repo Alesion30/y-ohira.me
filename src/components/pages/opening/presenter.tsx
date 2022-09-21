@@ -4,8 +4,8 @@ import style from './style.module.scss'
 
 import { DefaultLayout } from '~/components/layouts/default'
 import { TypingText } from '~/components/uiParts/TypingText'
-import { getRandom } from '~/utils/randomUtil'
-import { sleep } from '~/utils/sleepUtil'
+import { sleep } from '~/utils'
+import { getRandom } from '~/utils/random'
 
 export type OpeningProps = {
   onFinish?: () => void

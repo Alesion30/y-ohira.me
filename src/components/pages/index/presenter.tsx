@@ -11,7 +11,7 @@ import { DefaultLayout } from '~/components/layouts/default'
 import { VantaGlobeLayout } from '~/components/layouts/vanta'
 import { Container } from '~/components/uiParts/Container'
 import { Spacer } from '~/components/uiParts/Spacer'
-import { setDoneOpening } from '~/utils/openingUtil'
+import { setDoneOpening } from '~/utils'
 
 export const TopPresenter: FC = () => {
   return (

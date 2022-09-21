@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 
 import { OpeningPage } from '~/components/pages/opening'
-import { getDoneOpening, setDoneOpening } from '~/utils/openingUtil'
+import { getDoneOpening, setDoneOpening } from '~/utils'
 
 export type OpeningLayoutProps = {
   children: React.ReactNode
