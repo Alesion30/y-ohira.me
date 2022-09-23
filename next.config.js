@@ -2,26 +2,24 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 
-const withPWA = require('next-pwa')
+// const withPWA = require('next-pwa')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+/** @type {import('next').NextConfig} **/
 const nextConfig = {
-  cssModules: true,
   // Google Fonts
-  experimental: {
-    optimizeFonts: true,
-  },
+  optimizeFonts: true,
   // Next Image
   images: {
     domains: ['media.graphcms.com', 'media.graphassets.com'],
   },
   // PWA
-  pwa: {
-    dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
-  },
+  // pwa: {
+  //   dest: 'public',
+  //   disable: process.env.NODE_ENV === 'development',
+  // },
   // SCSS
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
@@ -35,4 +33,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withBundleAnalyzer(withPWA(nextConfig))
+module.exports = withBundleAnalyzer(nextConfig)
