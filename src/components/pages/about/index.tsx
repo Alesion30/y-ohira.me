@@ -1,8 +1,93 @@
+import dayjs from 'dayjs'
 import { FC } from 'react'
 
 import { AboutPresenter, Carrier, Skill } from './presenter'
 
+import kyusyuUniversity from '/public/img/experience/kyushuUniversity.jpg'
+import admission from '/public/img/experience/admission.jpg'
+import gleap from '/public/img/experience/gleap.jpg'
+import twoThree from '/public/img/experience/23.jpg'
+import hacku from '/public/img/experience/hacku.jpg'
+import creamy from '/public/img/experience/creamy.jpg'
+import creamy2 from '/public/img/experience/creamy2.jpg'
+import passtick from '/public/img/experience/passtick.png'
+import challecara from '/public/img/experience/challecara.png'
+import commit from '/public/img/experience/commit.png'
+
+import { Experience } from '~/components/organisms'
+
 export const AboutPage: FC = () => {
+  const experiences: Experience[] = [
+    {
+      title: '九州大学工学部電気情報工学科に入学',
+      date: dayjs('2018-04-01').toDate(),
+      images: [
+        { width: 400, height: 300, src: kyusyuUniversity },
+        { width: 400, height: 300, src: admission },
+      ],
+    },
+    {
+      title: 'プログラミングサークルGLEAP',
+      description:
+        '九大発のプログラミングサークルGLEAPに入部。サークル内でHTML・CSS・JavaScriptを用いたWEB開発やLaravelを用いたバックエンド開発の勉強会の講師を務めたり、サークルの開発案件のプロジェクトリーダーとして、いくつものプロジェクトを遂行した。',
+      date: dayjs('2019-05').toDate(),
+      images: [{ width: 400, height: 300, src: gleap }],
+    },
+    {
+      title: 'HAIT Lab 2期生',
+      description: '東大人工知能開発団体HAITLabに2期生として入部する。',
+      date: dayjs('2019-10').toDate(),
+    },
+    {
+      title: 'チャレキャラ2019でExcite賞を受賞',
+      description:
+        'チャレキャラ2019にて、「Passtick」というアプリを開発し、Excite賞を受賞。(賞金として5万円を獲得)',
+      date: dayjs('2019-12').toDate(),
+      images: [
+        { width: 400, height: 300, src: challecara },
+        { width: 400, height: 300, src: passtick },
+      ],
+    },
+    {
+      title: '株式会社DEVEL',
+      description:
+        '株式会社DEVELで量子機械学習プラットフォームの開発に従事する。',
+      date: dayjs('2020-1').toDate(),
+    },
+    {
+      title: '株式会社23',
+      description:
+        '23株式会社にエンジニアとして入社する。Fukuoka Growth Next主催のスタートアップカンファレンス「calling」のイベントサイトや終活アプリ「shuzoくん」の開発に携わる。',
+      date: dayjs('2020-10').toDate(),
+      images: [{ width: 400, height: 300, src: twoThree }],
+    },
+    {
+      title: 'Yahoo! Open HackU 2021',
+      description:
+        'Yahoo!主催のOpen HackU 2021にて、vscode拡張機能・GitHubと連携してエンジニアの頑張りを経験値として見える化したWEBサイト「コミットくん」を開発。',
+      date: dayjs('2021-9').toDate(),
+      images: [
+        { width: 400, height: 300, src: hacku },
+        { width: 400, height: 300, src: commit },
+      ],
+    },
+    {
+      title: '技育展2021',
+      description:
+        'サポーターズ主催のハッカソン「技育展」で、イベント調整アプリ「Creamy」を発表',
+      date: dayjs('2021-10').toDate(),
+      images: [
+        { width: 1920 / 2, height: 1080 / 2, src: creamy },
+        { width: 1920 / 2, height: 1080 / 2, src: creamy2 },
+      ],
+    },
+    {
+      title: '九州大学大学院システム情報科学府に入学',
+      description: '九州大学大学院システム情報科学府に入学',
+      date: dayjs('2022-04-01').toDate(),
+    },
+  ]
+
   const carriers: Carrier[] = [
     { content: '九州大学工学部電気情報工学科に入学。', date: '2018年04月' },
     {
@@ -101,5 +186,11 @@ export const AboutPage: FC = () => {
     { name: '上記にない言語', star: 0 },
   ]
 
-  return <AboutPresenter carriers={carriers} skills={skills} />
+  return (
+    <AboutPresenter
+      carriers={carriers}
+      experiences={experiences}
+      skills={skills}
+    />
+  )
 }

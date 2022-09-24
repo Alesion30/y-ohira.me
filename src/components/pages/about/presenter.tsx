@@ -1,14 +1,15 @@
-import Image from 'next/image'
 import { FC } from 'react'
-
-import alesionImg from '../../../../public/img/alesion.png'
 
 import style from './style.module.scss'
 
-import { Spacer, Stars, CustomLink } from '~/components/atoms'
+import { Spacer, Stars } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { SectionTitle } from '~/components/molucules'
-import { ExperienceTimeline } from '~/components/organisms'
+import {
+  Experience,
+  ExperienceTimeline,
+  SelfIntroduce,
+} from '~/components/organisms'
 
 export type Carrier = { date: string; content: string }
 
@@ -19,17 +20,20 @@ export type Skill = {
 
 export type AboutProps = {
   carriers: Carrier[]
+  experiences: Experience[]
   skills: Skill[]
 }
 
-export const AboutPresenter: FC<AboutProps> = ({ carriers, skills }) => {
+export const AboutPresenter: FC<AboutProps> = ({ experiences, skills }) => {
   return (
     <DefaultLayout>
       <SectionTitle description='経歴' title='PROFILE' />
       <Spacer height={50} />
-      <ExperienceTimeline />
+      <ExperienceTimeline experiences={experiences} />
+      <Spacer height={20} />
+      <SelfIntroduce />
       <Spacer height={50} />
-      <div>
+      {/* <div>
         {carriers.map((item, index) => {
           return (
             <div key={`about_carrier_${index}`} className={style.carrier}>
@@ -39,61 +43,7 @@ export const AboutPresenter: FC<AboutProps> = ({ carriers, skills }) => {
           )
         })}
       </div>
-      <Spacer height={50} />
-      <div className={style.account}>
-        <div className={style.accountImage}>
-          <Image
-            alt='alesion'
-            height={237}
-            layout='fixed'
-            priority={true}
-            src={alesionImg}
-            width={334}
-          />
-        </div>
-        <div className={style.accountDesc}>
-          <p className={style.accountDescP}>
-            <span className={style.accountDescLabel}>Name:</span>
-            Yuta Ohira
-          </p>
-          <p className={style.accountDescP}>
-            <span className={style.accountDescLabel}>University:</span>
-            Kyushu University
-          </p>
-          <p className={style.accountDescP}>
-            <span className={style.accountDescLabel}>GitHub:</span>
-            <CustomLink
-              href='https://github.com/Alesion30'
-              target={true}
-              title='https://github.com/Alesion30'
-            />
-          </p>
-          <p className={style.accountDescP}>
-            <span className={style.accountDescLabel}>Gmail:</span>
-            <CustomLink
-              href='mailto:ohira.job720@gmail.com'
-              title='ohira.job720@gmail.com'
-            />
-          </p>
-          <p className={style.accountDescP}>
-            <span className={style.accountDescLabel}>Qiita:</span>
-            <CustomLink
-              href='https://qiita.com/Alesion30'
-              target={true}
-              title='https://qiita.com/Alesion30'
-            />
-          </p>
-          <p className={style.accountDescP}>
-            <span className={style.accountDescLabel}>Zenn:</span>
-            <CustomLink
-              href='https://zenn.dev/alesion'
-              target={true}
-              title='https://zenn.dev/alesion'
-            />
-          </p>
-        </div>
-      </div>
-      <Spacer height={80} />
+      <Spacer height={80} /> */}
       <SectionTitle description='スキルセット' title='My Skills' />
       <Spacer height={30} />
       <div className={style.star}>

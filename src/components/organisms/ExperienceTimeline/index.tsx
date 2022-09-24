@@ -2,33 +2,22 @@ import dayjs from 'dayjs'
 import NextImage, { StaticImageData } from 'next/image'
 import { FC } from 'react'
 
-import kyusyuUniversity from '/public/img/experience/kyushuUniversity.jpg'
-
 import styles from './style.module.scss'
 
-type Experience = {
+export type Experience = {
   title: string
-  description: string
+  description?: string
   date: Date
-  images: StaticImageData[]
+  images?: { width: number; height: number; src: StaticImageData }[]
 }
 
-const experiences: Experience[] = [
-  {
-    title: '九州大学大学システム情報科学府に入学',
-    description: '九州大学大学システム情報科学府に入学しました',
-    date: new Date(2022, 4, 1),
-    images: [kyusyuUniversity, kyusyuUniversity],
-  },
-  {
-    title: '九州大学大学システム情報科学府に入学',
-    description: '九州大学大学システム情報科学府に入学しました',
-    date: new Date(2022, 4, 1),
-    images: [],
-  },
-]
+type ExperienceTimelineProps = {
+  experiences: Experience[]
+}
 
-export const ExperienceTimeline: FC = () => {
+export const ExperienceTimeline: FC<ExperienceTimelineProps> = ({
+  experiences,
+}) => {
   return (
     <ul className={styles.timeline}>
       {experiences.map((experience, i) => {
@@ -49,23 +38,23 @@ export const ExperienceTimeline: FC = () => {
                 {title}
               </label>
               <span className={styles.date}>
-                {dayjs(date).format('YYYY/MM/DD')}
+                {dayjs(date).format('YYYY年MM月')}
               </span>
               <span className={styles.circle} />
               <div className={styles.moreContent}>
-                {images.length > 0 && (
+                {images && images.length > 0 && (
                   <div className={styles.images}>
                     {images.map((image, j) => (
                       <NextImage
                         key={`${id}_image_${j}`}
-                        height={300}
-                        src={image}
-                        width={400}
+                        height={image.height}
+                        src={image.src}
+                        width={image.width}
                       />
                     ))}
                   </div>
                 )}
-                <p>{description}</p>
+                {description && <p>{description}</p>}
               </div>
             </div>
           </li>
