@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion'
 import { FC, Fragment } from 'react'
 
-import { Spacer } from '~/components/atoms'
+import { Spacer, Container } from '~/components/atoms'
 import { Header } from '~/components/organisms'
-import { Container } from '~/components/uiParts/Container'
 
 export type DefaultLayoutProps = {
   children: React.ReactNode

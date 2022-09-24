@@ -6,11 +6,10 @@ import handshake from '../../../../public/img/handshake.gif'
 
 import style from './style.module.scss'
 
-import { Spacer } from '~/components/atoms'
+import { Spacer, Container } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { VantaGlobeLayout } from '~/components/layouts/vanta'
 import { TopLinkCard } from '~/components/molucules'
-import { Container } from '~/components/uiParts/Container'
 import { setDoneOpening } from '~/utils'
 
 export const TopPresenter: FC = () => {
