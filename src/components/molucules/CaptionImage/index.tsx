@@ -13,7 +13,7 @@ export type CaptionImageProps = {
   imgAspectRatio?: number // 画像のアスペクト比（height / width）
 }
 
-export const CaptionImagePresenter: FC<CaptionImageProps> = ({
+export const CaptionImage: FC<CaptionImageProps> = ({
   description,
   height,
   imgAspectRatio,

@@ -7,7 +7,7 @@ export type SectionTitleProps = {
   description?: string
 } & DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 
-export const SectionTitlePresenter: FC<SectionTitleProps> = ({
+export const SectionTitle: FC<SectionTitleProps> = ({
   description,
   title,
   ...divProps

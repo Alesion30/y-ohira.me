@@ -5,8 +5,7 @@ import style from './style.module.scss'
 
 import { InViewAnimate, Spacer } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
-import { CaptionImage } from '~/components/uiParts/CaptionImage'
-import { SectionTitle } from '~/components/uiParts/SectionTitle'
+import { SectionTitle, CaptionImage } from '~/components/molucules'
 
 export type Content = {
   title: string

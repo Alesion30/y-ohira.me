@@ -4,8 +4,7 @@ import style from './style.module.scss'
 
 import { Spacer, InViewAnimate } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
-import { ContentCard } from '~/components/molucules'
-import { SectionTitle } from '~/components/uiParts/SectionTitle'
+import { ContentCard, SectionTitle } from '~/components/molucules'
 import { Blogs } from '~/data/model/blog'
 
 export type BlogProps = {
