@@ -5,8 +5,8 @@ import commit from '../../../../public/img/product/commit.png'
 import creamy from '../../../../public/img/product/creamy.png'
 import diclog from '../../../../public/img/product/diclog.png'
 import elepoke from '../../../../public/img/product/elepoke.png'
-import hamosuke from '../../../../public/img/product/hamosuke.gif'
 import linebot from '../../../../public/img/product/linebot.png'
+import mildTranslate from '../../../../public/img/product/mild-translate.png'
 import passtick from '../../../../public/img/product/passtick.png'
 import penlab from '../../../../public/img/product/penlab.gif'
 import shareCheese from '../../../../public/img/product/share-cheese.png'
@@ -19,6 +19,11 @@ export const ProductPage: FC = () => {
       description: 'マップメモ共有アプリ',
       src: shareCheese,
       title: 'シェアチーズ',
+    },
+    {
+      description: '絵文字付きのメッセージに翻訳',
+      src: mildTranslate,
+      title: 'マイルド翻訳',
     },
     {
       description: 'chrome拡張機能と連携する英単語アプリ',
@@ -48,7 +53,6 @@ export const ProductPage: FC = () => {
       title: '授業マイスター',
     },
     { description: '学習時間記録ツール', src: penlab, title: 'PenLab' },
-    { description: '予定管理アプリ', src: hamosuke, title: 'はもスケ' },
   ]
   return <ProductPresenter contents={contents} />
 }
