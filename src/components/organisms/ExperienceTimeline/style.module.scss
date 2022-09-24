@@ -2,14 +2,14 @@
 
 .timeline {
   list-style: none;
-  margin: 50px 0 30px 120px;
+  margin: 0;
+  margin-left: 120px;
   padding-left: 30px;
   border-left: 4px solid #fff;
 }
 
 .timelineItem {
   position: relative;
-  margin: 40px 0;
 }
 
 .label {
@@ -41,6 +41,17 @@
   max-height: 0px;
   opacity: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .radio {
@@ -54,9 +65,9 @@
       }
 
       .moreContent {
-        max-height: 200px;
+        max-height: 9999px; // 大きい値を指定
         opacity: 1;
-        transition: max-height 1s linear, opacity 0.4s linear;
+        transition: opacity 0.4s linear;
       }
 
       .label {
