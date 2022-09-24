@@ -8,6 +8,7 @@ import style from './style.module.scss'
 import { Spacer, Stars, CustomLink } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { SectionTitle } from '~/components/molucules'
+import { ExperienceTimeline } from '~/components/organisms'
 
 export type Carrier = { date: string; content: string }
 
@@ -25,6 +26,8 @@ export const AboutPresenter: FC<AboutProps> = ({ carriers, skills }) => {
   return (
     <DefaultLayout>
       <SectionTitle description='経歴' title='PROFILE' />
+      <Spacer height={50} />
+      <ExperienceTimeline />
       <Spacer height={50} />
       <div>
         {carriers.map((item, index) => {
