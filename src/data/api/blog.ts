@@ -16,7 +16,7 @@ const QUERY = gql`
         width
       }
       content
-      createdAt
+      date
     }
   }
 `

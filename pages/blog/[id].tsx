@@ -47,10 +47,17 @@ export const getStaticPaths: GetStaticPaths<StaticParams> = async () => {
 }
 
 export default function Page({ blog }: StaticProps) {
+  console.log(blog)
   return (
     <>
       <NextSeo title={blog?.title} />
-      <MarkdownLayout>{blog?.content ?? ''}</MarkdownLayout>
+      <MarkdownLayout
+        date={blog?.date}
+        thumbnail={blog?.image}
+        title={blog?.title}
+      >
+        {blog?.content ?? ''}
+      </MarkdownLayout>
     </>
   )
 }

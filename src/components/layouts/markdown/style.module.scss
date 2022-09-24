@@ -1,5 +1,30 @@
 @import '../../../styles/variables.scss';
 
+.back {
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.divider {
+  margin: 24px 0;
+}
+
 .container {
   h1,
   h2,
@@ -12,6 +37,7 @@
 
   a {
     text-decoration: underline;
+    word-wrap: break-word;
   }
 
   img {
@@ -22,5 +48,11 @@
     background-color: #001622;
     border-radius: $borderRadius;
     padding: 16px;
+    padding: 24px;
+    white-space: pre-wrap;
+  }
+
+  code {
+    font-family: 'Monaco';
   }
 }
