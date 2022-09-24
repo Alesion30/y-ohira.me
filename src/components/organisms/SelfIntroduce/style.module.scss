@@ -1,0 +1,23 @@
+.account {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  &Image {
+    margin: 20px;
+  }
+
+  &Desc {
+    margin: 20px;
+
+    &P {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &Label {
+      margin-right: 10px;
+    }
+  }
+}
