@@ -1,9 +1,9 @@
 import { FC } from 'react'
 
-import { BlogCard } from './BlogCard'
 import style from './style.module.scss'
 
 import { DefaultLayout } from '~/components/layouts/default'
+import { ContentCard } from '~/components/molucules'
 import { InViewAnimate } from '~/components/uiParts/InViewAnimate'
 import { SectionTitle } from '~/components/uiParts/SectionTitle'
 import { Spacer } from '~/components/uiParts/Spacer'
@@ -27,10 +27,11 @@ export const BlogPresenter: FC<BlogProps> = ({ blogs }) => {
                 delay={300}
                 open={{ opacity: 1, y: 0 }}
               >
-                <BlogCard
+                <ContentCard
                   date={blog.date}
                   href={`/blog/${blog.id}`}
-                  src={blog.image.url}
+                  image={blog.image}
+                  maxWidth={400}
                   title={blog.title}
                 />
               </InViewAnimate>
