@@ -3,11 +3,10 @@ import { FC } from 'react'
 
 import style from './style.module.scss'
 
+import { InViewAnimate, Spacer } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { CaptionImage } from '~/components/uiParts/CaptionImage'
-import { InViewAnimate } from '~/components/uiParts/InViewAnimate'
 import { SectionTitle } from '~/components/uiParts/SectionTitle'
-import { Spacer } from '~/components/uiParts/Spacer'
 
 export type Content = {
   title: string

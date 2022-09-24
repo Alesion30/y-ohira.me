@@ -7,10 +7,10 @@ import handshake from '../../../../public/img/handshake.gif'
 import { TopLinkCard } from './TopLinkCard'
 import style from './style.module.scss'
 
+import { Spacer } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { VantaGlobeLayout } from '~/components/layouts/vanta'
 import { Container } from '~/components/uiParts/Container'
-import { Spacer } from '~/components/uiParts/Spacer'
 import { setDoneOpening } from '~/utils'
 
 export const TopPresenter: FC = () => {

@@ -2,11 +2,10 @@ import { FC } from 'react'
 
 import style from './style.module.scss'
 
+import { Spacer, InViewAnimate } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { ContentCard } from '~/components/molucules'
-import { InViewAnimate } from '~/components/uiParts/InViewAnimate'
 import { SectionTitle } from '~/components/uiParts/SectionTitle'
-import { Spacer } from '~/components/uiParts/Spacer'
 import { Blogs } from '~/data/model/blog'
 
 export type BlogProps = {
