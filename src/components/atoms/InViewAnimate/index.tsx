@@ -1,7 +1,7 @@
-import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 import { AnimatePresence, motion, Variant, Variants } from 'framer-motion'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { InView } from 'react-intersection-observer'
+import { useWindowScroll } from 'react-use'
 
 type InViewAnimateProps = {
   open: Variant
@@ -20,25 +20,21 @@ export const InViewAnimate: FC<InViewAnimateProps> = ({
   open,
   threshold,
 }) => {
+  const [isVisible, setIsVisible] = useState(false)
   const variants: Variants = {
     closed: closed,
     open: open,
   }
-  let isVisible = false
 
   // 一番上かどうか
-  let isTop = false
-  isTop = !useScrollTrigger({
-    disableHysteresis: true,
-    target: typeof window !== 'undefined' ? window : undefined,
-    threshold: 50,
-  })
+  const { y } = useWindowScroll()
+  const isTop = y < 50
 
   return (
     <InView delay={delay} threshold={threshold}>
       {({ inView, ref }) => {
-        if (isTop) isVisible = false
-        if (inView) isVisible = true
+        if (isTop) setIsVisible(false)
+        if (inView) setIsVisible(true)
         return (
           <div ref={ref}>
             <AnimatePresence initial={false}>
