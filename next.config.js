@@ -22,7 +22,7 @@ const nextConfig = {
   // },
   // SCSS
   sassOptions: {
-    includePaths: [path.join(__dirname, 'src/styles')],
+    includePaths: [path.join(__dirname, 'src')],
   },
   webpack: (config) => {
     config.resolve.alias = {
