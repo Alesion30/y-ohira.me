@@ -2,8 +2,8 @@ import { FC, Fragment, ReactElement, useEffect, useRef, useState } from 'react'
 
 import style from './style.module.scss'
 
+import { TypingText } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
-import { TypingText } from '~/components/uiParts/TypingText'
 import { sleep } from '~/utils'
 import { getRandom } from '~/utils/random'
 

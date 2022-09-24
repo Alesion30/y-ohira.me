@@ -4,7 +4,7 @@ export type StarsProps = {
   star: 0 | 1 | 2 | 3 | 4 | 5
 }
 
-export const StarsPresenter: FC<StarsProps> = ({ star }) => {
+export const Stars: FC<StarsProps> = ({ star }) => {
   return (
     <div>
       {[...new Array(star)].map((_, index) => (

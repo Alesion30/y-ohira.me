@@ -5,11 +5,9 @@ import alesionImg from '../../../../public/img/alesion.png'
 
 import style from './style.module.scss'
 
-import { Spacer } from '~/components/atoms'
+import { Spacer, Stars, CustomLink } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { SectionTitle } from '~/components/molucules'
-import { CustomLink } from '~/components/uiParts/CustomLink'
-import { Stars } from '~/components/uiParts/Stars'
 
 export type Carrier = { date: string; content: string }
 

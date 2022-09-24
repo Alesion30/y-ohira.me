@@ -10,7 +10,7 @@ export type TypingTextProps = {
   delay?: number
 }
 
-export const TypingTextPresenter: FC<TypingTextProps> = ({
+export const TypingText: FC<TypingTextProps> = ({
   className,
   delay = 0,
   onFinishRender,
