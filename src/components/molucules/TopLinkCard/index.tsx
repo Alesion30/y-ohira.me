@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 import style from './style.module.scss'
 
-import { MyCard } from '~/components/uiParts/MyCard'
+import { Card } from '~/components/atoms'
 
 export type TopLinkCardProps = {
   title: string
@@ -13,7 +13,7 @@ export type TopLinkCardProps = {
   className?: string
 }
 
-export const TopLinkCardPresenter: FC<TopLinkCardProps> = ({
+export const TopLinkCard: FC<TopLinkCardProps> = ({
   blank,
   className,
   description,
@@ -21,11 +21,11 @@ export const TopLinkCardPresenter: FC<TopLinkCardProps> = ({
   title,
 }) => {
   return (
-    <MyCard blank={blank} className={clsx(style.card, className)} href={href}>
+    <Card blank={blank} className={clsx(style.card, className)} href={href}>
       <div className={style.cardContent}>
         <h3 className={style.title}>{title} &rarr;</h3>
         <p className={style.description}>{description}</p>
       </div>
-    </MyCard>
+    </Card>
   )
 }

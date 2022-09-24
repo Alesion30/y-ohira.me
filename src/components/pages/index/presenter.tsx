@@ -4,12 +4,12 @@ import { FC } from 'react'
 
 import handshake from '../../../../public/img/handshake.gif'
 
-import { TopLinkCard } from './TopLinkCard'
 import style from './style.module.scss'
 
 import { Spacer } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { VantaGlobeLayout } from '~/components/layouts/vanta'
+import { TopLinkCard } from '~/components/molucules'
 import { Container } from '~/components/uiParts/Container'
 import { setDoneOpening } from '~/utils'
 
