@@ -29,11 +29,9 @@ export const BlogPresenter: FC<BlogProps> = ({ blogs }) => {
               >
                 <BlogCard
                   date={blog.date}
-                  href={blog.link}
-                  // href={`/blog/${blog.id}`}
+                  href={`/blog/${blog.id}`}
                   src={blog.image.url}
                   title={blog.title}
-                  blank
                 />
               </InViewAnimate>
             </div>
