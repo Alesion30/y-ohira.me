@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion'
 import { FC, Fragment } from 'react'
 
-import { Header } from './header'
-
+import { Header } from '~/components/organisms'
 import { Container } from '~/components/uiParts/Container'
 import { Spacer } from '~/components/uiParts/Spacer'
 

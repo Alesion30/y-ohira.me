@@ -5,19 +5,15 @@ import { FC, useEffect, useState } from 'react'
 
 import style from './style.module.scss'
 
-export type HeaderProps = {
-  links: { href: string; name: string }[]
-}
+const links = [
+  { href: '/about', title: 'ABOUT' },
+  { href: '/product', title: 'PRODUCT' },
+  { href: '/blog', title: 'BLOG' },
+]
 
-export const HeaderPresenter: FC<HeaderProps> = () => {
+export const Header: FC = () => {
   const [open, setOpen] = useState(false)
   const router = useRouter()
-
-  const links = [
-    { href: '/about', title: 'ABOUT' },
-    { href: '/product', title: 'PRODUCT' },
-    { href: '/blog', title: 'BLOG' },
-  ]
 
   const onToggle = () => setOpen(!open)
   const onClose = () => setOpen(false)
