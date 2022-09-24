@@ -17,7 +17,8 @@
     "format": "prettier --write .",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "typed-scss-modules": "typed-scss-modules src -w"
+    "typed-scss-modules": "typed-scss-modules src -w",
+    "clean": "rm -rf node_modules yarn.lock .next"
   },
   "dependencies": {
     "@apollo/client": "3.6.9",
