@@ -9,6 +9,7 @@ import gleap from '/public/img/experience/gleap.jpg'
 import twoThree from '/public/img/experience/23.jpg'
 import hacku from '/public/img/experience/hacku.jpg'
 import creamy from '/public/img/experience/creamy.jpg'
+import ezuka from '/public/img/experience/ezuka.jpg'
 import creamy2 from '/public/img/experience/creamy2.jpg'
 import passtick from '/public/img/experience/passtick.png'
 import challecara from '/public/img/experience/challecara.png'
@@ -75,11 +76,29 @@ export const AboutPage: FC = () => {
       title: '技育展2021',
       description:
         'サポーターズ主催のハッカソン「技育展」で、イベント調整アプリ「Creamy」を発表',
-      date: dayjs('2021-10').toDate(),
+      date: dayjs('2021-9-25').toDate(),
       images: [
         { width: 1920 / 2, height: 1080 / 2, src: creamy },
         { width: 1920 / 2, height: 1080 / 2, src: creamy2 },
       ],
+    },
+    {
+      title: 'e-ZUKA スマートフォンアプリコンテスト2021',
+      description:
+        '飯塚市主催の「e-ZUKA スマートフォンアプリコンテスト2021」にて、オンライン会議のための感情可視化アプリ「REmotion」とイベント調整アプリ「Creamy」を発表し、グランプリを含む合計8個の賞を獲得。(賞金総額46万円)',
+      date: dayjs('2021-11-20').toDate(),
+      images: [{ width: 1430 / 2, height: 800 / 2, src: ezuka }],
+    },
+    {
+      title: 'ICTビジネスプランコンテスト2021（九州大会）',
+      description:
+        'ICTビジネスプランコンテスト2021（九州大会）で、「REmotion」と「Creamy」を発表し、キャンパスグランプリ賞・キャンパス準グランプリ賞・アイ・オー・データ賞を受賞。',
+      date: dayjs('2021-12-22').toDate(),
+    },
+    {
+      title: '九州大学工学部電気情報工学科を卒業',
+      description: '九州大学工学部電気情報工学科を卒業しました。',
+      date: dayjs('2022-03-01').toDate(),
     },
     {
       title: '九州大学大学院システム情報科学府に入学',
