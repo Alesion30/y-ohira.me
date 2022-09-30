@@ -6482,7 +6482,7 @@ __metadata:
     react-use: 17.4.0
     sass: 1.55.0
     three: 0.145.0
-    typed-scss-modules: 7.0.0
+    typed-scss-modules: 7.0.1
     typescript: 4.8.4
     vanta: 0.5.24
   languageName: unknown
@@ -7965,9 +7965,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typed-scss-modules@npm:7.0.0":
-  version: 7.0.0
-  resolution: "typed-scss-modules@npm:7.0.0"
+"typed-scss-modules@npm:7.0.1":
+  version: 7.0.1
+  resolution: "typed-scss-modules@npm:7.0.1"
   dependencies:
     bundle-require: ^3.0.4
     chalk: 4.1.2
@@ -7990,7 +7990,7 @@ __metadata:
       optional: true
   bin:
     typed-scss-modules: dist/lib/cli.js
-  checksum: d41af1b9a3d6b16b62060968a20aeefc52f08e13abc7b787f410151a3d0016b84e15747625dc31cfbdcae0866555c93adbf4e3b1b0cb8b3312126a46b79d3199
+  checksum: 3012934405722196d3bb540805265d2ebf1fe50e77a04a1c91ea41e0aa4068c5f4150bf972c3e6bd089b5bfbd25ee03a498d467cb937a7095404abc435607372
   languageName: node
   linkType: hard
 
