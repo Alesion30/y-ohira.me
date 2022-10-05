@@ -60,5 +60,5 @@
     "typed-scss-modules": "7.0.1",
     "typescript": "4.8.4"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.4"
 }
