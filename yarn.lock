@@ -1891,10 +1891,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.7.18":
-  version: 18.7.18
-  resolution: "@types/node@npm:18.7.18"
-  checksum: 8aec61f0f96e2a69ce51f1f40f949ca578bbb4fe05d7c0b8ce3aeeb848e90f755837f17f6ac132ca404d974fe9b2974150ad3b4984fc9dc7c3ceddb10bae0167
+"@types/node@npm:18.11.5":
+  version: 18.11.5
+  resolution: "@types/node@npm:18.11.5"
+  checksum: ac54e9287dd4549ea3dc8aabc0cf7bfa04c52f02925d7fd68414789617ec770f034c8ae2e111e8bd00d446a46fcac42587b5a316a1303e2f6ea094854248c9ff
   languageName: node
   linkType: hard
 
@@ -6496,7 +6496,7 @@ __metadata:
   dependencies:
     "@apollo/client": 3.7.0
     "@next/bundle-analyzer": 12.3.1
-    "@types/node": 18.7.18
+    "@types/node": 18.11.5
     "@types/react": 18.0.22
     "@types/react-dom": 18.0.7
     "@types/three": 0.144.0
