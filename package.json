@@ -39,7 +39,7 @@
     "vanta": "0.5.24"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.0.2",
+    "@next/bundle-analyzer": "13.0.3",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
@@ -47,7 +47,7 @@
     "@typescript-eslint/eslint-plugin": "5.42.1",
     "@typescript-eslint/parser": "5.42.1",
     "eslint": "8.27.0",
-    "eslint-config-next": "13.0.2",
+    "eslint-config-next": "13.0.3",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "3.5.2",
     "eslint-plugin-import": "2.26.0",
