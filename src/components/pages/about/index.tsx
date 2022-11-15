@@ -4,7 +4,6 @@ import { FC } from 'react'
 import { AboutPresenter, Carrier, Skill } from './presenter'
 
 import kyusyuUniversity from '/public/img/experience/kyushuUniversity.jpg'
-import admission from '/public/img/experience/admission.jpg'
 import gleap from '/public/img/experience/gleap.jpg'
 import twoThree from '/public/img/experience/23.jpg'
 import hacku from '/public/img/experience/hacku.jpg'
@@ -22,10 +21,7 @@ export const AboutPage: FC = () => {
     {
       title: '九州大学工学部電気情報工学科に入学',
       date: dayjs('2018-04-01').toDate(),
-      images: [
-        { width: 400, height: 300, src: kyusyuUniversity },
-        { width: 400, height: 300, src: admission },
-      ],
+      images: [{ width: 400, height: 300, src: kyusyuUniversity }],
     },
     {
       title: 'プログラミングサークルGLEAP',
