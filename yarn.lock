@@ -4184,9 +4184,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.6.15":
-  version: 7.6.15
-  resolution: "framer-motion@npm:7.6.15"
+"framer-motion@npm:7.6.17":
+  version: 7.6.17
+  resolution: "framer-motion@npm:7.6.17"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": 10.13.1
@@ -4201,7 +4201,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 3022b288ba0b5fda92edd843f236724a9ac4ac7248431cb11812d878d2c178956b129bc7b3875cf731998096de2116f2240d73adf0ae0d98d446c2700ff9eb23
+  checksum: ade093932028818ca3ddd2bb82ea5af25c9e977b7298b86f73cbed76923dc42ed578398539b704c2a85ec0375ba77cfc7332393d94f910826cdf669d1315f548
   languageName: node
   linkType: hard
 
@@ -6617,7 +6617,7 @@ __metadata:
     eslint-plugin-import: 2.26.0
     eslint-plugin-prettier: 4.2.1
     eslint-plugin-react: 7.31.11
-    framer-motion: 7.6.15
+    framer-motion: 7.6.17
     graphql: 16.6.0
     modern-css-reset: 1.4.0
     next: 12.3.4
@@ -6629,7 +6629,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-intersection-observer: 9.4.1
-    react-markdown: 8.0.3
+    react-markdown: 8.0.4
     react-use: 17.4.0
     sass: 1.56.1
     three: 0.147.0
@@ -6847,9 +6847,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-markdown@npm:8.0.3":
-  version: 8.0.3
-  resolution: "react-markdown@npm:8.0.3"
+"react-markdown@npm:8.0.4":
+  version: 8.0.4
+  resolution: "react-markdown@npm:8.0.4"
   dependencies:
     "@types/hast": ^2.0.0
     "@types/prop-types": ^15.0.0
@@ -6869,7 +6869,7 @@ __metadata:
   peerDependencies:
     "@types/react": ">=16"
     react: ">=16"
-  checksum: 66c0b45889d0262168547d9356145ced276993dac1d441c5c1cf2371fe71f347419696f9040c084c7d77c1caced21d358677c38f66edae736f942ac5964c032f
+  checksum: 9feec3734694ef05f450779a1adac10dbb768b8f3adbf4c81f59ca3cea8fd2f6a578fa4c488183597a7418f972715e5d84705cc76f278b55c86d622e82561bf8
   languageName: node
   linkType: hard
 
