@@ -28,9 +28,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.7.2":
-  version: 3.7.2
-  resolution: "@apollo/client@npm:3.7.2"
+"@apollo/client@npm:3.7.3":
+  version: 3.7.3
+  resolution: "@apollo/client@npm:3.7.3"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/context": ^0.7.0
@@ -60,7 +60,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 95a8e7e21fb7c4efdae50455491d6ff2bcdba2de27ba24c604f8e4ef08b95dddeda973fe98f7bb794ffd6f990797d6cd662d2cb23d8a246c39937d04f7100493
+  checksum: 2422c4693630039c6cb1a94b1c8dc1e346e2fc65a76742fe2a79407e6afc781034a1a8460d4c4d9733b7d93860dcece3b4b54f195381c642402ca217b62b1380
   languageName: node
   linkType: hard
 
@@ -4184,9 +4184,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.9.1":
-  version: 7.9.1
-  resolution: "framer-motion@npm:7.9.1"
+"framer-motion@npm:7.10.0":
+  version: 7.10.0
+  resolution: "framer-motion@npm:7.10.0"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": ^10.15.3
@@ -4198,7 +4198,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 59576010720c3e03453166be6f0c2be418735e940001dcac2d25c139632306cdfa8f3c8afb999aedd933dd97a302dc6b41d9f7b1ee5c6a612574341a7f9b805a
+  checksum: 8cf2f39874610745d15dc36e90edc71898daaca460e0538fb206a77149a3bb02054b1e792b5cd2c16750e5d3d5009d5f45cd5e6571b2410d3643332fcf29c152
   languageName: node
   linkType: hard
 
@@ -6576,7 +6576,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.7.2
+    "@apollo/client": 3.7.3
     "@next/bundle-analyzer": 13.0.7
     "@types/node": 18.11.15
     "@types/react": 18.0.26
@@ -6593,7 +6593,7 @@ __metadata:
     eslint-plugin-import: 2.26.0
     eslint-plugin-prettier: 4.2.1
     eslint-plugin-react: 7.31.11
-    framer-motion: 7.9.1
+    framer-motion: 7.10.0
     graphql: 16.6.0
     modern-css-reset: 1.4.0
     next: 12.3.4
