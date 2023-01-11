@@ -3731,7 +3731,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:3.5.2, eslint-import-resolver-typescript@npm:^3.5.2":
+"eslint-import-resolver-typescript@npm:3.5.3":
+  version: 3.5.3
+  resolution: "eslint-import-resolver-typescript@npm:3.5.3"
+  dependencies:
+    debug: ^4.3.4
+    enhanced-resolve: ^5.10.0
+    get-tsconfig: ^4.2.0
+    globby: ^13.1.2
+    is-core-module: ^2.10.0
+    is-glob: ^4.0.3
+    synckit: ^0.8.4
+  peerDependencies:
+    eslint: "*"
+    eslint-plugin-import: "*"
+  checksum: 63b5f28bec5a29b1d3be33b79795441f7b0da54479e5c99a115877d9b70b2b7464c19a928b4ae7674a937b9ee8e7d4b1d30b7f5e6325c4c3aaa8c607bb175258
+  languageName: node
+  linkType: hard
+
+"eslint-import-resolver-typescript@npm:^3.5.2":
   version: 3.5.2
   resolution: "eslint-import-resolver-typescript@npm:3.5.2"
   dependencies:
@@ -3831,9 +3849,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:7.31.11":
-  version: 7.31.11
-  resolution: "eslint-plugin-react@npm:7.31.11"
+"eslint-plugin-react@npm:7.32.0":
+  version: 7.32.0
+  resolution: "eslint-plugin-react@npm:7.32.0"
   dependencies:
     array-includes: ^3.1.6
     array.prototype.flatmap: ^1.3.1
@@ -3847,12 +3865,12 @@ __metadata:
     object.hasown: ^1.1.2
     object.values: ^1.1.6
     prop-types: ^15.8.1
-    resolve: ^2.0.0-next.3
+    resolve: ^2.0.0-next.4
     semver: ^6.3.0
     string.prototype.matchall: ^4.0.8
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-  checksum: a3d612f6647bef33cf2a67c81a6b37b42c075300ed079cffecf5fb475c0d6ab855c1de340d1cbf361a0126429fb906dda597527235d2d12c4404453dbc712fc6
+  checksum: b81ce2623b50a936287d8e21997bd855094e643856c99b42a9f0c10e1c7b123e469c3d75f77df9eefb719fee2b47a763862f1cdca1e7cc26edc7cde2fb8cba87
   languageName: node
   linkType: hard
 
@@ -6589,10 +6607,10 @@ __metadata:
     eslint: 8.31.0
     eslint-config-next: 13.1.1
     eslint-config-prettier: 8.6.0
-    eslint-import-resolver-typescript: 3.5.2
+    eslint-import-resolver-typescript: 3.5.3
     eslint-plugin-import: 2.26.0
     eslint-plugin-prettier: 4.2.1
-    eslint-plugin-react: 7.31.11
+    eslint-plugin-react: 7.32.0
     framer-motion: 8.4.0
     graphql: 16.6.0
     modern-css-reset: 1.4.0
@@ -6609,7 +6627,7 @@ __metadata:
     react-use: 17.4.0
     sass: 1.57.1
     three: 0.148.0
-    typed-scss-modules: 7.0.1
+    typed-scss-modules: 7.0.2
     typescript: 4.9.4
     vanta: 0.5.24
   languageName: unknown
@@ -7077,7 +7095,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^2.0.0-next.3":
+"resolve@npm:^2.0.0-next.3, resolve@npm:^2.0.0-next.4":
   version: 2.0.0-next.4
   resolution: "resolve@npm:2.0.0-next.4"
   dependencies:
@@ -7103,7 +7121,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^2.0.0-next.3#~builtin<compat/resolve>":
+"resolve@patch:resolve@^2.0.0-next.3#~builtin<compat/resolve>, resolve@patch:resolve@^2.0.0-next.4#~builtin<compat/resolve>":
   version: 2.0.0-next.4
   resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=c3c19d"
   dependencies:
@@ -8105,9 +8123,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typed-scss-modules@npm:7.0.1":
-  version: 7.0.1
-  resolution: "typed-scss-modules@npm:7.0.1"
+"typed-scss-modules@npm:7.0.2":
+  version: 7.0.2
+  resolution: "typed-scss-modules@npm:7.0.2"
   dependencies:
     bundle-require: ^3.0.4
     chalk: 4.1.2
@@ -8130,7 +8148,7 @@ __metadata:
       optional: true
   bin:
     typed-scss-modules: dist/lib/cli.js
-  checksum: 3012934405722196d3bb540805265d2ebf1fe50e77a04a1c91ea41e0aa4068c5f4150bf972c3e6bd089b5bfbd25ee03a498d467cb937a7095404abc435607372
+  checksum: 04da0beb343fbb59e817c1fa3790d5159202ef72a1edb615c2fb893a81ba193a2f89409d44ecb2cce57a829089d23dbcb16fc490c81ec82f8e5e7e2737e0d375
   languageName: node
   linkType: hard
 
