@@ -24,7 +24,7 @@
     "@apollo/client": "3.7.5",
     "clsx": "1.2.1",
     "dayjs": "1.11.7",
-    "framer-motion": "8.5.2",
+    "framer-motion": "8.5.3",
     "graphql": "16.6.0",
     "modern-css-reset": "1.4.0",
     "next": "12.3.4",
@@ -35,7 +35,7 @@
     "react-intersection-observer": "9.4.1",
     "react-markdown": "8.0.5",
     "react-use": "17.4.0",
-    "three": "0.148.0",
+    "three": "0.149.0",
     "vanta": "0.5.24"
   },
   "devDependencies": {
