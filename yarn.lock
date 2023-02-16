@@ -28,9 +28,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.7.7":
-  version: 3.7.7
-  resolution: "@apollo/client@npm:3.7.7"
+"@apollo/client@npm:3.7.8":
+  version: 3.7.8
+  resolution: "@apollo/client@npm:3.7.8"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/context": ^0.7.0
@@ -60,7 +60,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 4f061c663505dbbabe0e5c00f914dbb3ac1cb2a79beb1de49a6bb1cc299c66536ea076d3c30f579c7f9558efe710105f385cc7f69b247f2d198427d5a8f38eb6
+  checksum: 3b12251768f7e1973b7d193d1420b01e6a0cb4b8a57bb4f65a82df48df2b8420aa9fdfeb0a4dcec4d787c1dcddaa7307611153736dff79d567be39b0dcd7f3d2
   languageName: node
   linkType: hard
 
@@ -4202,9 +4202,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:9.0.3":
-  version: 9.0.3
-  resolution: "framer-motion@npm:9.0.3"
+"framer-motion@npm:9.0.4":
+  version: 9.0.4
+  resolution: "framer-motion@npm:9.0.4"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": ^10.15.3
@@ -4216,7 +4216,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 4adcfcd5b9c8af07022844cba1c7456b60a78ad65f86c7e18399ad9666e4132645b31652de34113496112386bf21bcd848c315a0a63c843a3aad6861604e393a
+  checksum: 9ef23d81c78785dd2f7f278bad133d96c22fd3a9dcc310521ea220873b0a923ca927dc2d3e8000e221edfcc5bfd6272f752435472e3a8f9b1ef476202ede1ce2
   languageName: node
   linkType: hard
 
@@ -6594,7 +6594,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.7.7
+    "@apollo/client": 3.7.8
     "@next/bundle-analyzer": 13.1.1
     "@types/node": 18.11.18
     "@types/react": 18.0.26
@@ -6611,7 +6611,7 @@ __metadata:
     eslint-plugin-import: 2.26.0
     eslint-plugin-prettier: 4.2.1
     eslint-plugin-react: 7.32.0
-    framer-motion: 9.0.3
+    framer-motion: 9.0.4
     graphql: 16.6.0
     modern-css-reset: 1.4.0
     next: 12.3.4
