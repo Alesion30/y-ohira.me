@@ -27,7 +27,7 @@ export const Header: FC = () => {
     <div>
       <div className={style.topLinkWrapper}>
         <Link href='/'>
-          <a className={style.topLink}>YUTA OHIRA</a>
+          <a className={style.topLink}>y-ohira.me</a>
         </Link>
       </div>
 
