@@ -176,6 +176,11 @@ export const AboutPage: FC = () => {
         'Yahoo!主催のDigital Hackdayで「マイルド翻訳」を開発し、Fun賞を受賞する。',
       date: '2022年09月',
     },
+    {
+      content:
+        'e-ZUKA スマートアプリコンテスト2022にて、マップメモ共有アプリ「シェアチーズ」を発表し、グランプリを含む合計4個の賞を獲得。(賞金総額41万円)',
+      date: '2022年11月',
+    },
   ]
 
   const skills: Skill[] = [
@@ -197,7 +202,7 @@ export const AboutPage: FC = () => {
     { name: 'C++(Arduino)', star: 2 },
     { name: 'Unity', star: 2 },
     { name: 'Swift', star: 1 },
-    { name: 'Go', star: 1 },
+    { name: 'Go', star: 2 },
     { name: '上記にない言語', star: 0 },
   ]
 
