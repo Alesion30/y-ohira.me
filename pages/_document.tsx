@@ -5,31 +5,25 @@ const MyDocument: FC = () => {
   return (
     <Html lang='ja' prefix='og: https://www.y-ohira.me/'>
       <Head>
-        <link href='/favicon.ico' rel='icon' />
-        <meta content='#222222' name='theme-color' />
-        <link href='/manifest.json' rel='manifest' />
-
-        {/* apple-touch-icon */}
+        {/* https://favicon.io/favicon-converter/ */}
         <link
-          href='/icons/icon-72x72.png'
+          href='/apple-touch-icon.png'
           rel='apple-touch-icon'
-          sizes='72x72'
+          sizes='180x180'
         />
         <link
-          href='/icons/icon-96x96.png'
-          rel='apple-touch-icon'
-          sizes='96x96'
+          href='/favicon-32x32.png'
+          rel='icon'
+          sizes='32x32'
+          type='image/png'
         />
         <link
-          href='/icons/icon-128x128.png'
-          rel='apple-touch-icon'
-          sizes='128x128'
+          href='/favicon-16x16.png'
+          rel='icon'
+          sizes='16x16'
+          type='image/png'
         />
-        <link
-          href='/icons/icon-144x144.png'
-          rel='apple-touch-icon'
-          sizes='144x144'
-        />
+        <link href='/site.webmanifest' rel='manifest' />
 
         {/* Google Fonts */}
         <link href='https://fonts.gstatic.com' rel='preconnect' />
