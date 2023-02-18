@@ -14,7 +14,7 @@ const config: DefaultSeoProps = {
         height: 630,
       },
     ],
-    site_name: 'y.ohira',
+    site_name: 'y-ohira.me',
     title: 'Web Engineer from Kyushu University',
   },
   titleTemplate: '%s | Web Engineer from Kyushu University',
