@@ -5,11 +5,7 @@ import style from './style.module.scss'
 import { Spacer, Stars } from '~/components/atoms'
 import { DefaultLayout } from '~/components/layouts/default'
 import { SectionTitle } from '~/components/molucules'
-import {
-  Experience,
-  ExperienceTimeline,
-  SelfIntroduce,
-} from '~/components/organisms'
+import { Experience, SelfIntroduce } from '~/components/organisms'
 
 export type Carrier = { date: string; content: string }
 
@@ -24,16 +20,13 @@ export type AboutProps = {
   skills: Skill[]
 }
 
-export const AboutPresenter: FC<AboutProps> = ({ experiences, skills }) => {
+export const AboutPresenter: FC<AboutProps> = ({ carriers, skills }) => {
   return (
     <DefaultLayout>
       <SectionTitle description='経歴' title='PROFILE' />
       <Spacer height={50} />
-      <ExperienceTimeline experiences={experiences} />
-      <Spacer height={20} />
-      <SelfIntroduce />
-      <Spacer height={50} />
-      {/* <div>
+      {/* <ExperienceTimeline experiences={experiences} /> */}
+      <div>
         {carriers.map((item, index) => {
           return (
             <div key={`about_carrier_${index}`} className={style.carrier}>
@@ -43,7 +36,7 @@ export const AboutPresenter: FC<AboutProps> = ({ experiences, skills }) => {
           )
         })}
       </div>
-      <Spacer height={80} /> */}
+      <Spacer height={50} />
       <SectionTitle description='スキルセット' title='My Skills' />
       <Spacer height={30} />
       <div className={style.star}>
@@ -57,6 +50,8 @@ export const AboutPresenter: FC<AboutProps> = ({ experiences, skills }) => {
           </div>
         ))}
       </div>
+      <Spacer height={80} />
+      <SelfIntroduce />
     </DefaultLayout>
   )
 }

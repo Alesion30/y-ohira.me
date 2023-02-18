@@ -5,7 +5,7 @@ import { CustomLink } from '~/components/atoms'
 
 import style from './style.module.scss'
 
-import alesionImg from '/public/img/alesion.png'
+import alesionImg from '/public/img/alesion.jpg'
 
 export const SelfIntroduce: FC = () => {
   return (
@@ -13,11 +13,11 @@ export const SelfIntroduce: FC = () => {
       <div className={style.accountImage}>
         <NextImage
           alt='alesion'
-          height={237}
+          height={240}
           layout='fixed'
           priority={true}
           src={alesionImg}
-          width={334}
+          width={240}
         />
       </div>
       <div className={style.accountDesc}>
