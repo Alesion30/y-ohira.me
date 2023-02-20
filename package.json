@@ -21,7 +21,7 @@
     "clean": "rm -rf node_modules yarn.lock .next"
   },
   "dependencies": {
-    "@apollo/client": "3.7.8",
+    "@apollo/client": "3.7.9",
     "clsx": "1.2.1",
     "dayjs": "1.11.7",
     "framer-motion": "9.0.4",
