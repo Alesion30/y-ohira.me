@@ -4202,9 +4202,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:9.0.4":
-  version: 9.0.4
-  resolution: "framer-motion@npm:9.0.4"
+"framer-motion@npm:9.0.7":
+  version: 9.0.7
+  resolution: "framer-motion@npm:9.0.7"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": ^10.15.3
@@ -4216,7 +4216,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 9ef23d81c78785dd2f7f278bad133d96c22fd3a9dcc310521ea220873b0a923ca927dc2d3e8000e221edfcc5bfd6272f752435472e3a8f9b1ef476202ede1ce2
+  checksum: f9ef0facc708cc934345c192c6bad11fee38562df07a8d2928502bc61af6133fdd19eb24ee10b24bd90689447c1fcce27087b4914f33ed7268984d5792e6373c
   languageName: node
   linkType: hard
 
@@ -6611,7 +6611,7 @@ __metadata:
     eslint-plugin-import: 2.26.0
     eslint-plugin-prettier: 4.2.1
     eslint-plugin-react: 7.32.0
-    framer-motion: 9.0.4
+    framer-motion: 9.0.7
     graphql: 16.6.0
     modern-css-reset: 1.4.0
     next: 12.3.4
