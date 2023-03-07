@@ -28,9 +28,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.7.9":
-  version: 3.7.9
-  resolution: "@apollo/client@npm:3.7.9"
+"@apollo/client@npm:3.7.10":
+  version: 3.7.10
+  resolution: "@apollo/client@npm:3.7.10"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/context": ^0.7.0
@@ -60,7 +60,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 7b75634747bb14079e63bae36f5ff9fd469ec1a8904f20fb896baf3962c2aaefe1219558c10c15bdf93df780777c5526e331296f01b686d9c0f3bd744afd1c86
+  checksum: d74a68f8042e76e3a81990c79a89aefc07c8899d354f3b469591356508001005106bba0fa953652c3ec19756d44bdec6730ac98f62fa836bd76acbcb7eff42ce
   languageName: node
   linkType: hard
 
@@ -4137,9 +4137,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:10.0.2":
-  version: 10.0.2
-  resolution: "framer-motion@npm:10.0.2"
+"framer-motion@npm:10.2.3":
+  version: 10.2.3
+  resolution: "framer-motion@npm:10.2.3"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     tslib: ^2.4.0
@@ -4149,7 +4149,12 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: f22ba943a4b51538201dc36b68df883e1d1375dbf2f4dd068fd44c627b5c32fac70b657e04d905336f14d0dda9f6fd5323c1e59ac590be4b3d8e5555d9a5964a
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 7c4178227bfded58e7d992b81b41eacbefd420ed3850fad867d6b00e6feed4b480bcf5938c1a30b977bd9a213037ded162faee490205b12d20cd168629c4fe9e
   languageName: node
   linkType: hard
 
@@ -6520,7 +6525,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.7.9
+    "@apollo/client": 3.7.10
     "@next/bundle-analyzer": 13.1.1
     "@types/node": 18.11.18
     "@types/react": 18.0.26
@@ -6537,7 +6542,7 @@ __metadata:
     eslint-plugin-import: 2.26.0
     eslint-plugin-prettier: 4.2.1
     eslint-plugin-react: 7.32.0
-    framer-motion: 10.0.2
+    framer-motion: 10.2.3
     graphql: 16.6.0
     modern-css-reset: 1.4.0
     next: 12.3.4
