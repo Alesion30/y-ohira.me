@@ -6557,7 +6557,7 @@ __metadata:
     react-markdown: 8.0.6
     react-use: 17.4.0
     sass: 1.57.1
-    three: 0.151.0
+    three: 0.151.2
     typed-scss-modules: 7.0.2
     typescript: 5.0.2
     vanta: 0.5.24
@@ -7901,10 +7901,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:0.151.0":
-  version: 0.151.0
-  resolution: "three@npm:0.151.0"
-  checksum: 8fe4f058a6b5d0c2be2ec7aa0b463266a2a5b16e14086afb8c5b801213f0338ed063c68510fec30015256aeea49129c370a3fe74580cf0c6a125b9cf1edd0fb1
+"three@npm:0.151.2":
+  version: 0.151.2
+  resolution: "three@npm:0.151.2"
+  checksum: d4db5bcaafe9ba4b706ded46164cf7ae322c6bbcdeb1e0e2317b28e4ec6434c560be86143f743bb20d06f4e39b4a360be84a706e3ad315427ad2cb89f5cc3d40
   languageName: node
   linkType: hard
 
