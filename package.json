@@ -23,7 +23,7 @@
   "dependencies": {
     "@apollo/client": "3.7.15",
     "clsx": "1.2.1",
-    "dayjs": "1.11.7",
+    "dayjs": "1.11.8",
     "framer-motion": "10.12.16",
     "graphql": "16.6.0",
     "modern-css-reset": "1.4.0",
