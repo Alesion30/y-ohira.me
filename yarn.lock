@@ -4450,10 +4450,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.7.0":
-  version: 16.7.0
-  resolution: "graphql@npm:16.7.0"
-  checksum: 46199d850ac6d972e03bc6ac402c9a86ff47e0abf99ce96ac94a97d2469d94d33217047582a3e37b8c6bd5af3d16e5842cd7eb3c663f521b5553ac752da31cdb
+"graphql@npm:16.7.1":
+  version: 16.7.1
+  resolution: "graphql@npm:16.7.1"
+  checksum: c924d8428daf0e96a5ea43e9bc3cd1b6802899907d284478ac8f705c8fd233a0a51eef915f7569fb5de8acb2e85b802ccc6c85c2b157ad805c1e9adba5a299bd
   languageName: node
   linkType: hard
 
@@ -5927,14 +5927,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-seo@npm:6.0.0":
-  version: 6.0.0
-  resolution: "next-seo@npm:6.0.0"
+"next-seo@npm:6.1.0":
+  version: 6.1.0
+  resolution: "next-seo@npm:6.1.0"
   peerDependencies:
     next: ^8.1.1-canary.54 || >=9.0.0
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: aa986b3731386bc91408df6bca09a9edc0cdd8a7730bcdc331f283ab50803a6d60047b685eeec4b11bde1660dbb792e3737e81ef05a65682323d0d07fa9edd85
+  checksum: 5909d34d12dd8ac641d7fa96b6fe562470e1539f582c0a3f2b5e35f16b9b0e402d9f909a84393f80989bd96c034118712a5aecb520e5a45662e02fa23db7b656
   languageName: node
   linkType: hard
 
@@ -6543,11 +6543,11 @@ __metadata:
     eslint-plugin-prettier: 4.2.1
     eslint-plugin-react: 7.32.0
     framer-motion: 10.12.16
-    graphql: 16.7.0
+    graphql: 16.7.1
     modern-css-reset: 1.4.0
     next: 12.3.4
     next-pwa: 5.6.0
-    next-seo: 6.0.0
+    next-seo: 6.1.0
     npm-run-all: 4.1.5
     prettier: 2.8.2
     prettier-plugin-sort-json: 1.0.0
