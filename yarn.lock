@@ -4178,9 +4178,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:10.13.1":
-  version: 10.13.1
-  resolution: "framer-motion@npm:10.13.1"
+"framer-motion@npm:10.14.0":
+  version: 10.14.0
+  resolution: "framer-motion@npm:10.14.0"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     tslib: ^2.4.0
@@ -4195,7 +4195,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 3df72d5ba72312dcec73044bf5478e89e099e7cee7f2996db15305a0e5a799909e6e782770ba8e3cfc44059093dfd06043b9a157e1faa85977930846a0ea4fd1
+  checksum: 48158dd488bc56367eeccc431d4af0c0589843c9a7d706565bc2386e429ca2773187cccbddffd3f9a796550fb5a767ca05e0a519a3e7e07f91435f3f8c63c372
   languageName: node
   linkType: hard
 
@@ -6597,7 +6597,7 @@ __metadata:
     eslint-plugin-import: 2.26.0
     eslint-plugin-prettier: 5.0.0
     eslint-plugin-react: 7.32.0
-    framer-motion: 10.13.1
+    framer-motion: 10.14.0
     graphql: 16.7.1
     modern-css-reset: 1.4.0
     next: 12.3.4
@@ -6612,7 +6612,7 @@ __metadata:
     react-markdown: 8.0.7
     react-use: 17.4.0
     sass: 1.57.1
-    three: 0.154.0
+    three: 0.155.0
     typed-scss-modules: 7.0.2
     typescript: 5.0.2
     vanta: 0.5.24
@@ -7977,10 +7977,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:0.154.0":
-  version: 0.154.0
-  resolution: "three@npm:0.154.0"
-  checksum: 90ad3cafef8b866641366977ab7189d56f7352c6cdc014cbab946544e42782ec4ea7e56b959b43590433a0fcdc4bd8f8029b18a75074ba10005182c5a73bcc88
+"three@npm:0.155.0":
+  version: 0.155.0
+  resolution: "three@npm:0.155.0"
+  checksum: 55de8af716686be2159b2ff407501ce2e6418b7d16a8dc57f3dcf9f08c4a6bedf0623fa8ddb67c1ae6f679d7ca53cfa0c64bab6b0577d6c467618389d5561211
   languageName: node
   linkType: hard
 
