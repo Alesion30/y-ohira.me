@@ -1858,13 +1858,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2.7.2":
-  version: 2.7.2
-  resolution: "@types/prettier@npm:2.7.2"
-  checksum: b47d76a5252265f8d25dd2fe2a5a61dc43ba0e6a96ffdd00c594cb4fd74c1982c2e346497e3472805d97915407a09423804cc2110a0b8e1b22cffcab246479b7
-  languageName: node
-  linkType: hard
-
 "@types/prop-types@npm:*, @types/prop-types@npm:^15.0.0":
   version: 15.7.5
   resolution: "@types/prop-types@npm:15.7.5"
@@ -6606,7 +6599,7 @@ __metadata:
     next-seo: 6.1.0
     npm-run-all: 4.1.5
     prettier: 3.0.0
-    prettier-plugin-sort-json: 1.0.0
+    prettier-plugin-sort-json: 3.0.0
     react: 18.2.0
     react-dom: 18.2.0
     react-intersection-observer: 9.5.2
@@ -6708,14 +6701,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-sort-json@npm:1.0.0":
-  version: 1.0.0
-  resolution: "prettier-plugin-sort-json@npm:1.0.0"
-  dependencies:
-    "@types/prettier": ^2.7.2
+"prettier-plugin-sort-json@npm:3.0.0":
+  version: 3.0.0
+  resolution: "prettier-plugin-sort-json@npm:3.0.0"
   peerDependencies:
-    prettier: ^2.3.2
-  checksum: 4a490e1eec43d0f2602318ecf68088864e09ad1b43c353c5f2feed48d154f11227c32af8981cf8207d23741067dae7f10b8b1671588334459290f2e297504b15
+    prettier: ^3.0.0
+  checksum: 5ccb1437300044d79cfbb3bc373c76d374a459ad6ef71c5d4b1784f503e556000a964552dd7172813af7ce576d86c08576201b4886a24ef678123bf209e1310f
   languageName: node
   linkType: hard
 
