@@ -35,24 +35,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.8.10":
-  version: 3.8.10
-  resolution: "@apollo/client@npm:3.8.10"
+"@apollo/client@npm:3.9.1":
+  version: 3.9.1
+  resolution: "@apollo/client@npm:3.9.1"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
+    "@wry/caches": ^1.0.0
     "@wry/equality": ^0.5.6
     "@wry/trie": ^0.5.0
     graphql-tag: ^2.12.6
     hoist-non-react-statics: ^3.3.2
     optimism: ^0.18.0
     prop-types: ^15.7.2
+    rehackt: 0.0.3
     response-iterator: ^0.2.6
     symbol-observable: ^4.0.0
     ts-invariant: ^0.10.3
     tslib: ^2.3.0
     zen-observable-ts: ^1.2.5
   peerDependencies:
-    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+    graphql: ^15.0.0 || ^16.0.0
     graphql-ws: ^5.5.5
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -66,7 +68,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: e80d80342edc025dc437f942b2efbc3431b5c1e418c1f9fd58ca2d451978f3e5e01599fc161194b0d82a80ba81f909b8b2781b835575c9e8ba014723dccd9918
+  checksum: 1ff6234b8471424960350dc1c6b4939952c6cd740374d69001f7a16bbc9ee9a66aa3adfe23b62d0044d3deea50b4915878e97805811fb7b2178900c7746fc7f0
   languageName: node
   linkType: hard
 
@@ -6834,7 +6836,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.8.10
+    "@apollo/client": 3.9.1
     "@next/bundle-analyzer": 13.5.2
     "@types/node": 18.17.19
     "@types/react": 18.2.22
@@ -6862,11 +6864,11 @@ __metadata:
     prettier-plugin-sort-json: 3.1.0
     react: 18.2.0
     react-dom: 18.2.0
-    react-intersection-observer: 9.5.3
+    react-intersection-observer: 9.5.4
     react-markdown: 9.0.1
     react-use: 17.5.0
     sass: 1.68.0
-    three: 0.160.1
+    three: 0.161.0
     typed-scss-modules: 7.1.4
     typescript: 5.2.2
     vanta: 0.5.24
@@ -7056,12 +7058,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:9.5.3":
-  version: 9.5.3
-  resolution: "react-intersection-observer@npm:9.5.3"
+"react-intersection-observer@npm:9.5.4":
+  version: 9.5.4
+  resolution: "react-intersection-observer@npm:9.5.4"
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 2281912a9fe7a52bb1237c1b5299873beee358f79325eb9ba80fc0e4b7640963c1b27528f873453746e93981c503f880fdea9f786ebeae2e6a4216b50d180941
+  checksum: 6936ecfab8bc35e63dfd0b5d5a36fe9ff6cff7caa4bfffd8d9bedf362580c2027e81375906c509f8461842942e4055110ff7e7ae23c1e256b88fc7c7951c6eac
   languageName: node
   linkType: hard
 
@@ -7272,6 +7274,21 @@ __metadata:
   bin:
     regjsparser: bin/parser
   checksum: 5e1b76afe8f1d03c3beaf9e0d935dd467589c3625f6d65fb8ffa14f224d783a0fed4bf49c2c1b8211043ef92b6117313419edf055a098ed8342e340586741afc
+  languageName: node
+  linkType: hard
+
+"rehackt@npm:0.0.3":
+  version: 0.0.3
+  resolution: "rehackt@npm:0.0.3"
+  peerDependencies:
+    "@types/react": "*"
+    react: "*"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: 2e3674d84aca46802f38cf5b01c62bf7d0ca5e324b2749dd79156fa61723e9f84df7778c39f97d351e815a852a8a8ac9633e29b6b7b8734d18042fda86620f54
   languageName: node
   linkType: hard
 
@@ -8333,10 +8350,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:0.160.1":
-  version: 0.160.1
-  resolution: "three@npm:0.160.1"
-  checksum: 5f4be21df6ee5abf63a21513e9650a4956e3699d59f16b4545b27e1c421405d452c132253381e8f5cca3f609d41c4e29dad24fddab526156017ec215ab244ad1
+"three@npm:0.161.0":
+  version: 0.161.0
+  resolution: "three@npm:0.161.0"
+  checksum: eb4df25a794dcd92b62ca4705b62c9391735863b4016fabe6d136e220449e5d840c0cfd183eb07caef3d6aeb241e78f58845087b4d27a30a420ed8f35a2ab12d
   languageName: node
   linkType: hard
 
