@@ -21,7 +21,7 @@
     "clean": "rm -rf node_modules yarn.lock .next"
   },
   "dependencies": {
-    "@apollo/client": "3.9.1",
+    "@apollo/client": "3.9.2",
     "clsx": "2.1.0",
     "dayjs": "1.11.10",
     "framer-motion": "11.0.3",
@@ -32,7 +32,7 @@
     "next-seo": "6.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intersection-observer": "9.5.4",
+    "react-intersection-observer": "9.6.0",
     "react-markdown": "9.0.1",
     "react-use": "17.5.0",
     "three": "0.161.0",
