@@ -35,9 +35,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.9.1":
-  version: 3.9.1
-  resolution: "@apollo/client@npm:3.9.1"
+"@apollo/client@npm:3.9.2":
+  version: 3.9.2
+  resolution: "@apollo/client@npm:3.9.2"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/caches": ^1.0.0
@@ -68,7 +68,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 1ff6234b8471424960350dc1c6b4939952c6cd740374d69001f7a16bbc9ee9a66aa3adfe23b62d0044d3deea50b4915878e97805811fb7b2178900c7746fc7f0
+  checksum: e5597d88fc31eef1483fdf89ce68973045f99ff608607d89170453f56e485f81405235a68ee5f5bd87a94e0769b6e27d54c7d6c3c59f6cae91b1be9bf90f3fd8
   languageName: node
   linkType: hard
 
@@ -6836,7 +6836,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.9.1
+    "@apollo/client": 3.9.2
     "@next/bundle-analyzer": 13.5.2
     "@types/node": 18.17.19
     "@types/react": 18.2.22
@@ -6864,7 +6864,7 @@ __metadata:
     prettier-plugin-sort-json: 3.1.0
     react: 18.2.0
     react-dom: 18.2.0
-    react-intersection-observer: 9.5.4
+    react-intersection-observer: 9.6.0
     react-markdown: 9.0.1
     react-use: 17.5.0
     sass: 1.68.0
@@ -7058,12 +7058,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:9.5.4":
-  version: 9.5.4
-  resolution: "react-intersection-observer@npm:9.5.4"
+"react-intersection-observer@npm:9.6.0":
+  version: 9.6.0
+  resolution: "react-intersection-observer@npm:9.6.0"
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 6936ecfab8bc35e63dfd0b5d5a36fe9ff6cff7caa4bfffd8d9bedf362580c2027e81375906c509f8461842942e4055110ff7e7ae23c1e256b88fc7c7951c6eac
+    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+  checksum: fba57f1601b6c08ea0345de23c4e41b1e0042834dbef62fa419fc18952f9ceb577d180ef3d8c8e6b01c3d5cfc3265ae5a007a532892c376461bf655b0c764ef7
   languageName: node
   linkType: hard
 
