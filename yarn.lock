@@ -35,9 +35,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.9.4":
-  version: 3.9.4
-  resolution: "@apollo/client@npm:3.9.4"
+"@apollo/client@npm:3.9.5":
+  version: 3.9.5
+  resolution: "@apollo/client@npm:3.9.5"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/caches": ^1.0.0
@@ -47,7 +47,7 @@ __metadata:
     hoist-non-react-statics: ^3.3.2
     optimism: ^0.18.0
     prop-types: ^15.7.2
-    rehackt: 0.0.4
+    rehackt: 0.0.5
     response-iterator: ^0.2.6
     symbol-observable: ^4.0.0
     ts-invariant: ^0.10.3
@@ -68,7 +68,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 0654342fc67f94b598e83e940f1c295e97afb387c308c7d07703436903d7e056990fe8cb2105df1e3f6eecf5a85779e657787dcf89f08aee90a72931352a28fa
+  checksum: 49ee8a0c61fb87fe295a2b0d1d279198a8a2bdf02e64291bf6c2d7c906131b3c90a08c3a9527c2f2cc6409ca67e549c761d883fc20d25091435d3097ab5b41ac
   languageName: node
   linkType: hard
 
@@ -6260,14 +6260,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-seo@npm:6.4.0":
-  version: 6.4.0
-  resolution: "next-seo@npm:6.4.0"
+"next-seo@npm:6.5.0":
+  version: 6.5.0
+  resolution: "next-seo@npm:6.5.0"
   peerDependencies:
     next: ^8.1.1-canary.54 || >=9.0.0
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: 94183bf0c75359bad52d9e6463fb433bdcf94f42b33e88a60897a8957b41bc3d6ebb5ead3084a43cf287c42f7b95ba4e9f3a6cd21af532e1a8eb285f2cf8ac3b
+  checksum: 744e49cae31debc5117f35132b6929edd68b3469eed238fbd8d4888cd22a32a67e780688265311d27311936d4d9dab5c1408536ad87c73e4c293701e5213130c
   languageName: node
   linkType: hard
 
@@ -6836,7 +6836,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.9.4
+    "@apollo/client": 3.9.5
     "@next/bundle-analyzer": 13.5.2
     "@types/node": 18.17.19
     "@types/react": 18.2.22
@@ -6858,7 +6858,7 @@ __metadata:
     modern-css-reset: 1.4.0
     next: 12.3.4
     next-pwa: 5.6.0
-    next-seo: 6.4.0
+    next-seo: 6.5.0
     npm-run-all: 4.1.5
     prettier: 3.0.3
     prettier-plugin-sort-json: 3.1.0
@@ -7281,9 +7281,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rehackt@npm:0.0.4":
-  version: 0.0.4
-  resolution: "rehackt@npm:0.0.4"
+"rehackt@npm:0.0.5":
+  version: 0.0.5
+  resolution: "rehackt@npm:0.0.5"
   peerDependencies:
     "@types/react": "*"
     react: "*"
@@ -7292,7 +7292,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: f2811c24847f7a03935c3b2093a01439f883550f6022e6d220574d0f4333fc24dd1bd746bb579038723eef1c48a2ce3002dd91aea9c2e15d2bd105ed6786f8c1
+  checksum: 0ece2c9d55541ba6fbafacd1dd9c7676df725a64f3f6ffdf64ce7ff765b0724b60cf27502c389bf09766ba0997c6f22ab1c2da82b96b9820e8d3c3159f3c2595
   languageName: node
   linkType: hard
 
