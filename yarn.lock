@@ -6847,7 +6847,7 @@ __metadata:
     prettier-plugin-sort-json: 3.1.0
     react: 18.2.0
     react-dom: 18.2.0
-    react-intersection-observer: 9.8.1
+    react-intersection-observer: 9.8.2
     react-markdown: 9.0.1
     react-use: 17.5.0
     sass: 1.68.0
@@ -7041,16 +7041,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:9.8.1":
-  version: 9.8.1
-  resolution: "react-intersection-observer@npm:9.8.1"
+"react-intersection-observer@npm:9.8.2":
+  version: 9.8.2
+  resolution: "react-intersection-observer@npm:9.8.2"
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 0aec6f3fb51bdcbf0131c8e8b9a6b0c89b835608c908d3236e675db58fa2ddc7128f7b1e7c0761fc5b36384cfdf5edef0f5c3651f900220f6b92a992794700ca
+  checksum: 0e77226cf458499959773da9db9e00ae33a6eb95c2fa1ec3f506bbcba00955c1c27d2320fba8cdd740cadb1c7d6cc396386cbd9c359298cff196cac660dbee49
   languageName: node
   linkType: hard
 
