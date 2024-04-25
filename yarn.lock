@@ -6845,13 +6845,13 @@ __metadata:
     npm-run-all: 4.1.5
     prettier: 3.0.3
     prettier-plugin-sort-json: 3.1.0
-    react: 18.2.0
-    react-dom: 18.2.0
+    react: 18.3.0
+    react-dom: 18.3.0
     react-intersection-observer: 9.8.2
     react-markdown: 9.0.1
     react-use: 17.5.0
     sass: 1.68.0
-    three: 0.163.0
+    three: 0.164.0
     typed-scss-modules: 7.1.4
     typescript: 5.2.2
     vanta: 0.5.24
@@ -7029,15 +7029,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react-dom@npm:18.2.0"
+"react-dom@npm:18.3.0":
+  version: 18.3.0
+  resolution: "react-dom@npm:18.3.0"
   dependencies:
     loose-envify: ^1.1.0
-    scheduler: ^0.23.0
+    scheduler: ^0.23.1
   peerDependencies:
-    react: ^18.2.0
-  checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+    react: ^18.3.0
+  checksum: 04dc715fdedee89754c9c2cd627cf8bc5914dbb678d053ceecaf6feb11566fc653763781aefd82c240f264c87b1643ab1328ca6565b8b449ce79fbb2912fd1c7
   languageName: node
   linkType: hard
 
@@ -7117,12 +7117,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react@npm:18.2.0"
+"react@npm:18.3.0":
+  version: 18.3.0
+  resolution: "react@npm:18.3.0"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
+  checksum: f1389bf7f9cc9295fded895635e54c4bf73626a8ea51afaa2da4988f89e71b68f249c1782f832d5912ba7d437da9292fc44ecf7c3dff072879253df93d703a10
   languageName: node
   linkType: hard
 
@@ -7570,12 +7570,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.23.0":
-  version: 0.23.0
-  resolution: "scheduler@npm:0.23.0"
+"scheduler@npm:^0.23.1":
+  version: 0.23.1
+  resolution: "scheduler@npm:0.23.1"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: d79192eeaa12abef860c195ea45d37cbf2bbf5f66e3c4dcd16f54a7da53b17788a70d109ee3d3dde1a0fd50e6a8fc171f4300356c5aee4fc0171de526bf35f8a
+  checksum: 8a5d140ee7e1f0927b64883544794043ebcaf57fe3f3541040535d1cb841640c389674838d3a25050227c20f8606cdeb1172c83e711523c689d428146ed8efcb
   languageName: node
   linkType: hard
 
@@ -8337,10 +8337,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:0.163.0":
-  version: 0.163.0
-  resolution: "three@npm:0.163.0"
-  checksum: 572c16264512f8d094929f585de0092cfaebe9306d7ee45acbf6a78e20e142424a4898679a79fbfe6c76cd3ea048b28f3f821e2daaf243a2e8f8a0d8c00c27dd
+"three@npm:0.164.0":
+  version: 0.164.0
+  resolution: "three@npm:0.164.0"
+  checksum: 728549589224498ce70476407d4de5d40e8feff325eb5e87a36c7d543c26832294e6ed9c3b20f950cb9763e3a71d533f5ff3296deb3b40b492a8c6d17f3b7ccf
   languageName: node
   linkType: hard
 
