@@ -35,7 +35,7 @@
     "react-intersection-observer": "9.8.2",
     "react-markdown": "9.0.1",
     "react-use": "17.5.0",
-    "three": "0.164.0",
+    "three": "0.164.1",
     "vanta": "0.5.24"
   },
   "devDependencies": {
