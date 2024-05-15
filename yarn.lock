@@ -35,9 +35,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.10.3":
-  version: 3.10.3
-  resolution: "@apollo/client@npm:3.10.3"
+"@apollo/client@npm:3.10.4":
+  version: 3.10.4
+  resolution: "@apollo/client@npm:3.10.4"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/caches": ^1.0.0
@@ -68,7 +68,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 7ec2565ee7c48db2f6a6bd7d141d5529b8e4b82f2bc59e50ecc71d9ad9364bb27ed1fb0ddaf549815cacc7faf10cafc19c1af8046d20d9bab3fed9ff7819fc8c
+  checksum: 577cb5a075fb9616b6b41bf7b34ce7ee393e7dfc3ca829db284a5bf70e35f658e4b218ba6f6d03e2604da814c6069e438584c9c609fe505dcbe6c4610f4cc638
   languageName: node
   linkType: hard
 
@@ -4294,9 +4294,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:11.2.0":
-  version: 11.2.0
-  resolution: "framer-motion@npm:11.2.0"
+"framer-motion@npm:11.2.2":
+  version: 11.2.2
+  resolution: "framer-motion@npm:11.2.2"
   dependencies:
     tslib: ^2.4.0
   peerDependencies:
@@ -4310,7 +4310,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 803c6c0e083cb8814aedfc0443dcca2c641aef962c23a01423707554d1de0a77ce2ac6cfd00619eed61cd5a417e83d2525dca601fabf816f7ba5d073fb3bbe76
+  checksum: e9ca6f3fc3e00397628a1dcd70cdf5930832aa03a13ae10242d2f72f82126c0dfae2bf63a03531b6ad0d7be581aecc64df6e26bfe7bf61ffd292d2774c07f444
   languageName: node
   linkType: hard
 
@@ -6819,7 +6819,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.10.3
+    "@apollo/client": 3.10.4
     "@next/bundle-analyzer": 13.5.2
     "@types/node": 18.17.19
     "@types/react": 18.2.22
@@ -6836,7 +6836,7 @@ __metadata:
     eslint-plugin-import: 2.28.1
     eslint-plugin-prettier: 5.0.0
     eslint-plugin-react: 7.33.2
-    framer-motion: 11.2.0
+    framer-motion: 11.2.2
     graphql: 16.8.1
     modern-css-reset: 1.4.0
     next: 12.3.4
