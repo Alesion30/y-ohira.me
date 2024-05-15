@@ -21,10 +21,10 @@
     "clean": "rm -rf node_modules yarn.lock .next"
   },
   "dependencies": {
-    "@apollo/client": "3.10.3",
+    "@apollo/client": "3.10.4",
     "clsx": "2.1.1",
     "dayjs": "1.11.11",
-    "framer-motion": "11.2.0",
+    "framer-motion": "11.2.2",
     "graphql": "16.8.1",
     "modern-css-reset": "1.4.0",
     "next": "12.3.4",
