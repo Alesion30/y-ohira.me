@@ -35,9 +35,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.10.5":
-  version: 3.10.5
-  resolution: "@apollo/client@npm:3.10.5"
+"@apollo/client@npm:3.10.6":
+  version: 3.10.6
+  resolution: "@apollo/client@npm:3.10.6"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/caches": ^1.0.0
@@ -68,7 +68,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 6f01c3eb0e3a6206e2572ded3d8f6b29b09d5a7e2a3ab0cd3d6c34b2611e0f2cccf5e8a46f5e917c0d31a4de954aed70a306e2b4cf615d87a16403234021b425
+  checksum: b37a49af0f5315f0de890b8f8bd03d16d88477fba861985582a6c101c3522e60c10bce399f2eff18a094bb094301ee94abe2301648131739f1eddf52c1eb9992
   languageName: node
   linkType: hard
 
@@ -4657,10 +4657,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.8.2":
-  version: 16.8.2
-  resolution: "graphql@npm:16.8.2"
-  checksum: 1a5ba8087b3ffb60627ab4b71565e77049f621da49144985d3b1e35a9c70bf846476a7b5912342eda72d70bd71f9427a3d73712b4250e0175d458b8011c9deba
+"graphql@npm:16.9.0":
+  version: 16.9.0
+  resolution: "graphql@npm:16.9.0"
+  checksum: 8cb3d54100e9227310383ce7f791ca48d12f15ed9f2021f23f8735f1121aafe4e5e611a853081dd935ce221724ea1ae4638faef5d2921fb1ad7c26b5f46611e9
   languageName: node
   linkType: hard
 
@@ -6819,7 +6819,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.10.5
+    "@apollo/client": 3.10.6
     "@next/bundle-analyzer": 13.5.2
     "@types/node": 18.17.19
     "@types/react": 18.2.22
@@ -6837,7 +6837,7 @@ __metadata:
     eslint-plugin-prettier: 5.0.0
     eslint-plugin-react: 7.33.2
     framer-motion: 11.2.11
-    graphql: 16.8.2
+    graphql: 16.9.0
     modern-css-reset: 1.4.0
     next: 12.3.4
     next-pwa: 5.6.0
