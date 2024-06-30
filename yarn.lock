@@ -35,9 +35,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.10.7":
-  version: 3.10.7
-  resolution: "@apollo/client@npm:3.10.7"
+"@apollo/client@npm:3.10.8":
+  version: 3.10.8
+  resolution: "@apollo/client@npm:3.10.8"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/caches": ^1.0.0
@@ -68,7 +68,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 9211da2512e8d7d573de77924717ef819b27f443551071f76fb4be90e16541328eb787d53dfb83c21562c609715a4c8ecd1d9dafa198ce48f3cfe1b192b0c18b
+  checksum: 965e95389bdbde8aa5f542f11860fd930438f635560c766c716f186d5a9d6c5f0bfb31088cf28150c4f3969191030f1bbc0254418738a5737568108e96ffd815
   languageName: node
   linkType: hard
 
@@ -6819,7 +6819,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.10.7
+    "@apollo/client": 3.10.8
     "@next/bundle-analyzer": 13.5.2
     "@types/node": 18.17.19
     "@types/react": 18.2.22
@@ -6851,7 +6851,7 @@ __metadata:
     react-markdown: 9.0.1
     react-use: 17.5.0
     sass: 1.68.0
-    three: 0.165.0
+    three: 0.166.0
     typed-scss-modules: 7.1.4
     typescript: 5.2.2
     vanta: 0.5.24
@@ -8337,10 +8337,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:0.165.0":
-  version: 0.165.0
-  resolution: "three@npm:0.165.0"
-  checksum: 1dcfe9ef046a49036e527cf0f72e07475546a16ede694f24630330ece7635ab8ee5c3a3422d43c65c2d267a255e4859820ddb35381defadbd3515d91e2c2bd2e
+"three@npm:0.166.0":
+  version: 0.166.0
+  resolution: "three@npm:0.166.0"
+  checksum: 9c6373f32ce6b864a6158567079caeb4a719c473f061f5fc20a74dd7468cb39d2fd1875df0e62ee7071190c9e6b4a7dc7f293c9593992f9a79847dce2e30116b
   languageName: node
   linkType: hard
 
