@@ -4294,9 +4294,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:11.2.12":
-  version: 11.2.12
-  resolution: "framer-motion@npm:11.2.12"
+"framer-motion@npm:11.2.13":
+  version: 11.2.13
+  resolution: "framer-motion@npm:11.2.13"
   dependencies:
     tslib: ^2.4.0
   peerDependencies:
@@ -4310,7 +4310,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: de0e689a35a394c8529f10b11ac12d77c0a43afeca09ceb0f47e526924635e81432a3d45ecfb0b3195b816e0d3b19e5ca28b4f247784c1aae3c6873b5ece6054
+  checksum: bc8f74f78d490bc4e30662d538cbc9516430047a128cbd6a759fc003675483201f04eb28b68614965c9738a96bf5f102d5c100c1d4f9cd2f03abb8d80b7f6931
   languageName: node
   linkType: hard
 
@@ -6836,7 +6836,7 @@ __metadata:
     eslint-plugin-import: 2.28.1
     eslint-plugin-prettier: 5.0.0
     eslint-plugin-react: 7.33.2
-    framer-motion: 11.2.12
+    framer-motion: 11.2.13
     graphql: 16.9.0
     modern-css-reset: 1.4.0
     next: 12.3.4
