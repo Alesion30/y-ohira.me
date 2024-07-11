@@ -4294,9 +4294,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:11.3.0":
-  version: 11.3.0
-  resolution: "framer-motion@npm:11.3.0"
+"framer-motion@npm:11.3.2":
+  version: 11.3.2
+  resolution: "framer-motion@npm:11.3.2"
   dependencies:
     tslib: ^2.4.0
   peerDependencies:
@@ -4310,7 +4310,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 6b460894bc3c3b1e92145a7d5aa6f007ebccef3757f4338111b6b4c87c9198a63f5aab42b56dc3119e58cc125abdfe9dcfcad33da35169eecb085954cb6954d8
+  checksum: f0235c6e71438e26c7b23b55fbb74ce18d84736dfcfbefb01826f489afd9deb5a7f2e7cdd1316f62291ca261bea26ff8ae4db77caedcae859e09cbd77db68d6f
   languageName: node
   linkType: hard
 
@@ -6836,7 +6836,7 @@ __metadata:
     eslint-plugin-import: 2.28.1
     eslint-plugin-prettier: 5.0.0
     eslint-plugin-react: 7.33.2
-    framer-motion: 11.3.0
+    framer-motion: 11.3.2
     graphql: 16.9.0
     modern-css-reset: 1.4.0
     next: 12.3.4
@@ -6847,7 +6847,7 @@ __metadata:
     prettier-plugin-sort-json: 3.1.0
     react: 18.3.1
     react-dom: 18.3.1
-    react-intersection-observer: 9.10.3
+    react-intersection-observer: 9.13.0
     react-markdown: 9.0.1
     react-use: 17.5.0
     sass: 1.68.0
@@ -7041,16 +7041,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:9.10.3":
-  version: 9.10.3
-  resolution: "react-intersection-observer@npm:9.10.3"
+"react-intersection-observer@npm:9.13.0":
+  version: 9.13.0
+  resolution: "react-intersection-observer@npm:9.13.0"
   peerDependencies:
     react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 482c89a432e582749f3cb3dd696e08638a92e41fbcb81bcb3dc3cadebcf8b40bc47e7a52d2a7e8c4f9eb2a3c1c29b4cb0f21007c1540da05893b5abb11d7a761
+  checksum: ee2a163b078923c1556814834f83d7c3ea3e8a9d3ceef974351fd52afe12163518ec57cb2eb0f6544ac255ac4b64d2e7652bc5d60c255159c0f25bda57a565b6
   languageName: node
   linkType: hard
 
