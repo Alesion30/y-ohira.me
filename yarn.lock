@@ -3089,10 +3089,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:1.11.11":
-  version: 1.11.11
-  resolution: "dayjs@npm:1.11.11"
-  checksum: 84788275aad8a87fee4f1ce4be08861df29687aae6b7b43dd65350118a37dda56772a3902f802cb2dc651dfed447a5a8df62d88f0fb900dba8333e411190a5d5
+"dayjs@npm:1.11.12":
+  version: 1.11.12
+  resolution: "dayjs@npm:1.11.12"
+  checksum: 40a4f67c2df3af125ae0ddec68d3a6d806d3009a7414bf45479aaf82f1dd82f3e139e6642e72391abccc37488897830c56afcabb4c819014130d283644df8128
   languageName: node
   linkType: hard
 
@@ -4294,9 +4294,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:11.3.6":
-  version: 11.3.6
-  resolution: "framer-motion@npm:11.3.6"
+"framer-motion@npm:11.3.7":
+  version: 11.3.7
+  resolution: "framer-motion@npm:11.3.7"
   dependencies:
     tslib: ^2.4.0
   peerDependencies:
@@ -4310,7 +4310,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 3342a1026f25317a9963a1333a14ff78ab8e3e81bd05e09d95e604a8a3c5391c4d814172eb8e79494a65cb3a316bb19be61add481f0b9785fd5317a6859b036f
+  checksum: 36ccdb7a790eff24329339daa3bf7ec9662d9a670ef73e994f4db75ce03b6338e6bd30b3b2d3abb8f4129f4ff5d38ff33f3f93033a98669610481c42b10c6d15
   languageName: node
   linkType: hard
 
@@ -6828,7 +6828,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 6.7.2
     "@typescript-eslint/parser": 6.7.2
     clsx: 2.1.1
-    dayjs: 1.11.11
+    dayjs: 1.11.12
     eslint: 8.50.0
     eslint-config-next: 13.5.2
     eslint-config-prettier: 9.0.0
@@ -6836,7 +6836,7 @@ __metadata:
     eslint-plugin-import: 2.28.1
     eslint-plugin-prettier: 5.0.0
     eslint-plugin-react: 7.33.2
-    framer-motion: 11.3.6
+    framer-motion: 11.3.7
     graphql: 16.9.0
     modern-css-reset: 1.4.0
     next: 12.3.4
