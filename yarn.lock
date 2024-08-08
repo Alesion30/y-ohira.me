@@ -35,9 +35,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:3.11.3":
-  version: 3.11.3
-  resolution: "@apollo/client@npm:3.11.3"
+"@apollo/client@npm:3.11.4":
+  version: 3.11.4
+  resolution: "@apollo/client@npm:3.11.4"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     "@wry/caches": ^1.0.0
@@ -68,7 +68,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 3d3afaf724229deafc046fc0a21a3093239388385ea089c7ac0bb718392b9275cbc565ea0f9f1a97870273a7b041a32ee6a42c5d1df6cbd8282b895536bf782e
+  checksum: 1fbb276b4365da8afea36ae1757ba7cc9814d29e0159f972313cf42ad50141786fd1be320aa75c484b99aec910ba789c6180a72ac5175c4ded3c1e49d1b54e94
   languageName: node
   linkType: hard
 
@@ -4287,9 +4287,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:11.3.23":
-  version: 11.3.23
-  resolution: "framer-motion@npm:11.3.23"
+"framer-motion@npm:11.3.24":
+  version: 11.3.24
+  resolution: "framer-motion@npm:11.3.24"
   dependencies:
     tslib: ^2.4.0
   peerDependencies:
@@ -4303,7 +4303,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: bce8b42f7eb351086f20461b75a90cae20e7b845756515ea70fa96b5d6175b4d983176b2d634ed6e2130d6e659e252380f6a93318ec343a356b27cfb0e4649b4
+  checksum: c036284f7adb0f8fa05624e0bfb5e0000c1a3cfdc349a01797c9f8be0fadb5b9ccdbea095abfe685cc52c94f7a69a79d98569c8f74aa1ba3bc1676624f614952
   languageName: node
   linkType: hard
 
@@ -6811,7 +6811,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@apollo/client": 3.11.3
+    "@apollo/client": 3.11.4
     "@next/bundle-analyzer": 13.5.2
     "@types/node": 18.17.19
     "@types/react": 18.2.22
@@ -6828,7 +6828,7 @@ __metadata:
     eslint-plugin-import: 2.28.1
     eslint-plugin-prettier: 5.0.0
     eslint-plugin-react: 7.33.2
-    framer-motion: 11.3.23
+    framer-motion: 11.3.24
     graphql: 16.9.0
     modern-css-reset: 1.4.0
     next: 12.3.4
