@@ -24,7 +24,7 @@
     "@apollo/client": "3.11.4",
     "clsx": "2.1.1",
     "dayjs": "1.11.13",
-    "framer-motion": "11.3.29",
+    "framer-motion": "11.3.30",
     "graphql": "16.9.0",
     "modern-css-reset": "1.4.0",
     "next": "12.3.4",
